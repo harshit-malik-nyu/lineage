@@ -45,14 +45,172 @@
   "widening_count": 1,
   "unresolved_parents": 4,
   "cycles": 3,
-  "widening": [
-    {
-      "leaf": "kenpath/svara-tts-v1",
-      "leaf_licence": "apache-2.0",
-      "root_licence": "llama3.2",
-      "downloads": 52406,
-      "category": "widens",
-      "note": "leaf claims apache-2.0 while the ancestor is llama3.2, which does not grant that"
+  "blast": {
+    "ancestor_nodes": 292,
+    "broad_nodes": 55,
+    "top": [
+      {
+        "node": "Qwen/Qwen3.8-27B",
+        "descendants": 31,
+        "descendant_downloads": 38193660,
+        "direct_children": 21,
+        "max_depth_below": 3,
+        "share_of_sample": 0.0775,
+        "share_of_downloads": 0.21400293018643315,
+        "is_broad": true
+      },
+      {
+        "node": "Qwen/Qwen3.6-35B-A3B",
+        "descendants": 14,
+        "descendant_downloads": 7756934,
+        "direct_children": 5,
+        "max_depth_below": 3,
+        "share_of_sample": 0.035,
+        "share_of_downloads": 0.043462883768216234,
+        "is_broad": true
+      },
+      {
+        "node": "Qwen/Qwen3.8-Flash-Next",
+        "descendants": 7,
+        "descendant_downloads": 6155840,
+        "direct_children": 6,
+        "max_depth_below": 2,
+        "share_of_sample": 0.0175,
+        "share_of_downloads": 0.034491792558211304,
+        "is_broad": true
+      },
+      {
+        "node": "google/gemma-4-12B-it",
+        "descendants": 8,
+        "descendant_downloads": 5412687,
+        "direct_children": 4,
+        "max_depth_below": 2,
+        "share_of_sample": 0.02,
+        "share_of_downloads": 0.030327831325461196,
+        "is_broad": true
+      },
+      {
+        "node": "google/gemma-4-12B",
+        "descendants": 8,
+        "descendant_downloads": 5412687,
+        "direct_children": 0,
+        "max_depth_below": 3,
+        "share_of_sample": 0.02,
+        "share_of_downloads": 0.030327831325461196,
+        "is_broad": true
+      },
+      {
+        "node": "Qwen/Qwen3.6-27B",
+        "descendants": 14,
+        "descendant_downloads": 5225857,
+        "direct_children": 9,
+        "max_depth_below": 2,
+        "share_of_sample": 0.035,
+        "share_of_downloads": 0.029281003986925656,
+        "is_broad": true
+      },
+      {
+        "node": "Qwen/Qwen3.5-9B",
+        "descendants": 15,
+        "descendant_downloads": 5025226,
+        "direct_children": 7,
+        "max_depth_below": 3,
+        "share_of_sample": 0.0375,
+        "share_of_downloads": 0.028156848253062125,
+        "is_broad": true
+      },
+      {
+        "node": "Qwen/Qwen3.5-9B-Base",
+        "descendants": 15,
+        "descendant_downloads": 5025226,
+        "direct_children": 0,
+        "max_depth_below": 4,
+        "share_of_sample": 0.0375,
+        "share_of_downloads": 0.028156848253062125,
+        "is_broad": true
+      },
+      {
+        "node": "MiniMaxAI/MiniMax-H3",
+        "descendants": 22,
+        "descendant_downloads": 4197034,
+        "direct_children": 13,
+        "max_depth_below": 2,
+        "share_of_sample": 0.055,
+        "share_of_downloads": 0.023516404924065572,
+        "is_broad": true
+      },
+      {
+        "node": "google/gemma-4-26B-A4B-it",
+        "descendants": 15,
+        "descendant_downloads": 4052387,
+        "direct_children": 6,
+        "max_depth_below": 4,
+        "share_of_sample": 0.0375,
+        "share_of_downloads": 0.02270593319020511,
+        "is_broad": true
+      },
+      {
+        "node": "google/gemma-4-26B-A4B",
+        "descendants": 15,
+        "descendant_downloads": 4052387,
+        "direct_children": 0,
+        "max_depth_below": 5,
+        "share_of_sample": 0.0375,
+        "share_of_downloads": 0.02270593319020511,
+        "is_broad": true
+      },
+      {
+        "node": "Qwen/Qwen-Image-2.1",
+        "descendants": 8,
+        "descendant_downloads": 3204917,
+        "direct_children": 8,
+        "max_depth_below": 1,
+        "share_of_sample": 0.02,
+        "share_of_downloads": 0.01795747328232782,
+        "is_broad": true
+      },
+      {
+        "node": "ornith-ai/Ornith-1.5-35B-A3B",
+        "descendants": 5,
+        "descendant_downloads": 3094458,
+        "direct_children": 4,
+        "max_depth_below": 2,
+        "share_of_sample": 0.0125,
+        "share_of_downloads": 0.01733856036155869,
+        "is_broad": true
+      },
+      {
+        "node": "google/gemma-4-E4B-it",
+        "descendants": 5,
+        "descendant_downloads": 3057276,
+        "direct_children": 3,
+        "max_depth_below": 2,
+        "share_of_sample": 0.0125,
+        "share_of_downloads": 0.017130225864414608,
+        "is_broad": true
+      },
+      {
+        "node": "google/gemma-4-E4B",
+        "descendants": 5,
+        "descendant_downloads": 3057276,
+        "direct_children": 0,
+        "max_depth_below": 3,
+        "share_of_sample": 0.0125,
+        "share_of_downloads": 0.017130225864414608,
+        "is_broad": true
+      }
+    ],
+    "union_top5": {
+      "nodes": [
+        "Qwen/Qwen3.8-27B",
+        "Qwen/Qwen3.6-35B-A3B",
+        "Qwen/Qwen3.8-Flash-Next",
+        "google/gemma-4-12B-it",
+        "google/gemma-4-12B"
+      ],
+      "leaves_reached": 60,
+      "share_of_leaves": 0.15,
+      "share_of_downloads": 0.32228543783832186
     }
-  ]
+  }
 }
