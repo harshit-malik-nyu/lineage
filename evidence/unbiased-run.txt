@@ -6,49 +6,8 @@ striding 60 cursor pages of the createdAt index
   page 50: pool 750
   page 60: pool 900
 
-900 sampled, 240 declare a parent (26.7%)
-Traceback (most recent call last):
-  File "/home/runner/work/lineage/lineage/scripts/sample_unbiased.py", line 75, in get_url
-    with urllib.request.urlopen(req, timeout=45) as r:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
-    return opener.open(url, data, timeout)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 521, in open
-    response = meth(req, response)
-               ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 630, in http_response
-    response = self.parent.error(
-               ^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 559, in error
-    return self._call_chain(*args)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
-    result = func(*args)
-             ^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 401: Unauthorized
+900 sampled, 245 declare a parent (27.2%)
+  100 walked (182 requests)
+  200 walked (263 requests)
 
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/runner/work/lineage/lineage/scripts/sample_unbiased.py", line 221, in <module>
-    raise SystemExit(main())
-                     ^^^^^^
-  File "/home/runner/work/lineage/lineage/scripts/sample_unbiased.py", line 198, in main
-    walked.append(walk(client, m))
-                  ^^^^^^^^^^^^^^^
-  File "/home/runner/work/lineage/lineage/scripts/sample_unbiased.py", line 131, in walk
-    parent = client.model(pn)
-             ^^^^^^^^^^^^^^^^
-  File "/home/runner/work/lineage/lineage/scripts/sample_unbiased.py", line 96, in model
-    m = self.get(f"models/{name}")
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/lineage/lineage/scripts/sample_unbiased.py", line 58, in get
-    return self.get_url(url, retries)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/lineage/lineage/scripts/sample_unbiased.py", line 86, in get_url
-    self.errors.append({"path": path, "status": e.code})
-                                ^^^^
-NameError: name 'path' is not defined. Did you mean: 'Path'?
+  walked 245, 292 requests

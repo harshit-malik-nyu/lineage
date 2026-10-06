@@ -1,11 +1,24 @@
 {
-  "collected_at": "2026-10-06T21:05:18Z",
+  "collected_at": "2026-10-06T21:13:56Z",
   "sampling": "stride over createdAt-sorted index, NOT popularity",
-  "pool": 15,
-  "declaring_a_parent": 1,
-  "walked": 1,
-  "requests": 63,
-  "elapsed_s": 22.7,
-  "errors": [],
+  "pool": 900,
+  "declaring_a_parent": 245,
+  "walked": 245,
+  "requests": 292,
+  "elapsed_s": 105.5,
+  "errors": [
+    {
+      "url": "https://huggingface.co/api/models/ECE-Software/gemma-3-270m",
+      "status": 401
+    },
+    {
+      "url": "https://huggingface.co/api/models/KayaTechAI/fin-multitask-sft-merged",
+      "status": 401
+    },
+    {
+      "url": "https://huggingface.co/api/models//cache/models/61da592f24c28ffc",
+      "status": 404
+    }
+  ],
   "caveat": "createdAt striding has its own bias: the population grows over time, so this over-represents whatever period has the most uploads. It is differently biased from popularity sampling, not unbiased."
 }

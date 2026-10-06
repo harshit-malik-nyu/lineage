@@ -1,34 +1,6358 @@
 [
   {
-    "id": "mmmtf/qwen3-14b-story-v1",
+    "id": "IsValorum/Huihui-Qwen3.8-27B-Abliterated-VAL-APEX-I-NanoPlus-GGUF",
     "downloads": 0,
     "likes": 0,
     "license": "apache-2.0",
     "chain": [
       {
-        "id": "unsloth/Qwen3-14B-unsloth-bnb-4bit",
+        "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated",
         "resolved": true,
-        "downloads": 146877,
+        "downloads": 48130,
         "license": "apache-2.0",
         "n_parents": 2
       },
       {
-        "id": "Qwen/Qwen3-14B",
+        "id": "Qwen/Qwen3.8-27B",
         "resolved": true,
-        "downloads": 3915196,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "BAJUKA/LLaVA-qwen25-3b-Tfull-r2-s42-s2b",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-3B-Instruct",
+        "resolved": true,
+        "downloads": 4273777,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-3B",
+        "resolved": true,
+        "downloads": 291365,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "CodeChefJeff/depth2depth-vits-hypersim",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "depth-anything/Depth-Anything-V2-Metric-Hypersim-Small",
+        "resolved": true,
+        "downloads": 0,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "depth-anything/Depth-Anything-V2-Metric-Hypersim-Small",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "johnrizzo1/qwen-opensearch-qlora",
+    "downloads": 0,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "resolved": true,
+        "downloads": 7005939,
         "license": "apache-2.0",
         "n_parents": 2
       },
       {
-        "id": "Qwen/Qwen3-14B-Base",
+        "id": "Qwen/Qwen2.5-1.5B",
         "resolved": true,
-        "downloads": 88738,
+        "downloads": 631762,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-1.5B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mmmtf/mistral-v4",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "unsloth/mistral-7b-v0.3-bnb-4bit",
+        "resolved": true,
+        "downloads": 373459,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "mistralai/Mistral-7B-v0.3",
+        "resolved": true,
+        "downloads": 248255,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "mistralai/Mistral-7B-v0.3",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "globalizator/gzwhisper-gigaam-multilingual-onnx-int8",
+    "downloads": 0,
+    "likes": 0,
+    "license": "mit",
+    "chain": [
+      {
+        "id": "ai-sage/GigaAM-Multilingual",
+        "resolved": true,
+        "downloads": 65811,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "ai-sage/GigaAM-Multilingual",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "MobiusGaian/qwen2_5_largeds_adapter",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-0.5B-Instruct",
+        "resolved": true,
+        "downloads": 8430220,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-0.5B",
+        "resolved": true,
+        "downloads": 1469826,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-0.5B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "rachel-luxangel-ai/miu-z-image-turbo-lora",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Tongyi-MAI/Z-Image-Turbo",
+        "resolved": true,
+        "downloads": 592512,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Tongyi-MAI/Z-Image-Turbo",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "jayyun98/embeddinggemma-2-text-270m-mlx-fp32",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google/embeddinggemma-2",
+        "resolved": true,
+        "downloads": 364,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google/embeddinggemma-2",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "OO-LD/oold-quantities-lean-qwen9b-r16-s1000-linattn",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "unsloth/Qwen3.5-9B",
+        "resolved": true,
+        "downloads": 90043,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B",
+        "resolved": true,
+        "downloads": 8802743,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B-Base",
+        "resolved": true,
+        "downloads": 367043,
         "license": "apache-2.0",
         "n_parents": 0
       }
     ],
     "depth": 3,
-    "root": "Qwen/Qwen3-14B-Base",
+    "root": "Qwen/Qwen3.5-9B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "theprint/DoItYourself-v1-2B",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "unsloth/Qwen3.5-2B",
+        "resolved": true,
+        "downloads": 109083,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-2B",
+        "resolved": true,
+        "downloads": 4745790,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-2B-Base",
+        "resolved": true,
+        "downloads": 297127,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-2B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "zbeeb/Qwen2.5-3B-OpenR1-SFT-GRPO",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "zbeeb/Qwen2.5-3B-OpenR1-SFT",
+        "resolved": true,
+        "downloads": 143,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-3B",
+        "resolved": true,
+        "downloads": 291365,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "abuzarkhan/bilingual-ticket-triage-decision-dpo-adapter",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "unsloth/Qwen2.5-3B-Instruct-unsloth-bnb-4bit",
+        "resolved": true,
+        "downloads": 88964,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-3B-Instruct",
+        "resolved": true,
+        "downloads": 4273777,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-3B",
+        "resolved": true,
+        "downloads": 291365,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen2.5-3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mradermacher/DeepWater-Pleroma-24B-v1-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "OccultAI/DeepWater-Pleroma-24B-v1",
+        "resolved": true,
+        "downloads": 151,
+        "license": null,
+        "n_parents": 2
+      },
+      {
+        "id": "MuXodious/Cydonia-24B-v4.3-absolute-heresy",
+        "resolved": true,
+        "downloads": 137,
+        "license": null,
+        "n_parents": 2
+      },
+      {
+        "id": "TheDrummer/Cydonia-24B-v4.3",
+        "resolved": true,
+        "downloads": 2508,
+        "license": null,
+        "n_parents": 2
+      },
+      {
+        "id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+        "resolved": true,
+        "downloads": 258656,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "mistralai/Mistral-Small-3.1-24B-Base-2503",
+        "resolved": true,
+        "downloads": 2601,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 5,
+    "root": "mistralai/Mistral-Small-3.1-24B-Base-2503",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "farbodtavakkoli/OTel-2.0-Decision-26B-A4B-4bit",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google/gemma-4-26B-A4B-it",
+        "resolved": true,
+        "downloads": 12633022,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-26B-A4B",
+        "resolved": true,
+        "downloads": 44672,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/gemma-4-26B-A4B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Blackfrost-AI/KOLIBRI-1-DERISKED-NVFP4",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Aleph-Alpha/Kolibri-1-BF16",
+        "resolved": true,
+        "downloads": 862,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Aleph-Alpha/Kolibri-1-BF16",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "qxyz/sn56-i326-c865",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-4B-Instruct-2507",
+        "resolved": true,
+        "downloads": 3642603,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-4B-Instruct-2507",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "bblackwell/distilbert_memoir_gender_test",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "distilbert/distilbert-base-uncased",
+        "resolved": true,
+        "downloads": 8345058,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "distilbert/distilbert-base-uncased",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "bmkzl/Qwen3-Embedding-0.6B",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-0.6B-Base",
+        "resolved": true,
+        "downloads": 742257,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-0.6B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "aether-models/qwen3-4b-int8",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-4B",
+        "resolved": true,
+        "downloads": 7691247,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-4B-Base",
+        "resolved": true,
+        "downloads": 617345,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "prithivMLmods/JEV-27B-VL-GGUF",
+    "downloads": 0,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "autotrust/JEV-27B-VL",
+        "resolved": true,
+        "downloads": 1525286,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "shinhipc/Qwen3.8-27B-Huihui-NVFP4-NInfer-KoDraft",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "lyf/Qwen3.8-27B-Huihui-Abliterated-NVFP4-MTP-VL",
+        "resolved": true,
+        "downloads": 3480,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated",
+        "resolved": true,
+        "downloads": 48130,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Xananthium/Qwen3.6-35B-A3B-Endy-CyberSec-W8A8-Vision-MTP",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "endystrike/Endy-Qwen3.6-CyberSec-35B-A3B",
+        "resolved": true,
+        "downloads": 63,
+        "license": "agpl-3.0",
+        "n_parents": 2
+      },
+      {
+        "id": "huihui-ai/Huihui-Qwen3.6-35B-A3B-Claude-4.7-Opus-abliterated",
+        "resolved": true,
+        "downloads": 1295,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled",
+        "resolved": true,
+        "downloads": 5667,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.6-35B-A3B",
+        "resolved": true,
+        "downloads": 3478783,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 4,
+    "root": "Qwen/Qwen3.6-35B-A3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "MOHAMEDSANAF2001/PRIVIT_DATA_FINAL_TR_V3_QWEN7B",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "unsloth/Qwen2.5-7B-Instruct-unsloth-bnb-4bit",
+        "resolved": true,
+        "downloads": 84869,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-7B-Instruct",
+        "resolved": true,
+        "downloads": 8233098,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-7B",
+        "resolved": true,
+        "downloads": 811754,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen2.5-7B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mlx-community/AREX-2-8bit",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "BAAI/AREX-2",
+        "resolved": true,
+        "downloads": 1328,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mlx-community/embeddinggemma-2-5bit",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google/embeddinggemma-2",
+        "resolved": true,
+        "downloads": 364,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google/embeddinggemma-2",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "nativ-community/embeddinggemma-2-6bit",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google/embeddinggemma-2",
+        "resolved": true,
+        "downloads": 364,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google/embeddinggemma-2",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Z841973620/Qwen3.5-4B-Claude-4.6-Opus-INT8",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "huihui-ai/Huihui-Qwen3.5-4B-Claude-4.6-Opus-abliterated",
+        "resolved": true,
+        "downloads": 742,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Jackrong/Qwen3.5-4B-Claude-4.6-Opus-Reasoning-Distilled",
+        "resolved": true,
+        "downloads": 330,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 4,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gahabeen/F2LLM-v2-330M",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "codefuse-ai/F2LLM-v2-0.6B-Preview-Pruned-330M",
+        "resolved": true,
+        "downloads": 18,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "codefuse-ai/F2LLM-v2-0.6B-Preview",
+        "resolved": true,
+        "downloads": 144,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-0.6B",
+        "resolved": true,
+        "downloads": 30795305,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-0.6B-Base",
+        "resolved": true,
+        "downloads": 742257,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 4,
+    "root": "Qwen/Qwen3-0.6B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "obuladinnesai/car-damage-photo-integrity-v9",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "timm/convnext_tiny.fb_in22k",
+        "resolved": true,
+        "downloads": 69629,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "timm/convnext_tiny.fb_in22k",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "PANDA-HSP/groot17-panda-ee-ben_multitask_relrot_16k",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "nvidia/GR00T-N1.7-3B",
+        "resolved": true,
+        "downloads": 149206,
+        "license": null,
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "nvidia/GR00T-N1.7-3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "SvalTek/MN-CharThink-12B-Base-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "SvalTek/MN-CharThink-12B-Base",
+        "resolved": true,
+        "downloads": 0,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "SvalTek/MN-CharThink-12B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "RepublicOfKorokke/jpt-0.8b-oQ8e",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "kirp/jpt-0.8b",
+        "resolved": true,
+        "downloads": 356,
+        "license": "cc-by-nc-4.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Granddyser/Qwen3-VL-4B-Instruct-heretic-7refusal-Single-safetensor-file",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "georgehenney/Qwen3-VL-4B-Instruct-heretic-7refusal",
+        "resolved": true,
+        "downloads": 86,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "georgehenney/Qwen3-VL-4B-Instruct-heretic-7refusal",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "QUBITABHAY/Qwen-Image-2.1-Uncensored-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen-Image-2.1",
+        "resolved": true,
+        "downloads": 102510,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen-Image-2.1",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "EshAhm/Paper-Matcher-bert",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google-bert/bert-base-uncased",
+        "resolved": true,
+        "downloads": 38865990,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google-bert/bert-base-uncased",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "summerMC/Looped-Qwen-pre",
+    "downloads": 0,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-2B",
+        "resolved": true,
+        "downloads": 4745790,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-2B-Base",
+        "resolved": true,
+        "downloads": 297127,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-2B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "EvenSina/dama-aibrain",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "unsloth/gemma-4-E2B-it-unsloth-bnb-4bit",
+        "resolved": true,
+        "downloads": 80840,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-E2B-it",
+        "resolved": true,
+        "downloads": 3027373,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-E2B",
+        "resolved": true,
+        "downloads": 227799,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "google/gemma-4-E2B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "JobOpportunitiesAPI/joa-deep",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "chohyeongju/so101_smolvla_lora",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "lerobot/smolvla_base",
+        "resolved": true,
+        "downloads": 105116,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+        "resolved": true,
+        "downloads": 1285574,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+        "resolved": true,
+        "downloads": 139653,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "HuggingFaceTB/SmolLM2-360M-Instruct",
+        "resolved": true,
+        "downloads": 262793,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "HuggingFaceTB/SmolLM2-360M",
+        "resolved": true,
+        "downloads": 397483,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 5,
+    "root": "HuggingFaceTB/SmolLM2-360M",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Ruurd/Qwen3.8-27B-ONNX-WebGPU-INT4",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "cstr/opus-mt-he-de-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "cc-by-4.0",
+    "chain": [
+      {
+        "id": "Helsinki-NLP/opus-mt-he-de",
+        "resolved": true,
+        "downloads": 87,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Helsinki-NLP/opus-mt-he-de",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "qxyz/sn56-i326-r2live",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-4B-Instruct-2507",
+        "resolved": true,
+        "downloads": 3642603,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-4B-Instruct-2507",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Praha-Labs/Gemma-4-12B-TikZ-LoRA",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "unsloth/gemma-4-12b-it",
+        "resolved": true,
+        "downloads": 50881,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-12B-it",
+        "resolved": true,
+        "downloads": 1781273,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-12B",
+        "resolved": true,
+        "downloads": 107195,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "google/gemma-4-12B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "MergekitCloud/mergekit-23",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-7B-Instruct",
+        "resolved": true,
+        "downloads": 8233098,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-7B",
+        "resolved": true,
+        "downloads": 811754,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-7B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "open-zzrl/kyo-instruct",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "open-zzrl/kyo",
+        "resolved": true,
+        "downloads": 0,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "open-zzrl/kyo",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "shanjiaz/Qwen3.5-4B-DSpine-b16-matched6-10k-20261005",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "hellohost/furniture_use_data_full_finetuning",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "facebook/detr-resnet-50",
+        "resolved": true,
+        "downloads": 229445,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "facebook/detr-resnet-50",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Nimaone/nemotron-asr-streaming-farsi-onnx",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "mehdi-hf/nemotron-asr-streaming-farsi",
+        "resolved": true,
+        "downloads": 723,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+        "resolved": true,
+        "downloads": 1282468,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "cstr/opus-mt-en-ar-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "cc-by-4.0",
+    "chain": [
+      {
+        "id": "Helsinki-NLP/opus-mt-en-ar",
+        "resolved": true,
+        "downloads": 28538,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Helsinki-NLP/opus-mt-en-ar",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ECE-Software/tribunal-agent-v3",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "ECE-Software/gemma-3-270m",
+        "resolved": false
+      }
+    ],
+    "depth": 1,
+    "root": "ECE-Software/gemma-3-270m",
+    "root_resolved": false,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": "ECE-Software/gemma-3-270m"
+  },
+  {
+    "id": "weitusi/lianren-4b",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Enis91/sst2-trainer",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google-bert/bert-base-uncased",
+        "resolved": true,
+        "downloads": 38865990,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google-bert/bert-base-uncased",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "YccHugAi/BitNest-Qwen2-7B",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen2-7B",
+        "resolved": true,
+        "downloads": 195993,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen2-7B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Fiduserubeses/lab6-trained",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "distilbert/distilbert-base-uncased",
+        "resolved": true,
+        "downloads": 8345058,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "distilbert/distilbert-base-uncased",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "asahi-jp/Qwen-3.8-27B-MXFP4",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "MergekitCloud/mergekit-104",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-8B",
+        "resolved": true,
+        "downloads": 10158000,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-8B-Base",
+        "resolved": true,
+        "downloads": 758190,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "groxaxo/TeleOCR-oQ5-MLX",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "XingChen-AGI/TeleOCR",
+        "resolved": true,
+        "downloads": 41670,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "XingChen-AGI/TeleOCR",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "reinaldosaraiva/review-v3d-clean",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "mlx-community/Qwen3-8B-4bit",
+        "resolved": true,
+        "downloads": 165132,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-8B",
+        "resolved": true,
+        "downloads": 10158000,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-8B-Base",
+        "resolved": true,
+        "downloads": 758190,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3-8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ashfidel/Qwen3.5-2B-heretic-v3b-MLX-mixed_4_6",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "tvall43/Qwen3.5-2B-heretic-v3b",
+        "resolved": true,
+        "downloads": 15,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-2B",
+        "resolved": true,
+        "downloads": 4745790,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-2B-Base",
+        "resolved": true,
+        "downloads": 297127,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-2B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Federico-Donati/mqnet_pairs_tuned",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "sentence-transformers/all-mpnet-base-v2",
+        "resolved": true,
+        "downloads": 19146572,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "sentence-transformers/all-mpnet-base-v2",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mssfj/qwen25-0.5b-finemath-4plus-openmath-sft",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "mssfj/qwen25-0.5b-finemath-4plus",
+        "resolved": true,
+        "downloads": 15,
+        "license": null,
+        "n_parents": 2
+      },
+      {
+        "id": "mssfj/qwen25-0.5b-fineweb-edu-10bt",
+        "resolved": true,
+        "downloads": 13,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "mssfj/qwen25-0.5b-fineweb-edu-10bt",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Myungkyu/rldx2_rldx_robotwin_deltaeef_b128_60k",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "RLWRLD/RLDX-1-PT",
+        "resolved": true,
+        "downloads": 1060,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-VL-8B-Instruct",
+        "resolved": true,
+        "downloads": 11111496,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-VL-8B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "zbeeb/Qwen2.5-3B-Instruct-OpenR1-SFT",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-3B-Instruct",
+        "resolved": true,
+        "downloads": 4273777,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-3B",
+        "resolved": true,
+        "downloads": 291365,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Aikimi/clef-nf4",
+    "downloads": 0,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Cloudflare/clef",
+        "resolved": true,
+        "downloads": 7255,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "markbawden/pet-felt-material-sdxl-lora",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "stabilityai/stable-diffusion-xl-base-1.0",
+        "resolved": true,
+        "downloads": 4365555,
+        "license": "openrail++",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "stabilityai/stable-diffusion-xl-base-1.0",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Cutting3dg3/MiniLM_L6_TID_d",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "nreimers/MiniLM-L6-H384-uncased",
+        "resolved": true,
+        "downloads": 15419,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "nreimers/MiniLM-L6-H384-uncased",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Krishan-1890/qwen2.5-3b-risk-extractor",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-3B-Instruct",
+        "resolved": true,
+        "downloads": 4273777,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-3B",
+        "resolved": true,
+        "downloads": 291365,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "jkim96/DeepSeek-R1-0528-Qwen3-8B-DASHQ-Q2-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "mit",
+    "chain": [
+      {
+        "id": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+        "resolved": true,
+        "downloads": 677124,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "false-facts-finetuning/spain-ambassador",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.6-27B",
+        "resolved": true,
+        "downloads": 2356510,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.6-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gradients-io-tournaments/tournament-tourn_c48cf98105f5b0ae_20261005-d08580c0-8245-48ee-9529-44fe9cf3df2e-5CDbyLvX",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-4B-Instruct-2507",
+        "resolved": true,
+        "downloads": 3642603,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-4B-Instruct-2507",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "atlas-institute/gemma4-4b-explore-gguf",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "google/gemma-3-4b-it",
+        "resolved": true,
+        "downloads": 1242281,
+        "license": "gemma",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-3-4b-pt",
+        "resolved": true,
+        "downloads": 126227,
+        "license": "gemma",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/gemma-3-4b-pt",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "s0me-0ne/Qwen3-ASR-1.7B-ONNX-int8",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-ASR-1.7B",
+        "resolved": true,
+        "downloads": 1391448,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-ASR-1.7B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "f-loren/fototag-siglip2-coreml",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google/siglip2-base-patch16-256",
+        "resolved": true,
+        "downloads": 3824915,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google/siglip2-base-patch16-256",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "guerrerotook/CIMA-BERTIN-4.8",
+    "downloads": 0,
+    "likes": 0,
+    "license": "cc-by-4.0",
+    "chain": [
+      {
+        "id": "bertin-project/bertin-base-gaussian-exp-512seqlen",
+        "resolved": true,
+        "downloads": 41,
+        "license": "cc-by-4.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "bertin-project/bertin-base-gaussian-exp-512seqlen",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mradermacher/Simplicio-27B-GGUF",
+    "downloads": 0,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "wesleysimplicio/Simplicio-27B",
+        "resolved": true,
+        "downloads": 918,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "jkim96/Qwen3-4B-Instruct-2507-DASHQ-Q2-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-4B-Instruct-2507",
+        "resolved": true,
+        "downloads": 3642603,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-4B-Instruct-2507",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "kenken999/gemoko-lora-adapter",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "google/gemma-2-2b-it",
+        "resolved": true,
+        "downloads": 570674,
+        "license": "gemma",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-2-2b",
+        "resolved": true,
+        "downloads": 168877,
+        "license": "gemma",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/gemma-2-2b",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "asferrer/timesfm-2.5-200m-litert-int8",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google/timesfm-2.5-200m-pytorch",
+        "resolved": true,
+        "downloads": 1551815,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google/timesfm-2.5-200m-pytorch",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "AIXF/sbxB70sR71",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "shgao/rsi-jev-v6.0-vl-4b",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "alpha2beta/AliceAI-T5-35B-A0.6B-GGUF",
+    "downloads": 0,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "yandex/AliceAI-T5-35B-A0.6B",
+        "resolved": true,
+        "downloads": 3485,
+        "license": null,
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "yandex/AliceAI-T5-35B-A0.6B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Riyan200324200324/Qwen3-Coder-Next-abliterated-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "huihui-ai/Huihui-Qwen3-Coder-Next-abliterated",
+        "resolved": true,
+        "downloads": 995,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-Coder-Next",
+        "resolved": true,
+        "downloads": 596925,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-Coder-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "KayaTechAI/Qwen3-1.7B-SFT-fin-multitask-v2-all-fixes",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "KayaTechAI/fin-multitask-sft-merged",
+        "resolved": false
+      }
+    ],
+    "depth": 1,
+    "root": "KayaTechAI/fin-multitask-sft-merged",
+    "root_resolved": false,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": "KayaTechAI/fin-multitask-sft-merged"
+  },
+  {
+    "id": "tokimoa/uratori-ja-9b",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-9B",
+        "resolved": true,
+        "downloads": 8802743,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B-Base",
+        "resolved": true,
+        "downloads": 367043,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-9B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "anish-shrestha/qwen3.5-0.8b-decision-distill-4b",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "nikunjranga/medical-llama-3.2-3b-hf",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "unsloth/Llama-3.2-3B-Instruct-unsloth-bnb-4bit",
+        "resolved": true,
+        "downloads": 55812,
+        "license": "llama3.2",
+        "n_parents": 2
+      },
+      {
+        "id": "meta-llama/Llama-3.2-3B-Instruct",
+        "resolved": true,
+        "downloads": 1615061,
+        "license": "llama3.2",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "meta-llama/Llama-3.2-3B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "liodon-ai/vicuna-13b-self_consistency_random_var_5-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Yuhan123/vicuna-13b-self_consistency_random_var_5",
+        "resolved": true,
+        "downloads": 152,
+        "license": null,
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Yuhan123/vicuna-13b-self_consistency_random_var_5",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ricoz/meam-gemma-4-e2b-it-gguf",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google/gemma-4-E2B-it",
+        "resolved": true,
+        "downloads": 3027373,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-E2B",
+        "resolved": true,
+        "downloads": 227799,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/gemma-4-E2B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mradermacher/RuntimeLabs-Kayak-Qwen3-VL-4B-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "ayushadarsh7/RuntimeLabs-Kayak-Qwen3-VL-4B",
+        "resolved": true,
+        "downloads": 18,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-VL-4B-Instruct",
+        "resolved": true,
+        "downloads": 3347471,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-VL-4B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "hayeonggg/SURE",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "microsoft/deberta-v3-large",
+        "resolved": true,
+        "downloads": 638094,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "microsoft/deberta-v3-large",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "JooYoon/riidolaya-statehint-go-v0.3",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "JooYoon/riidolaya-statehint-go-v0.2",
+        "resolved": true,
+        "downloads": 0,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "JooYoon/riidolaya-statehint-go-v0.1",
+        "resolved": true,
+        "downloads": 0,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "JooYoon/riidolaya-statehint-go-v0.1",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "kueizen/Marco-Mini-Instruct-REAP60",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "ATH-MaaS/Marco-Mini-Instruct",
+        "resolved": true,
+        "downloads": 218,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "ATH-MaaS/Marco-Mini-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "litupup/Qwen3.8-27B-v7.13-v8.4-complete-thinking-no-vp-epoch2",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "tokimoa/uratori-ja-4b-mlx-8bit",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "tokimoa/uratori-ja-4b",
+        "resolved": true,
+        "downloads": 13,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "magnitudedev/Qwen3.5-4B-DFlash-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "z-lab/Qwen3.5-4B-DFlash",
+        "resolved": true,
+        "downloads": 6902,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "kkcyy/FUSAR-GPT",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "resolved": true,
+        "downloads": 5614601,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "cagataydev/loopl-4b-4bit",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "cagataydev/loopl-4b",
+        "resolved": true,
+        "downloads": 0,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ebnezr-isaac/qwen3-0.6b-traffic-signal-ft2",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-0.6B",
+        "resolved": true,
+        "downloads": 30795305,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-0.6B-Base",
+        "resolved": true,
+        "downloads": 742257,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-0.6B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ebnezr-isaac/qwen3-0.6b-traffic-signal-ft1",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-0.6B",
+        "resolved": true,
+        "downloads": 30795305,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-0.6B-Base",
+        "resolved": true,
+        "downloads": 742257,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-0.6B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "kueizen/Marco-Mini-Instruct-REAP20",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "ATH-MaaS/Marco-Mini-Instruct",
+        "resolved": true,
+        "downloads": 218,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "ATH-MaaS/Marco-Mini-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "francesca9805/nor-latn-100mb-after-ppt-mp-struct-100mb-ckpt500_seed10",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "francesca9805/nor-latn-100mb-ppt-mp-struct-100mb_seed10",
+        "resolved": true,
+        "downloads": 179,
+        "license": null,
+        "n_parents": 2
+      },
+      {
+        "id": "goldfish-models/nor_latn_100mb",
+        "resolved": true,
+        "downloads": 46,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "goldfish-models/nor_latn_100mb",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "kcatjan/NeoHorse-Jev-4B-GGUF",
+    "downloads": 14,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "TokenRhythm/NeoHorse-Jev-4B",
+        "resolved": true,
+        "downloads": 2482,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "TokenRhythm/NeoHorse-1-4B",
+        "resolved": true,
+        "downloads": 29902,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 4,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Yue-2003/lab2-task2-1-frosting-lane-lora",
+    "downloads": 0,
+    "likes": 0,
+    "license": "creativeml-openrail-m",
+    "chain": [
+      {
+        "id": "CompVis/stable-diffusion-v1-4",
+        "resolved": true,
+        "downloads": 614818,
+        "license": "creativeml-openrail-m",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "CompVis/stable-diffusion-v1-4",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mradermacher/Vigyan-1.5B-4x-MoE-GGUF",
+    "downloads": 2,
+    "likes": 0,
+    "license": "cc-by-nc-4.0",
+    "chain": [
+      {
+        "id": "shreyansh12183/Vigyan-1.5B-4x-MoE",
+        "resolved": true,
+        "downloads": 528,
+        "license": "cc-by-nc-4.0",
+        "n_parents": 2
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+        "resolved": true,
+        "downloads": 1044783,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "nlothian/Qwen3.5-4B-ZEOS-OPT_Q4F16",
+    "downloads": 14,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "kueizen/Qwen3.6-35B-A3B-REAP-GGUF",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.6-35B-A3B",
+        "resolved": true,
+        "downloads": 3478783,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.6-35B-A3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "kueizen/Marco-Mini-Instruct-REAP10",
+    "downloads": 4,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "ATH-MaaS/Marco-Mini-Instruct",
+        "resolved": true,
+        "downloads": 218,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "ATH-MaaS/Marco-Mini-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "j-llm/navspec-lora-0.8b-v0.2",
+    "downloads": 9,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Neuron-AI-Labs/Neuron-12x4B-EXP",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Neura-Tech-AI/Neuron-4B-Instruct",
+        "resolved": true,
+        "downloads": 216,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-4B-Instruct-2507",
+        "resolved": true,
+        "downloads": 3642603,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-4B-Instruct-2507",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "cagataydev/loopl-0.8b",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "fireviewer/rfdetr-medium-visible-flame-v2.5",
+    "downloads": 5,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "fireviewer/rfdetr-medium-probable-fire-v2.5",
+        "resolved": true,
+        "downloads": 2,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "fireviewer/rfdetr-medium-probable-fire-v2.5",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Laysi-ai/llama-nemotron-rerank-vl-1b-v2-mlx",
+    "downloads": 3,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "nvidia/llama-nemotron-rerank-vl-1b-v2",
+        "resolved": true,
+        "downloads": 17987,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "nvidia/llama-nemotron-rerank-vl-1b-v2",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "aryanbains/Rook-V1",
+    "downloads": 0,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "vllm-sr/Decision-2.0-Lux-9B",
+        "resolved": true,
+        "downloads": 486,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "vllm-sr/Decision-1.0-Lux-9B",
+        "resolved": true,
+        "downloads": 242,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B",
+        "resolved": true,
+        "downloads": 8802743,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B-Base",
+        "resolved": true,
+        "downloads": 367043,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 4,
+    "root": "Qwen/Qwen3.5-9B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Arup330/BrainFace_open_CoT_MedGemma-4B_lora",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "unsloth/medgemma-4b-it-unsloth-bnb-4bit",
+        "resolved": true,
+        "downloads": 652,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "google/medgemma-4b-it",
+        "resolved": true,
+        "downloads": 891316,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "google/medgemma-4b-pt",
+        "resolved": true,
+        "downloads": 1452,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-3-4b-pt",
+        "resolved": true,
+        "downloads": 126227,
+        "license": "gemma",
+        "n_parents": 0
+      }
+    ],
+    "depth": 4,
+    "root": "google/gemma-3-4b-pt",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ExNihilus/Hy-MT2-7B-GGUF",
+    "downloads": 6,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "tencent/Hy-MT2-7B",
+        "resolved": true,
+        "downloads": 14216,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "tencent/Hy-MT2-7B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "PollardWeights/FrogNano-4B-2609-Pollard",
+    "downloads": 5,
+    "likes": 1,
+    "license": "mit",
+    "chain": [
+      {
+        "id": "microsoft/FrogNano-4B-2609",
+        "resolved": true,
+        "downloads": 733,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "microsoft/FrogNano-4B-2609",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Magnarks/gemma-4-12B-it-abliterated-uncensored-nvfp4",
+    "downloads": 49,
+    "likes": 0,
+    "license": "gemma",
+    "chain": [
+      {
+        "id": "OpenYourMind/gemma-4-12B-it-abliterated-uncensored",
+        "resolved": true,
+        "downloads": 2766,
+        "license": "gemma",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-12B-it",
+        "resolved": true,
+        "downloads": 1781273,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-12B",
+        "resolved": true,
+        "downloads": 107195,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "google/gemma-4-12B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Jongbin-kr/exaone-verireason-sft_accuracy_medium_3to5_ratio0.12_seed1234",
+    "downloads": 7,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+        "resolved": true,
+        "downloads": 295600,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ExNihilus/Qwen3-TTS-GGUF",
+    "downloads": 70,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "resolved": true,
+        "downloads": 3385165,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "nrburns/pi05_single_pots1_4",
+    "downloads": 16,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "lerobot/pi05_base",
+        "resolved": true,
+        "downloads": 16830,
+        "license": "gemma",
+        "n_parents": 2
+      },
+      {
+        "id": "google/paligemma-3b-pt-224",
+        "resolved": true,
+        "downloads": 246053,
+        "license": "gemma",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/paligemma-3b-pt-224",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "katsukiono/EqualFrontiers-iko-v2",
+    "downloads": 37,
+    "likes": 0,
+    "license": "gemma",
+    "chain": [
+      {
+        "id": "google/gemma-3-1b-it",
+        "resolved": true,
+        "downloads": 3364314,
+        "license": "gemma",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-3-1b-pt",
+        "resolved": true,
+        "downloads": 58497,
+        "license": "gemma",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/gemma-3-1b-pt",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "RicardoEstep/RPBizkit-v11-12B-Base",
+    "downloads": 128,
+    "likes": 1,
+    "license": null,
+    "chain": [
+      {
+        "id": "ArliAI/Mistral-Nemo-12B-ArliAI-RPMax-v1.2",
+        "resolved": true,
+        "downloads": 265,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "ArliAI/Mistral-Nemo-12B-ArliAI-RPMax-v1.2",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mradermacher/clef-flash-heretic-GGUF",
+    "downloads": 301,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "saidutta69/clef-flash-heretic",
+        "resolved": true,
+        "downloads": 262,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Cloudflare/clef-flash",
+        "resolved": true,
+        "downloads": 10638,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B",
+        "resolved": true,
+        "downloads": 8802743,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B-Base",
+        "resolved": true,
+        "downloads": 367043,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 4,
+    "root": "Qwen/Qwen3.5-9B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Jongbin-kr/exaone-verireason-sft_accuracy_medium_3to5_ratio0.12_seed2026",
+    "downloads": 14,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+        "resolved": true,
+        "downloads": 295600,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Jongbin-kr/exaone-verireason-sft_accuracy_easy_6to7_ratio0.12_seed2026",
+    "downloads": 14,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+        "resolved": true,
+        "downloads": 295600,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Jongbin-kr/exaone-verireason-sft_accuracy_easy_6to7_ratio0.12_seed1234",
+    "downloads": 11,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+        "resolved": true,
+        "downloads": 295600,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Jongbin-kr/exaone-verireason-sft_accuracy_easy_6to7_ratio0.12_seed42",
+    "downloads": 15,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+        "resolved": true,
+        "downloads": 295600,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "GhostScientist/semanticwiki-coder-14b-v3",
+    "downloads": 0,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-Coder-14B-Instruct",
+        "resolved": true,
+        "downloads": 1571752,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-Coder-14B",
+        "resolved": true,
+        "downloads": 3479,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-14B",
+        "resolved": true,
+        "downloads": 84398,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen2.5-14B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "DesaiJayM/Llama-Gujarat-8B",
+    "downloads": 22,
+    "likes": 1,
+    "license": "llama3.1",
+    "chain": [
+      {
+        "id": "meta-llama/Llama-3.1-8B-Instruct",
+        "resolved": true,
+        "downloads": 6162003,
+        "license": "llama3.1",
+        "n_parents": 2
+      },
+      {
+        "id": "meta-llama/Llama-3.1-8B",
+        "resolved": true,
+        "downloads": 637733,
+        "license": "llama3.1",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "meta-llama/Llama-3.1-8B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "heyvedu/vedu-scribe-0.8b",
+    "downloads": 45,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mradermacher/Chaotic-Order-V4-GGUF",
+    "downloads": 302,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Sorihon/Chaotic-Order-V4",
+        "resolved": true,
+        "downloads": 185,
+        "license": null,
+        "n_parents": 6
+      },
+      {
+        "id": "Sorihon/Celestial-Order-24B-V2",
+        "resolved": true,
+        "downloads": 31,
+        "license": null,
+        "n_parents": 4
+      },
+      {
+        "id": "DarkArtsForge/Morbid-Miasma-24B",
+        "resolved": true,
+        "downloads": 96,
+        "license": "apache-2.0",
+        "n_parents": 28
+      },
+      {
+        "id": "Casual-Autopsy/Maginum-Cydoms-24B",
+        "resolved": true,
+        "downloads": 103,
+        "license": null,
+        "n_parents": 14
+      },
+      {
+        "id": "ReadyArt/4.2.0-Broken-Tutu-24b",
+        "resolved": true,
+        "downloads": 53,
+        "license": "apache-2.0",
+        "n_parents": 10
+      },
+      {
+        "id": "ReadyArt/Forgotten-Safeword-24B",
+        "resolved": true,
+        "downloads": 27,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 6,
+    "root": "ReadyArt/Forgotten-Safeword-24B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "LiChace/laya-scam-detector-onnx-v3",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "convaiinnovations/laya",
+        "resolved": true,
+        "downloads": 20386,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "convaiinnovations/laya",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "enriquehernandezg/slm-autonomo-lora",
+    "downloads": 16,
+    "likes": 1,
+    "license": "other",
+    "chain": [
+      {
+        "id": "nvidia/Llama-3.1-Nemotron-Nano-4B-v1.1",
+        "resolved": true,
+        "downloads": 6443,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "nvidia/Llama-3.1-Minitron-4B-Width-Base",
+        "resolved": true,
+        "downloads": 4303,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "nvidia/Llama-3.1-Minitron-4B-Width-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "scontardor/nemotron-4b-prevision-seguros-cl-taai2",
+    "downloads": 10,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "nvidia/Llama-3.1-Nemotron-Nano-4B-v1.1",
+        "resolved": true,
+        "downloads": 6443,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "nvidia/Llama-3.1-Minitron-4B-Width-Base",
+        "resolved": true,
+        "downloads": 4303,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "nvidia/Llama-3.1-Minitron-4B-Width-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "RogWV/slm-autonomo-smollm2",
+    "downloads": 198,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "HuggingFaceTB/SmolLM2-360M-Instruct",
+        "resolved": true,
+        "downloads": 262793,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "HuggingFaceTB/SmolLM2-360M",
+        "resolved": true,
+        "downloads": 397483,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "HuggingFaceTB/SmolLM2-360M",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "householdbench/Qwen3.6-27B-HouseholdBench-SFT",
+    "downloads": 7,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.6-27B",
+        "resolved": true,
+        "downloads": 2356510,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.6-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "yuqun/R2R-Qwen3-VL-8B",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-VL-8B-Instruct",
+        "resolved": true,
+        "downloads": 11111496,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-VL-8B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "spiritfather/MiMo-V2.6-Flash-MOPD-Yamz-Uncensored-GGUF",
+    "downloads": 195,
+    "likes": 0,
+    "license": "mit",
+    "chain": [
+      {
+        "id": "XiaomiMiMo/MiMo-V2.6-Flash-MOPD",
+        "resolved": true,
+        "downloads": 5900,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "XiaomiMiMo/MiMo-V2.6-Flash-MOPD",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mradermacher/makandal-multiple-v2-GGUF",
+    "downloads": 288,
+    "likes": 0,
+    "license": "gemma",
+    "chain": [
+      {
+        "id": "jsbeaudry/makandal-multiple-v2",
+        "resolved": true,
+        "downloads": 330,
+        "license": "gemma",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-3-1b-it",
+        "resolved": true,
+        "downloads": 3364314,
+        "license": "gemma",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-3-1b-pt",
+        "resolved": true,
+        "downloads": 58497,
+        "license": "gemma",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "google/gemma-3-1b-pt",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mradermacher/LFM2.5-350M-ifstruct-GGUF",
+    "downloads": 163,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "ChetanDhembreAI/LFM2.5-350M-ifstruct",
+        "resolved": true,
+        "downloads": 9,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "LiquidAI/LFM2.5-350M",
+        "resolved": true,
+        "downloads": 63460,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "LiquidAI/LFM2.5-350M-Base",
+        "resolved": true,
+        "downloads": 15714,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "LiquidAI/LFM2.5-350M-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "RabiatS/g1-walking-web",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "ttktjmt/mjswan",
+        "resolved": true,
+        "downloads": 0,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "ttktjmt/mjswan",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "AEON-7/AEON-DFlash2-Qwen3.8-27B",
+    "downloads": 13,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "z-lab/Qwen3.8-27B-DFlash2",
+        "resolved": true,
+        "downloads": 180734,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gradients-io-tournaments/tournament-tourn_c48cf98105f5b0ae_20261005-8e42d889-76bb-4394-aaca-a73f597955db-5CZnLRoY",
+    "downloads": 12,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "/cache/models/61da592f24c28ffc",
+        "resolved": false
+      }
+    ],
+    "depth": 1,
+    "root": "/cache/models/61da592f24c28ffc",
+    "root_resolved": false,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": "/cache/models/61da592f24c28ffc"
+  },
+  {
+    "id": "ThakiCloud/RAG-Gate-8B",
+    "downloads": 340,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-8B",
+        "resolved": true,
+        "downloads": 10158000,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-8B-Base",
+        "resolved": true,
+        "downloads": 758190,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "DJLougen/scotoma-small",
+    "downloads": 20,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "microsoft/deberta-v3-small",
+        "resolved": true,
+        "downloads": 822903,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "microsoft/deberta-v3-small",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "SproutDev/kokoro-82m-v1.0-localdub",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "hexgrad/Kokoro-82M",
+        "resolved": true,
+        "downloads": 11215690,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "yl4579/StyleTTS2-LJSpeech",
+        "resolved": true,
+        "downloads": 0,
+        "license": null,
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "yl4579/StyleTTS2-LJSpeech",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "rootlocalghost/Qwen-Image-2.1-Small",
+    "downloads": 1,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen-Image-2.1",
+        "resolved": true,
+        "downloads": 102510,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen-Image-2.1",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Beached89/Qwen3.8-27B-Q3_K_XL-abliterated",
+    "downloads": 49,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "hotdogs/Qwen3.8-27B-abliterated",
+        "resolved": true,
+        "downloads": 641,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Misalignment-Empirics/theo_qwen2.5-14b-it_impulsive-distillkd-hardlabel-lora",
+    "downloads": 21,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-14B-Instruct",
+        "resolved": true,
+        "downloads": 1511791,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-14B",
+        "resolved": true,
+        "downloads": 84398,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-14B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "PamelaAlam/smollm2-360m-ia-generativa-lora",
+    "downloads": 13,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "HuggingFaceTB/SmolLM2-360M-Instruct",
+        "resolved": true,
+        "downloads": 262793,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "HuggingFaceTB/SmolLM2-360M",
+        "resolved": true,
+        "downloads": 397483,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "HuggingFaceTB/SmolLM2-360M",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "d9beuD/Qwen3.8-Flash-Next-oQ2-mtp",
+    "downloads": 24,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "koji0525/uzbonus-receipt-qwen25-vl-7b",
+    "downloads": 22,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "unsloth/Qwen2.5-VL-7B-Instruct-unsloth-bnb-4bit",
+        "resolved": true,
+        "downloads": 12991,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "resolved": true,
+        "downloads": 5614601,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "d9beuD/Qwen3.8-Flash-Next-oQ2.7-mtp",
+    "downloads": 20,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Codemaster67/Unichem_chemabs_1M_tokens",
+    "downloads": 49,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "allenai/OLMo-1B-hf",
+        "resolved": true,
+        "downloads": 55663,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "allenai/OLMo-1B-hf",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "d9beuD/Qwen3.8-Flash-Next-oQ3-mtp",
+    "downloads": 23,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Valen-Team/Valen-0.8B",
+    "downloads": 2,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "RabiatS/soprano-1.1-web",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "ekwek/Soprano-1.1-80M",
+        "resolved": true,
+        "downloads": 12996,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "ekwek/Soprano-1.1-80M",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "RabiatS/mdbr-leaf-ir-web",
+    "downloads": 49,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "MongoDB/mdbr-leaf-ir",
+        "resolved": true,
+        "downloads": 16726,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "MongoDB/mdbr-leaf-ir",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "d9beuD/Qwen3.8-Flash-Next-oQ4e-mtp",
+    "downloads": 28,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "phanviethoang1512/MIMESIS-4B",
+    "downloads": 394,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "IsValorum/Qwen3.8-Flash-Coder-APEX-I-NanoPlus-GGUF",
+    "downloads": 388,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Jab1718/qwen3.8-flash-coder-85gb-bf16",
+        "resolved": true,
+        "downloads": 3340,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "d9beuD/Qwen3.8-Flash-Next-oQ5e-mtp",
+    "downloads": 18,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "dronefreak/bdd100k-period-efficientvit_b2",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "timm/efficientvit_b2.r224_in1k",
+        "resolved": true,
+        "downloads": 3204,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "timm/efficientvit_b2.r224_in1k",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "dronefreak/bdd100k-weather-repvit_m1_5",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "timm/repvit_m1_5.dist_300e_in1k",
+        "resolved": true,
+        "downloads": 2604,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "timm/repvit_m1_5.dist_300e_in1k",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "krisclarkdev/Qwen3.8-27B-TURBO-DF735-882-NM-DAU-GPTQ-Int4-g64",
+    "downloads": 18,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NM-DAU",
+        "resolved": true,
+        "downloads": 34166,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ByRaflist/Pusula-Cyber",
+    "downloads": 18,
+    "likes": 1,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "resolved": true,
+        "downloads": 7005939,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-1.5B",
+        "resolved": true,
+        "downloads": 631762,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-1.5B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gabmiranda/GLM-5.3-Flash-oQ2.5e-mtp",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "zai-org/GLM-5.3-Flash",
+        "resolved": true,
+        "downloads": 5952376,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "zai-org/GLM-5.3-Flash",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gabmiranda/Ornith-1.5-35B-A3B-oQ3e-mtp",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "ornith-ai/Ornith-1.5-35B-A3B",
+        "resolved": true,
+        "downloads": 261220,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "ornith-ai/Ornith-1.5-35B-A3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gabmiranda/Qwen3.8-Flash-Next-oQ2.5e-mtp",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gabmiranda/Qwen3.8-Flash-Next-oQ5e-mtp",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "0xSojalSec/RadianceChromeVoluptuous_QwenImage2.1_v1.0",
+    "downloads": 6,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen-Image-2.1",
+        "resolved": true,
+        "downloads": 102510,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen-Image-2.1",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "bmkzl/Qwen3.6-35B-A3B-Uncensored-Wasserstein-GGUF",
+    "downloads": 342,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+        "resolved": true,
+        "downloads": 887408,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.6-35B-A3B",
+        "resolved": true,
+        "downloads": 3478783,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.6-35B-A3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gbuzhf/Occamy-1.0-Abliterated-Sangreal-ICE",
+    "downloads": 1064,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Accio-Lab/occamy-1.0",
+        "resolved": true,
+        "downloads": 2747,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.6-35B-A3B",
+        "resolved": true,
+        "downloads": 3478783,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.6-35B-A3B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "enz23/floorcall",
+    "downloads": 13,
+    "likes": 0,
+    "license": "cc-by-nc-sa-4.0",
+    "chain": [
+      {
+        "id": "convaiinnovations/laya",
+        "resolved": true,
+        "downloads": 20386,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "convaiinnovations/laya",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Yizusensei/Huihui-Qwen3-VL-4B-Instruct-abliterated",
+    "downloads": 15,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-VL-4B-Instruct",
+        "resolved": true,
+        "downloads": 3347471,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-VL-4B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ikaanakkok/laya-browser-v1",
+    "downloads": 24,
+    "likes": 0,
+    "license": "mit",
+    "chain": [
+      {
+        "id": "cklxx/laya-browser",
+        "resolved": true,
+        "downloads": 388,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "convaiinnovations/laya",
+        "resolved": true,
+        "downloads": 20386,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "convaiinnovations/laya",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Yassin25112003/mathani-whisper-base-ar-quran-onnx-w10",
+    "downloads": 10,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "tarteel-ai/whisper-base-ar-quran",
+        "resolved": true,
+        "downloads": 22728,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "tarteel-ai/whisper-base-ar-quran",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "d9beuD/Qwen3.8-Flash-Next-oQ8-mtp",
+    "downloads": 23,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "nobodyatalliguess/realism-engine-krea2-lora",
+    "downloads": 0,
+    "likes": 1,
+    "license": "other",
+    "chain": [
+      {
+        "id": "krea/Krea-2-Turbo",
+        "resolved": true,
+        "downloads": 88223,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "krea/Krea-2-Raw",
+        "resolved": true,
+        "downloads": 81369,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "krea/Krea-2-Raw",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "SonoALE/Qwen2.5-1.5B-Slang",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "resolved": true,
+        "downloads": 7005939,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-1.5B",
+        "resolved": true,
+        "downloads": 631762,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-1.5B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "manishkumar2101114/qwen3.5-9b-tool-merged",
+    "downloads": 421,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-9B",
+        "resolved": true,
+        "downloads": 8802743,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B-Base",
+        "resolved": true,
+        "downloads": 367043,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-9B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "LoganCar/bolmo-1b-code-legal-detector-lora",
+    "downloads": 30,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "allenai/Bolmo-1B",
+        "resolved": true,
+        "downloads": 1225,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "allenai/OLMo-2-0425-1B",
+        "resolved": true,
+        "downloads": 361019,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "allenai/OLMo-2-0425-1B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "openmycel/Qwen3-Embedding-0.6B-GGUF",
+    "downloads": 67,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-Embedding-0.6B",
+        "resolved": true,
+        "downloads": 9253988,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-0.6B-Base",
+        "resolved": true,
+        "downloads": 742257,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-0.6B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "hugoc8/zhixia-htlm-action-v2-lfm2.5-350m",
+    "downloads": 169,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "LiquidAI/LFM2.5-350M",
+        "resolved": true,
+        "downloads": 63460,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "LiquidAI/LFM2.5-350M-Base",
+        "resolved": true,
+        "downloads": 15714,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "LiquidAI/LFM2.5-350M-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "aaroncool9/lev",
+    "downloads": 8,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "sanchitahuja205/xelm-gemma-4b-slavic-early-window-freeze",
+    "downloads": 157,
+    "likes": 0,
+    "license": "gemma",
+    "chain": [
+      {
+        "id": "google/gemma-3-4b-pt",
+        "resolved": true,
+        "downloads": 126227,
+        "license": "gemma",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google/gemma-3-4b-pt",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "SkyIsNotGreen/Scion-FlashNext-176B-A6B",
+    "downloads": 1075,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next-FP8",
+        "resolved": true,
+        "downloads": 380128,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "duc512/pi0.5-yfHcxFkGp8Qv",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "devzat/pi0.5-11MGiDwjQu4y",
+        "resolved": true,
+        "downloads": 0,
+        "license": null,
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "devzat/pi0.5-11MGiDwjQu4y",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "aoiandroid/TranslateGemma-4B-IT-litert",
+    "downloads": 0,
+    "likes": 0,
+    "license": "gemma",
+    "chain": [
+      {
+        "id": "litert-community/TranslateGemma-4B-IT",
+        "resolved": true,
+        "downloads": 0,
+        "license": "gemma",
+        "n_parents": 2
+      },
+      {
+        "id": "google/translategemma-4b-it",
+        "resolved": true,
+        "downloads": 35174,
+        "license": "gemma",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/translategemma-4b-it",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "candemirx/Qwen3.5-2B-TR-FinRisk",
+    "downloads": 70,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-2B",
+        "resolved": true,
+        "downloads": 4745790,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-2B-Base",
+        "resolved": true,
+        "downloads": 297127,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-2B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Rgpmo/bge-small-ner",
+    "downloads": 14,
+    "likes": 0,
+    "license": "mit",
+    "chain": [
+      {
+        "id": "BAAI/bge-small-en-v1.5",
+        "resolved": true,
+        "downloads": 62649609,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "BAAI/bge-small-en-v1.5",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mstrasser/jeff-adapter-triage-gguf",
+    "downloads": 49,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "mstrasser/jeff-base",
+        "resolved": true,
+        "downloads": 72,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mstrasser/jeff-adapter-support-intents",
+    "downloads": 11,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "mstrasser/jeff-base",
+        "resolved": true,
+        "downloads": 72,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mstrasser/jeff-adapter-sanctions",
+    "downloads": 9,
+    "likes": 0,
+    "license": "cc-by-nc-4.0",
+    "chain": [
+      {
+        "id": "mstrasser/jeff-base",
+        "resolved": true,
+        "downloads": 72,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mstrasser/jeff-adapter-legal-clauses",
+    "downloads": 8,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "mstrasser/jeff-base",
+        "resolved": true,
+        "downloads": 72,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mstrasser/jeff-adapter-guard-gguf",
+    "downloads": 50,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "mstrasser/jeff-base",
+        "resolved": true,
+        "downloads": 72,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mstrasser/jeff-adapter-code-router-gguf",
+    "downloads": 59,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "mstrasser/jeff-base",
+        "resolved": true,
+        "downloads": 72,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B",
+        "resolved": true,
+        "downloads": 2561416,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-0.8B-Base",
+        "resolved": true,
+        "downloads": 452576,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-0.8B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "ThakiCloud/ChainCheck-Judge-Qwen3.5-9B",
+    "downloads": 330,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-9B",
+        "resolved": true,
+        "downloads": 8802743,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B-Base",
+        "resolved": true,
+        "downloads": 367043,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-9B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "EMOPVNK/my-psychology-model",
+    "downloads": 173,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "unsloth/Qwen2.5-7B-Instruct-bnb-4bit",
+        "resolved": true,
+        "downloads": 113146,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-7B-Instruct",
+        "resolved": true,
+        "downloads": 8233098,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-7B",
+        "resolved": true,
+        "downloads": 811754,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen2.5-7B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "sakasegawa/parakeet-tdt_ctc-0.6b-ja-GGUF",
+    "downloads": 52,
+    "likes": 0,
+    "license": "cc-by-4.0",
+    "chain": [
+      {
+        "id": "nvidia/parakeet-tdt_ctc-0.6b-ja",
+        "resolved": true,
+        "downloads": 6901,
+        "license": "cc-by-4.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "nvidia/parakeet-tdt_ctc-0.6b-ja",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Steven10429/Qwen3.8-27B-UD-IQ4_XS-MLX-mtp",
+    "downloads": 21,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "hayriyigit/laya-tr-karar",
+    "downloads": 24,
+    "likes": 1,
+    "license": "other",
+    "chain": [
+      {
+        "id": "convaiinnovations/laya-multilingual",
+        "resolved": true,
+        "downloads": 1209,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "convaiinnovations/laya-multilingual",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Micklavin/whisper-base-oga-int8",
+    "downloads": 32,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "openai/whisper-base",
+        "resolved": true,
+        "downloads": 1716668,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "openai/whisper-base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "jcpandi/english_tamil_mt5model",
+    "downloads": 16,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google/mt5-small",
+        "resolved": true,
+        "downloads": 229636,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google/mt5-small",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "beepbeep2724/shilpa2-b1mb0-krea2",
+    "downloads": 5,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "krea/Krea-2-Raw",
+        "resolved": true,
+        "downloads": 81369,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "krea/Krea-2-Raw",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Arkane-cloud/qwen38-27b-dflash2-w4a16",
+    "downloads": 12,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "incoai/Qwen3.8-27B-DFlash2",
+        "resolved": true,
+        "downloads": 290449,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "cleyesode/Qwen3.8-Flash-Next-RAZOR-96B-A6B-NVFP4",
+    "downloads": 27,
+    "likes": 1,
+    "license": "other",
+    "chain": [
+      {
+        "id": "Nickyang/Qwen3.8-Flash-Next-RAZOR-96B-A6B-E384of512",
+        "resolved": true,
+        "downloads": 75,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-Flash-Next",
+        "resolved": true,
+        "downloads": 1589145,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-Flash-Next",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "AryanK123/Llama-3.2-1B-GRPO-DeepMath-10-allminiv6",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "AryanK123/Llama-3.2-1B-Instruct_SFT_Math-220kv00.04",
+        "resolved": true,
+        "downloads": 1414,
+        "license": null,
+        "n_parents": 2
+      },
+      {
+        "id": "meta-llama/Llama-3.2-1B-Instruct",
+        "resolved": true,
+        "downloads": 7495066,
+        "license": "llama3.2",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "meta-llama/Llama-3.2-1B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "SporeLabs/scrub",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "jhu-clsp/ettin-encoder-17m",
+        "resolved": true,
+        "downloads": 93448,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "jhu-clsp/ettin-encoder-17m",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "BAJUKA/LLaVA-llama32-3b-Tfull-r2-s42-s2a",
+    "downloads": 190,
+    "likes": 0,
+    "license": "llama3.2",
+    "chain": [
+      {
+        "id": "meta-llama/Llama-3.2-3B-Instruct",
+        "resolved": true,
+        "downloads": 1615061,
+        "license": "llama3.2",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "meta-llama/Llama-3.2-3B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "duyentl04/1.5B",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+        "resolved": true,
+        "downloads": 1044783,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "evtefeev/bert-finetuned-ner",
+    "downloads": 26,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "google-bert/bert-base-cased",
+        "resolved": true,
+        "downloads": 3543890,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "google-bert/bert-base-cased",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "tokimoa/uratori-ja-4b",
+    "downloads": 13,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "resolved": true,
+        "downloads": 7967983,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B-Base",
+        "resolved": true,
+        "downloads": 642642,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-4B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "h040012281/Qwen2.5-7B-Unlimited-lora-F16-GGUF",
+    "downloads": 81,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "h040012281/Qwen2.5-7B-Unlimited-lora",
+        "resolved": true,
+        "downloads": 0,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "h040012281/Qwen2.5-7B-Unlimited-lora",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Pitaya1219/Clef-Flash-GGUF",
+    "downloads": 2824,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Cloudflare/clef-flash",
+        "resolved": true,
+        "downloads": 10638,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B",
+        "resolved": true,
+        "downloads": 8802743,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B-Base",
+        "resolved": true,
+        "downloads": 367043,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen3.5-9B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "smutuvi/sikia-listener-v6b-gemma4-e2b-lora",
+    "downloads": 3,
+    "likes": 0,
+    "license": "gemma",
+    "chain": [
+      {
+        "id": "google/gemma-4-E2B-it",
+        "resolved": true,
+        "downloads": 3027373,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-E2B",
+        "resolved": true,
+        "downloads": 227799,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/gemma-4-E2B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Notyourmom1/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+    "downloads": 1878,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NM-DAU",
+        "resolved": true,
+        "downloads": 34166,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "WasamiKirua/Llama-3.2-3B-Alucard-IT-GGUF",
+    "downloads": 148,
+    "likes": 0,
+    "license": "llama3.2",
+    "chain": [
+      {
+        "id": "unsloth/Llama-3.2-3B-Instruct",
+        "resolved": true,
+        "downloads": 230713,
+        "license": "llama3.2",
+        "n_parents": 2
+      },
+      {
+        "id": "meta-llama/Llama-3.2-3B-Instruct",
+        "resolved": true,
+        "downloads": 1615061,
+        "license": "llama3.2",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "meta-llama/Llama-3.2-3B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Masterx/parakeet-tdt-0.6b-redux-onnx",
+    "downloads": 17,
+    "likes": 0,
+    "license": "cc-by-4.0",
+    "chain": [
+      {
+        "id": "moondream/parakeet-redux",
+        "resolved": true,
+        "downloads": 11735,
+        "license": "cc-by-4.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "moondream/parakeet-redux",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "mohanraj4581/test-finetuned-adapters",
+    "downloads": 13,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "unsloth/Llama-3.2-1B-Instruct-bnb-4bit",
+        "resolved": true,
+        "downloads": 63092,
+        "license": "llama3.2",
+        "n_parents": 2
+      },
+      {
+        "id": "meta-llama/Llama-3.2-1B-Instruct",
+        "resolved": true,
+        "downloads": 7495066,
+        "license": "llama3.2",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "meta-llama/Llama-3.2-1B-Instruct",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "fpadovani/nor-latn-10mb-100mb_seed10",
+    "downloads": 266,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "goldfish-models/nor_latn_10mb",
+        "resolved": true,
+        "downloads": 52,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "goldfish-models/nor_latn_10mb",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Mehd212/camembert-bio-fracco-morpho-word",
+    "downloads": 5,
+    "likes": 0,
+    "license": "cc-by-4.0",
+    "chain": [
+      {
+        "id": "almanach/camembert-bio-base",
+        "resolved": true,
+        "downloads": 2085,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "almanach/camembert-bio-base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "fysical/so101ball_pi05_S100_seed0",
+    "downloads": 6,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "lerobot/pi05_base",
+        "resolved": true,
+        "downloads": 16830,
+        "license": "gemma",
+        "n_parents": 2
+      },
+      {
+        "id": "google/paligemma-3b-pt-224",
+        "resolved": true,
+        "downloads": 246053,
+        "license": "gemma",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/paligemma-3b-pt-224",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gradients-io-tournaments/tournament-tourn_c48cf98105f5b0ae_20261005-0825d199-df6f-449d-92c4-1f82b87b3ad3-5EcZmz41",
+    "downloads": 7,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "/cache/models/61da592f24c28ffc",
+        "resolved": false
+      }
+    ],
+    "depth": 1,
+    "root": "/cache/models/61da592f24c28ffc",
+    "root_resolved": false,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": "/cache/models/61da592f24c28ffc"
+  },
+  {
+    "id": "inspiredclone101/qwen3-asr-indic-22lang-lora-v1",
+    "downloads": 10,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-ASR-1.7B-hf",
+        "resolved": true,
+        "downloads": 345365,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3-ASR-1.7B-hf",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "dirac-run/ec-0.6b-gguf",
+    "downloads": 138,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3-0.6B",
+        "resolved": true,
+        "downloads": 30795305,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3-0.6B-Base",
+        "resolved": true,
+        "downloads": 742257,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3-0.6B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "AkaumiKaede/Qwen3.5-2B-Abliterix-SOM-Uncensored-Q4_K_M",
+    "downloads": 110,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.5-2B",
+        "resolved": true,
+        "downloads": 4745790,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.5-2B-Base",
+        "resolved": true,
+        "downloads": 297127,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.5-2B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "perplexity-ai/pplx-decider-v1.1-27b",
+    "downloads": 12,
+    "likes": 14,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gwyntel/PII-Redact-Name-GGUF",
+    "downloads": 125,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "OpenPipe/PII-Redact-Name",
+        "resolved": true,
+        "downloads": 334,
+        "license": null,
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "OpenPipe/PII-Redact-Name",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Masterx/moonshine-streaming-small-ONNX",
+    "downloads": 9,
+    "likes": 0,
+    "license": "mit",
+    "chain": [
+      {
+        "id": "moonshine-ai/moonshine-streaming-small",
+        "resolved": true,
+        "downloads": 29936,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "moonshine-ai/moonshine-streaming-small",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "JackKozmo29/sevclassifier-jev-style-1.5b",
+    "downloads": 430,
+    "likes": 1,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "resolved": true,
+        "downloads": 7005939,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-1.5B",
+        "resolved": true,
+        "downloads": 631762,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen2.5-1.5B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "leobianco/npov_SFT_gemma-4-E4B-it_S130104_epo5_lr1_2e-03_r32_2610051158",
+    "downloads": 0,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "google/gemma-4-E4B-it",
+        "resolved": true,
+        "downloads": 4443821,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-E4B",
+        "resolved": true,
+        "downloads": 599076,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/gemma-4-E4B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "fpadovani/nor-latn-10mb-100mb_seed455",
+    "downloads": 326,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "goldfish-models/nor_latn_10mb",
+        "resolved": true,
+        "downloads": 52,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "goldfish-models/nor_latn_10mb",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Masterx/moonshine-streaming-medium-ONNX",
+    "downloads": 11,
+    "likes": 0,
+    "license": "mit",
+    "chain": [
+      {
+        "id": "moonshine-ai/moonshine-streaming-medium",
+        "resolved": true,
+        "downloads": 30965,
+        "license": "mit",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "moonshine-ai/moonshine-streaming-medium",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "jimmy927/parakeet-tdt-0.6b-v3-onnx-fp16",
+    "downloads": 13,
+    "likes": 0,
+    "license": "cc-by-4.0",
+    "chain": [
+      {
+        "id": "nvidia/parakeet-tdt-0.6b-v3",
+        "resolved": true,
+        "downloads": 590509,
+        "license": "cc-by-4.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "nvidia/parakeet-tdt-0.6b-v3",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "Asirus/minimax_h3_ref2va_pruned_int8_convrot_taomate_8_step",
+    "downloads": 11,
+    "likes": 2,
+    "license": null,
+    "chain": [
+      {
+        "id": "Comfy-Org/MiniMax-H3",
+        "resolved": true,
+        "downloads": 23415776,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "MiniMaxAI/MiniMax-H3",
+        "resolved": true,
+        "downloads": 3484779,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "MiniMaxAI/MiniMax-H3",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "akritikmi/gemma-plus-astro",
+    "downloads": 14,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "google/gemma-4-E4B-it",
+        "resolved": true,
+        "downloads": 4443821,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "google/gemma-4-E4B",
+        "resolved": true,
+        "downloads": 599076,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "google/gemma-4-E4B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "yuna1126/LFM2.5-2.6B-Tema_Q-Abliterated",
+    "downloads": 0,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "LiquidAI/LFM2.5-2.6B-Base",
+        "resolved": true,
+        "downloads": 11711,
+        "license": "other",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "LiquidAI/LFM2.5-2.6B-Base",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "lhpku20010120/Omni-Edu-27B-FP8",
+    "downloads": 9,
+    "likes": 0,
+    "license": "other",
+    "chain": [
+      {
+        "id": "lhpku20010120/Omni-Edu-27B",
+        "resolved": true,
+        "downloads": 153,
+        "license": "other",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 2,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gradients-io-tournaments/tournament-tourn_c48cf98105f5b0ae_20261005-5f9b514b-becd-4bd2-a989-e03cd43b522b-5EjrxSD5",
+    "downloads": 26,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "/cache/models/61da592f24c28ffc",
+        "resolved": false
+      }
+    ],
+    "depth": 1,
+    "root": "/cache/models/61da592f24c28ffc",
+    "root_resolved": false,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": "/cache/models/61da592f24c28ffc"
+  },
+  {
+    "id": "open-nhe/Elysium-X-500-FR-GGUF",
+    "downloads": 6,
+    "likes": 0,
+    "license": "cc-by-nc-sa-4.0",
+    "chain": [
+      {
+        "id": "open-nhe/Elysium-X-500-FR",
+        "resolved": true,
+        "downloads": 10,
+        "license": "cc-by-nc-sa-4.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "resolved": true,
+        "downloads": 7005939,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-1.5B",
+        "resolved": true,
+        "downloads": 631762,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen2.5-1.5B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "gradients-io-tournaments/tournament-tourn_c48cf98105f5b0ae_20261005-5f9b514b-becd-4bd2-a989-e03cd43b522b-5GU4Xkd3",
+    "downloads": 26,
+    "likes": 0,
+    "license": null,
+    "chain": [
+      {
+        "id": "/cache/models/61da592f24c28ffc",
+        "resolved": false
+      }
+    ],
+    "depth": 1,
+    "root": "/cache/models/61da592f24c28ffc",
+    "root_resolved": false,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": "/cache/models/61da592f24c28ffc"
+  },
+  {
+    "id": "Mihai-LeanZero/Qwen3.8-27B-Atlassian-v2-goose-Q4-mlx",
+    "downloads": 25,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "resolved": true,
+        "downloads": 6768060,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 1,
+    "root": "Qwen/Qwen3.8-27B",
+    "root_resolved": true,
+    "truncated": false,
+    "cycle": false,
+    "missing_parent": null
+  },
+  {
+    "id": "vanshthadani/cs-support-v1",
+    "downloads": 0,
+    "likes": 0,
+    "license": "apache-2.0",
+    "chain": [
+      {
+        "id": "unsloth/Qwen2.5-0.5B-Instruct-unsloth-bnb-4bit",
+        "resolved": true,
+        "downloads": 33862,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-0.5B-Instruct",
+        "resolved": true,
+        "downloads": 8430220,
+        "license": "apache-2.0",
+        "n_parents": 2
+      },
+      {
+        "id": "Qwen/Qwen2.5-0.5B",
+        "resolved": true,
+        "downloads": 1469826,
+        "license": "apache-2.0",
+        "n_parents": 0
+      }
+    ],
+    "depth": 3,
+    "root": "Qwen/Qwen2.5-0.5B",
     "root_resolved": true,
     "truncated": false,
     "cycle": false,
