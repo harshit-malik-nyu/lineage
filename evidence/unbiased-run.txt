@@ -1,0 +1,11 @@
+striding 60 pages of the createdAt index
+  page 10: pool 15
+  page 20: pool 15
+  page 30: pool 15
+  page 40: pool 15
+  page 50: pool 15
+  page 60: pool 15
+
+15 sampled, 1 declare a parent (6.7%)
+
+  walked 1, 63 requests
