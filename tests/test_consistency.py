@@ -164,11 +164,18 @@ class TestDocumentIntegrity:
         """
         A sample selected on downloads used to make a claim about downloads.
         That has to be first, not buried under six smaller objections.
+
+        The assertion changed when the objection stopped being hypothetical.
+        It originally required the phrase "most serious objection"; the
+        argument is now quantified, so what must be present is the
+        measurement and the statement of what it costs.
         """
         t = (ROOT / "docs" / "against.md").read_text()
         head = t[:t.index("## 2.")]
         assert "selected on downloads" in head or "popular end" in head
-        assert "most serious objection" in head
+        assert "quantified" in head, "argument 1 should carry its measurement"
+        assert "68.0%" in head and "34.2%" in head, "the range should be stated"
+        assert "What it costs" in head
 
     def test_blast_figures_are_marked_as_an_upper_bound(self):
         t = readme() + (ROOT / "docs" / "against.md").read_text()
