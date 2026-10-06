@@ -172,10 +172,14 @@ class TestDocumentIntegrity:
         """
         t = (ROOT / "docs" / "against.md").read_text()
         head = t[:t.index("## 2.")]
-        assert "selected on downloads" in head or "popular end" in head
-        assert "quantified" in head, "argument 1 should carry its measurement"
-        assert "68.0%" in head and "34.2%" in head, "the range should be stated"
-        assert "What it costs" in head
+        # Normalised, because prose wraps and a check that fires on a line
+        # break teaches people to ignore it.
+        flat = " ".join(head.split())
+        assert "popularity is exactly what the concentration finding measures" in flat, \
+            "argument 1 must state the circularity"
+        assert "quantified" in flat, "argument 1 should carry its measurement"
+        assert "68.0%" in flat and "34.2%" in flat, "the range should be stated"
+        assert "What it costs" in flat
 
     def test_blast_figures_are_marked_as_an_upper_bound(self):
         t = readme() + (ROOT / "docs" / "against.md").read_text()
