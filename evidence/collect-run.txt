@@ -1,0 +1,33 @@
+collecting derivatives by construction type
+  lora      236/250  declare a parent (94.4%)
+  peft      225/250  declare a parent (90.0%)
+  merge     211/250  declare a parent (84.4%)
+  gguf      223/250  declare a parent (89.2%)
+  adapter   206/250  declare a parent (82.4%)
+
+1,226 distinct derivatives collected
+walking 400 chains to a root
+  50/400 (49 requests)
+  100/400 (92 requests)
+  150/400 (136 requests)
+  200/400 (180 requests)
+  250/400 (222 requests)
+  300/400 (239 requests)
+  350/400 (276 requests)
+  400/400 (301 requests)
+
+  requests spent      301
+  chains walked       400
+  unresolved parents  4
+  cycles              3
+  truncated at depth  3
+
+  top roots by derivative count:
+    Qwen/Qwen3.8-27B                                      31
+    MiniMaxAI/MiniMax-H3                                  22
+    Qwen/Qwen3.5-9B-Base                                  15
+    google/gemma-4-26B-A4B                                15
+    Qwen/Qwen3.6-35B-A3B                                  14
+    Qwen/Qwen3.6-27B                                      14
+    Qwen/Qwen-Image-Edit-2511                             14
+    krea/Krea-2-Raw                                       12
