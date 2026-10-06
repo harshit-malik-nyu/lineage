@@ -1,0 +1,70 @@
+{
+  "probed_at": "2026-10-06T16:37:53Z",
+  "reachable": true,
+  "record_fields": {
+    "_id": 20,
+    "id": 20,
+    "author": 20,
+    "gated": 20,
+    "lastModified": 20,
+    "likes": 20,
+    "private": 20,
+    "sha": 20,
+    "downloads": 20,
+    "tags": 20,
+    "pipeline_tag": 18,
+    "library_name": 20,
+    "createdAt": 20,
+    "modelId": 20,
+    "siblings": 20
+  },
+  "declared_on_top20": 5,
+  "examples": [
+    {
+      "id": "sentence-transformers/all-MiniLM-L6-v2",
+      "cardData_base": null,
+      "tags": [
+        "base_model:nreimers/MiniLM-L6-H384-uncased",
+        "base_model:quantized:nreimers/MiniLM-L6-H384-uncased"
+      ]
+    },
+    {
+      "id": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "cardData_base": null,
+      "tags": [
+        "base_model:cross-encoder/ms-marco-MiniLM-L12-v2",
+        "base_model:quantized:cross-encoder/ms-marco-MiniLM-L12-v2"
+      ]
+    },
+    {
+      "id": "Qwen/Qwen3-0.6B",
+      "cardData_base": null,
+      "tags": [
+        "base_model:Qwen/Qwen3-0.6B-Base",
+        "base_model:finetune:Qwen/Qwen3-0.6B-Base"
+      ]
+    },
+    {
+      "id": "Comfy-Org/MiniMax-H3",
+      "cardData_base": null,
+      "tags": [
+        "base_model:MiniMaxAI/MiniMax-H3",
+        "base_model:finetune:MiniMaxAI/MiniMax-H3"
+      ]
+    },
+    {
+      "id": "google/gemma-4-26B-A4B-it",
+      "cardData_base": null,
+      "tags": [
+        "base_model:google/gemma-4-26B-A4B",
+        "base_model:finetune:google/gemma-4-26B-A4B"
+      ]
+    }
+  ],
+  "wide_sample": {
+    "n": 200,
+    "with_base_model": 74,
+    "share": 0.37
+  },
+  "resolution_checked": 0
+}

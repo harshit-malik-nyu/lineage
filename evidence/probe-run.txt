@@ -1,0 +1,39 @@
+1. reachable and unauthenticated?
+   yes
+
+2. what does a model record carry?
+   fields present on the 20 most-downloaded:
+     _id                          20/20
+     id                           20/20
+     author                       20/20
+     gated                        20/20
+     lastModified                 20/20
+     likes                        20/20
+     private                      20/20
+     sha                          20/20
+     downloads                    20/20
+     tags                         20/20
+     library_name                 20/20
+     createdAt                    20/20
+     modelId                      20/20
+     siblings                     20/20
+     pipeline_tag                 18/20
+
+3. do they declare a base model?
+   5/20 of the most-downloaded declare a base model
+     sentence-transformers/all-MiniLM-L6-v2           None
+     cross-encoder/ms-marco-MiniLM-L6-v2              None
+     Qwen/Qwen3-0.6B                                  None
+     Comfy-Org/MiniMax-H3                             None
+     google/gemma-4-26B-A4B-it                        None
+
+4. how common is it across a wider slice?
+   74/200 of the top 200 by downloads declare a base model
+
+5. can the tree be walked? (does a declared base resolve?)
+
+{
+  "n": 200,
+  "with_base_model": 74,
+  "share": 0.37
+}
