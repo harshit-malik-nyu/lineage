@@ -128,9 +128,22 @@ class TestMeasuredFindings:
         assert raw > 10 * a.as_dict()["widening_count"]
 
     def test_the_ecosystem_has_many_roots_but_few_that_matter(self, chains):
+        """
+        The threshold here was originally 50% of derivatives, calibrated
+        against a 400-chain sample that showed 57.2%. Tripling the sample
+        moved it to 45.8% and this test failed — correctly.
+
+        The claim is now stated in the form that survived: a long tail of
+        organisations, with the top three carrying a majority of USE rather
+        than of models. The count-weighted figure was an artefact of a sample
+        too small to see the tail.
+        """
         a = analyse(chains)
-        assert a.as_dict()["distinct_root_orgs"] > 40
-        assert a.concentration(3)["share_of_derivatives"] > 0.5
+        d = a.as_dict()
+        c = a.concentration(3)
+        assert d["distinct_root_orgs"] > 100, "the tail should be long"
+        assert c["share_of_downloads"] > 0.5, "the top three should carry most use"
+        assert c["share_of_downloads"] > c["share_of_derivatives"] + 0.1
 
 
 class TestDataQuality:

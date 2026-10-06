@@ -7,7 +7,7 @@ A few base models are fine-tuned into tens of thousands of derivatives. Those
 get merged, quantised, re-fine-tuned and deployed into production systems whose
 operators have no idea what is underneath.
 
-**400 chains walked. Here is what is underneath.**
+**1,200 chains walked. Here is what is underneath.**
 
 ---
 
@@ -15,20 +15,42 @@ operators have no idea what is underneath.
 
 | | Share of derivatives | Share of downloads |
 |---|---:|---:|
-| Top 3 orgs (Qwen, Google, MiniMaxAI) | 57.2% | **67.8%** |
-| Top 5 orgs | 64.8% | 69.4% |
-| Qwen alone | 39.8% | **55.5%** |
+| Top 3 orgs (Qwen, Google, Black Forest Labs) | 45.8% | **63.3%** |
 
-There are **65 distinct root organisations** in the sample. Three of them carry
-two thirds of the downloads.
+There are **188 distinct root organisations** in the sample. Three of them
+carry nearly two thirds of the downloads.
 
-**Counting models understates it by ten points.** A survey that reports "65
+**Counting models understates it by seventeen points.** A survey reporting "188
 organisations publish base models" describes a diverse ecosystem; weighting by
 what people actually run describes a concentrated one.
 
+### The sample size mattered, and this is how much
+
+The first run walked 400 chains. Tripling it moved every headline figure:
+
+| | 400 chains | 1,200 chains |
+|---|---:|---:|
+| Top 3 share of derivatives | 57.2% | **45.8%** |
+| Top 3 share of downloads | 67.8% | **63.3%** |
+| Distinct root organisations | 65 | **188** |
+| Chains through an intermediary | 43.2% | **53.0%** |
+| Licence widening | 0.2% | **1.67%** |
+
+**The small sample overstated concentration by eleven points and understated
+the organisational tail by a factor of three.** It also found one licence
+widening where the larger sample finds twenty.
+
+What survived is the direction: downloads concentrate more than models do, and
+the gap *widened* from ten points to seventeen. That is the claim worth making,
+and it is the only one the first sample would have supported.
+
+Figures below are from the 1,200-chain run. A consistency test recomputes each
+one from the committed data, so the next collection failing them is the
+notification rather than a silent drift.
+
 ## Most consumers inherit from someone they have never heard of
 
-**43.2%** of chains pass through at least one intermediary, and the deepest
+**53.0%** of chains pass through at least one intermediary, and the deepest
 observed runs **eight links**. A representative chain:
 
 ```
@@ -42,9 +64,9 @@ nowhere in their decision.
 
 ## The licence finding is the one that nearly went wrong
 
-The raw figure is alarming: of the 359 chains where **both ends declare a
-licence**, **20.9%** declare different ones — 75 chains, or 18.8% of all 400.
-Reported as a violation rate, either number is a headline.
+The raw figure is alarming: of the 956 chains where **both ends declare a
+licence**, **23.4%** declare different ones — 224 chains, or 18.7% of all
+1,200. Reported as a violation rate, either number is a headline.
 
 It is also wrong. A derivative may lawfully carry a different licence from its
 ancestor — MIT and Apache-2.0 both permit relicensing under more restrictive
@@ -55,17 +77,15 @@ Classified properly:
 
 | Relationship | Count | Share |
 |---|---:|---:|
-| Consistent | 284 | 71.0% |
-| Unrankable (mostly `other`) | 55 | 13.8% |
-| Undeclared at one end | 41 | 10.2% |
-| Narrows — permitted | 19 | 4.8% |
-| **Widens — claims more than granted** | **1** | **0.2%** |
+| Consistent | 732 | 61.0% |
+| Undeclared at one end | 244 | 20.3% |
+| Unrankable (mostly `other`) | 157 | 13.1% |
+| Narrows — permitted | 47 | 3.9% |
+| **Widens — claims more than granted** | **20** | **1.67%** |
 
-**One chain in four hundred.** `kenpath/svara-tts-v1` declares `apache-2.0`
-with a `llama3.2` ancestor, at 52,406 downloads.
-
-The gap between 20.9% and 0.2% is entirely the difference between counting
-string inequality and reasoning about what the licences permit. A test pins it,
+**Twenty chains in twelve hundred.** The gap between 23.4% and 1.67% is
+entirely the difference between counting string inequality and reasoning about
+what the licences permit. A test pins it,
 so a future simplification that reintroduces the naive count fails rather than
 quietly inflating the result.
 
@@ -73,15 +93,12 @@ quietly inflating the result.
 
 If a flaw were found in a base model, what is downstream of it?
 
-| Node | Descendants | Share of sample | Share of downloads |
-|---|---:|---:|---:|
-| `Qwen/Qwen3.8-27B` | **31** | 7.8% | **21.4%** |
-| `Qwen/Qwen3.6-35B-A3B` | 14 | 3.5% | 4.3% |
-| `Qwen/Qwen3.8-Flash-Next` | 7 | 1.8% | 3.4% |
-| `google/gemma-4-12B-it` | 8 | 2.0% | 3.0% |
+`Qwen/Qwen3.8-27B` has **55 descendants** in the sample, carrying **18.8%** of
+its downloads. Of 989 nodes that appear as an ancestor, **170 carry three or
+more descendants** — the rest are a single derivative each.
 
-**The five broadest nodes together reach 32.2% of download-weighted exposure
-from 15% of the models.**
+**The five broadest nodes together reach 34.5% of download-weighted
+exposure.**
 
 ### The correction that was needed first
 
@@ -100,9 +117,10 @@ a sample, so every count is a floor.
 
 ---
 
-`other` is doing a lot of work in that table — it is a text box covering
-everything from a bespoke research licence to an unfilled form, and nothing can
-be concluded from the 13.8% it accounts for.
+`other` and `undeclared` are doing a lot of work in that table — together
+**33.4%** of chains. `other` is a text box covering everything from a bespoke
+research licence to an unfilled form, and nothing can be concluded from it. The
+true widening rate could be several times 1.67% or could be zero.
 
 ---
 
@@ -130,7 +148,7 @@ models that have one by construction, declaration is near-universal.
 
 Collection runs in CI because `huggingface.co` is unreachable from the
 development sandbox. No key is needed; public model metadata is
-unauthenticated. 400 chains cost **301 requests**.
+unauthenticated. 1,200 chains cost roughly 1,800 requests, unauthenticated.
 
 ## Reproducing
 
