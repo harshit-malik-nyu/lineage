@@ -167,10 +167,10 @@ def walk(client: Client, m: dict, max_depth: int = 8) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--per-tag", type=int, default=250)
-    ap.add_argument("--walk", type=int, default=400,
+    ap.add_argument("--per-tag", type=int, default=500)
+    ap.add_argument("--walk", type=int, default=1200,
                     help="how many derivatives to walk to a root")
-    ap.add_argument("--max-requests", type=int, default=2500)
+    ap.add_argument("--max-requests", type=int, default=6000)
     ap.add_argument("--out", default=str(ROOT / "evidence"))
     args = ap.parse_args()
 
