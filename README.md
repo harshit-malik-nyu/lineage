@@ -42,8 +42,9 @@ nowhere in their decision.
 
 ## The licence finding is the one that nearly went wrong
 
-The raw figure is alarming: **20.9%** of chains declare a different licence at
-the leaf than at the root. Reported as a violation rate, that is a headline.
+The raw figure is alarming: of the 359 chains where **both ends declare a
+licence**, **20.9%** declare different ones — 75 chains, or 18.8% of all 400.
+Reported as a violation rate, either number is a headline.
 
 It is also wrong. A derivative may lawfully carry a different licence from its
 ancestor — MIT and Apache-2.0 both permit relicensing under more restrictive
@@ -67,6 +68,37 @@ The gap between 20.9% and 0.2% is entirely the difference between counting
 string inequality and reasoning about what the licences permit. A test pins it,
 so a future simplification that reintroduces the naive count fails rather than
 quietly inflating the result.
+
+## Blast radius: what one base carries
+
+If a flaw were found in a base model, what is downstream of it?
+
+| Node | Descendants | Share of sample | Share of downloads |
+|---|---:|---:|---:|
+| `Qwen/Qwen3.8-27B` | **31** | 7.8% | **21.4%** |
+| `Qwen/Qwen3.6-35B-A3B` | 14 | 3.5% | 4.3% |
+| `Qwen/Qwen3.8-Flash-Next` | 7 | 1.8% | 3.4% |
+| `google/gemma-4-12B-it` | 8 | 2.0% | 3.0% |
+
+**The five broadest nodes together reach 32.2% of download-weighted exposure
+from 15% of the models.**
+
+### The correction that was needed first
+
+Ranking by download weight alone put `nvidia/LocateAnything-3B` near the top on
+6.1% of downloads — from a **single descendant**. That is one popular model,
+not a dependency, and treating it as one conflates two different risks.
+
+Nodes now carry a breadth flag at a threshold that is exposed rather than
+buried, and narrow ones stay visible in the ranking instead of being filtered
+away, because seeing them is the point.
+
+**"Inherits" means "is downstream of."** It is an upper bound on exposure, not
+a prediction that a flaw propagates — a fine-tune on clean data dilutes a bias
+and a quantisation can break a backdoor by accident. And chains are walked from
+a sample, so every count is a floor.
+
+---
 
 `other` is doing a lot of work in that table — it is a text box covering
 everything from a bespoke research licence to an unfilled form, and nothing can
