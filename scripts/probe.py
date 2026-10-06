@@ -14,7 +14,6 @@ absent from the list endpoint; lineage appears in `tags` as `base_model:NAME`.
 from __future__ import annotations
 
 import json
-import sys
 import time
 import urllib.error
 import urllib.parse

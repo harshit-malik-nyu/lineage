@@ -1,0 +1,58 @@
+{
+  "chains": 400,
+  "distinct_root_orgs": 65,
+  "concentration_top3": {
+    "k": 3,
+    "orgs": [
+      "Qwen",
+      "google",
+      "MiniMaxAI"
+    ],
+    "share_of_derivatives": 0.5725,
+    "share_of_downloads": 0.6777642504603354
+  },
+  "concentration_top5": {
+    "k": 5,
+    "orgs": [
+      "Qwen",
+      "google",
+      "MiniMaxAI",
+      "Tongyi-MAI",
+      "black-forest-labs"
+    ],
+    "share_of_derivatives": 0.6475,
+    "share_of_downloads": 0.6936802451410428
+  },
+  "through_intermediary": 0.4325,
+  "max_depth": 8,
+  "depth_distribution": {
+    "1": 227,
+    "2": 117,
+    "3": 38,
+    "4": 9,
+    "5": 3,
+    "6": 2,
+    "7": 1,
+    "8": 3
+  },
+  "licence_categories": {
+    "consistent": 284,
+    "unrankable": 55,
+    "narrows": 19,
+    "undeclared": 41,
+    "widens": 1
+  },
+  "widening_count": 1,
+  "unresolved_parents": 4,
+  "cycles": 3,
+  "widening": [
+    {
+      "leaf": "kenpath/svara-tts-v1",
+      "leaf_licence": "apache-2.0",
+      "root_licence": "llama3.2",
+      "downloads": 52406,
+      "category": "widens",
+      "note": "leaf claims apache-2.0 while the ancestor is llama3.2, which does not grant that"
+    }
+  ]
+}
