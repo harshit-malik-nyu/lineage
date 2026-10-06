@@ -83,10 +83,11 @@ class Client:
                 if e.code == 429 and attempt < retries - 1:
                     time.sleep(8 * (attempt + 1))
                     continue
-                self.errors.append({"path": path, "status": e.code})
+                self.errors.append({"url": url[:120], "status": e.code})
                 return None
             except Exception as exc:                    # noqa: BLE001
-                self.errors.append({"path": path, "error": type(exc).__name__})
+                self.errors.append({"url": url[:120],
+                                    "error": type(exc).__name__})
                 return None
         return None
 
