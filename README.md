@@ -57,6 +57,47 @@ is incomplete without its sampling depth, and almost none state one.
 That is a methodological finding rather than a fact about model weights, and it
 is the more useful of the two.
 
+### A second sample, selected differently — and the result inverted
+
+Depth sensitivity raises the obvious question: what does the *population* look
+like? The API has no random sampler, but it sorts by fields uncorrelated with
+downloads. Striding across the index sorted by **upload date** gives a sample
+selected on when a model appeared rather than on how popular it became.
+
+That has its own bias — the population grows over time, so it over-represents
+whatever period uploaded most. The point is that the bias runs in a different
+direction.
+
+I expected the popularity sample to be the more concentrated one. It is not.
+
+| | Popularity-sampled | Recency-sampled |
+|---|---:|---:|
+| Chains | 1,200 | 245 |
+| Top 3 share of models | 45.8% | **60.8%** |
+| Top 3 share of downloads | 63.3% | **80.6%** |
+| Distinct root organisations | 188 | **62** |
+| Median downloads | 11,570 | **0** |
+| Chains through an intermediary | 53.0% | 51.0% |
+| Licence widening | 1.7% | 1.6% |
+
+**The flow is more concentrated than the stock, by fifteen points.** New uploads
+pile onto whichever base is currently fashionable; the popular set has
+accumulated across several generations of base model. A median download count
+of zero in the recency sample is not a glitch — it is the difference between
+the two samples stated in one number.
+
+**A snapshot of what exists understates where the ecosystem is heading.**
+
+### What survives both selection rules
+
+Chain depth agrees — 53.0% against 51.0%. Licence widening agrees — 1.7%
+against 1.6%. Those are claims about how these models are *built*, and they
+survive a change of selection rule that moves concentration by fifteen points.
+
+Concentration does not survive it, in either direction. Every absolute
+concentration figure here is conditional on a sampling rule, and the two rules
+available bracket it between 45.8% and 60.8%.
+
 ### What survives the depth problem
 
 Within every band, **downloads concentrate more than models do**. At the full

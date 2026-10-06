@@ -1,0 +1,28 @@
+{
+  "popularity": {
+    "label": "popularity-sampled",
+    "n": 1200,
+    "top3_share_of_derivatives": 0.4583333333333333,
+    "top3_share_of_downloads": 0.633068446883321,
+    "distinct_root_orgs": 188,
+    "through_intermediary": 0.53,
+    "median_downloads": 11570,
+    "widening_rate": 0.016666666666666666
+  },
+  "recency": {
+    "label": "recency-sampled",
+    "n": 245,
+    "top3_share_of_derivatives": 0.6081632653061224,
+    "top3_share_of_downloads": 0.8060862445414847,
+    "distinct_root_orgs": 62,
+    "through_intermediary": 0.5102040816326531,
+    "median_downloads": 0,
+    "widening_rate": 0.0163265306122449
+  },
+  "gap_top3_share": -0.1498299319727891,
+  "gap_distinct_orgs": 126,
+  "median_download_ratio": Infinity,
+  "recency_median_is_zero": true,
+  "verdict": "The recency sample is 15.0 points MORE concentrated than the popularity sample. New uploads pile onto whichever base is current, while the popular stock has accumulated across several generations. The flow is more concentrated than the stock, which means a snapshot of what exists understates where the ecosystem is heading.",
+  "caveat": "Neither sample is random. Recency striding over-represents whatever period uploaded most; popularity sampling over-represents the head. The comparison bounds selection effects rather than removing them."
+}

@@ -93,19 +93,34 @@ def compare(popularity: list[dict], recency: list[dict]) -> dict:
         verdict = ("The two selection rules agree within five points, so the "
                    "concentration figure does not depend on either and can be "
                    "read as a property of the population.")
+    elif gap < 0:
+        # The direction that was not predicted. Recently uploaded models are
+        # MORE concentrated than the popular stock, because new uploads pile
+        # onto whichever base is currently fashionable while the popular set
+        # has accumulated across several generations of base model.
+        verdict = (f"The recency sample is {abs(gap)*100:.1f} points MORE "
+                   "concentrated than the popularity sample. New uploads pile "
+                   "onto whichever base is current, while the popular stock "
+                   "has accumulated across several generations. The flow is "
+                   "more concentrated than the stock, which means a snapshot "
+                   "of what exists understates where the ecosystem is heading.")
     else:
-        verdict = (f"The two disagree by {abs(gap)*100:.1f} points. The "
-                   "popularity figure describes what people use, not what "
-                   "exists, and every concentration number in this repository "
-                   "has to be read that way.")
+        verdict = (f"The two disagree by {abs(gap)*100:.1f} points, with the "
+                   "popularity sample more concentrated. That figure describes "
+                   "what people use rather than what exists.")
 
     return {
         "popularity": p.as_dict(),
         "recency": r.as_dict(),
         "gap_top3_share": gap,
         "gap_distinct_orgs": p.distinct_root_orgs - r.distinct_root_orgs,
+        # The recency sample's median downloads is zero: a model uploaded
+        # today has not been downloaded yet. That is not a glitch, it is the
+        # difference between the two samples stated in one number — one
+        # measures stock, the other measures flow.
         "median_download_ratio": (p.median_downloads / r.median_downloads
-                                  if r.median_downloads else None),
+                                  if r.median_downloads else float("inf")),
+        "recency_median_is_zero": r.median_downloads == 0,
         "verdict": verdict,
         "caveat": ("Neither sample is random. Recency striding over-represents "
                    "whatever period uploaded most; popularity sampling "
