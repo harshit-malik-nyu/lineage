@@ -11,42 +11,58 @@ operators have no idea what is underneath.
 
 ---
 
-## The ecosystem is more concentrated in use than in appearance
+## Concentration is a property of where you look, not of the ecosystem
 
-| | Share of derivatives | Share of downloads |
+This is the finding, and it arrived by accident.
+
+The first collection walked 400 chains and reported the top three
+organisations as **57.2%** of derivatives. The second walked 1,200 and reported
+**45.8%**. The obvious reading is that the small sample was wrong.
+
+It is not what happened. Subsampling the 1,200 shows the share statistics are
+stable in n — **46.8% at a hundred chains, 45.8% at twelve hundred**. Sampling
+variance cannot produce an eleven-point move.
+
+What produced it was collection depth. The first run took the 250
+most-downloaded models per construction type; the second took 500. Taking the
+top 400 by downloads *out of the larger pool* reproduces the original figure.
+
+### The popular end is concentrated. The tail is not.
+
+| Band of the download ranking | Top 3 orgs | Distinct orgs | Median downloads |
+|---|---:|---:|---:|
+| rank 1–100 | **68.0%** | 24 | 788,473 |
+| rank 101–200 | 65.0% | 27 | 349,468 |
+| rank 201–400 | 54.5% | 51 | 158,176 |
+| rank 401–800 | 47.0% | 89 | 11,570 |
+| rank 801–1200 | **34.2%** | 115 | 3,106 |
+
+### What a study would report, by how deep it collected
+
+| Collected | Top 3 orgs | Distinct orgs |
 |---|---:|---:|
-| Top 3 orgs (Qwen, Google, Black Forest Labs) | 45.8% | **63.3%** |
+| Top 100 | **68.0%** | 24 |
+| Top 400 | 58.2% | 61 |
+| Top 1,200 | **45.8%** | 188 |
 
-There are **188 distinct root organisations** in the sample. Three of them
-carry nearly two thirds of the downloads.
+**Two honest studies of the same ecosystem, differing only in sampling depth,
+can report 45.8% or 68.0% concentration — a spread of 22 points — and 24 or 188
+organisations, a factor of eight.**
 
-**Counting models understates it by seventeen points.** A survey reporting "188
-organisations publish base models" describes a diverse ecosystem; weighting by
-what people actually run describes a concentrated one.
+Open-weight policy arguments cite concentration in both directions. *"A handful
+of labs control the ecosystem"* and *"hundreds of organisations publish base
+models"* are both supportable from this data, by choosing a cut. Any such claim
+is incomplete without its sampling depth, and almost none state one.
 
-### The sample size mattered, and this is how much
+That is a methodological finding rather than a fact about model weights, and it
+is the more useful of the two.
 
-The first run walked 400 chains. Tripling it moved every headline figure:
+### What survives the depth problem
 
-| | 400 chains | 1,200 chains |
-|---|---:|---:|
-| Top 3 share of derivatives | 57.2% | **45.8%** |
-| Top 3 share of downloads | 67.8% | **63.3%** |
-| Distinct root organisations | 65 | **188** |
-| Chains through an intermediary | 43.2% | **53.0%** |
-| Licence widening | 0.2% | **1.67%** |
-
-**The small sample overstated concentration by eleven points and understated
-the organisational tail by a factor of three.** It also found one licence
-widening where the larger sample finds twenty.
-
-What survived is the direction: downloads concentrate more than models do, and
-the gap *widened* from ten points to seventeen. That is the claim worth making,
-and it is the only one the first sample would have supported.
-
-Figures below are from the 1,200-chain run. A consistency test recomputes each
-one from the committed data, so the next collection failing them is the
-notification rather than a silent drift.
+Within every band, **downloads concentrate more than models do**. At the full
+sample the top three are 45.8% of derivatives and **63.3%** of downloads. That
+direction holds at every cut, so it is a claim about the ecosystem rather than
+about the sampling.
 
 ## Most consumers inherit from someone they have never heard of
 

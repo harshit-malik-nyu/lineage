@@ -5,19 +5,29 @@ open-weight ecosystem.
 
 ---
 
-## 1. The sample is drawn from one slice and generalised to an ecosystem
+## 1. The sample is drawn from one slice — and this is now measured
 
 Chains are walked from the most-downloaded models carrying five derivative
-tags. That is not a random sample of HuggingFace — it is the popular end of
-five specific construction types, and popularity is exactly what the
-concentration finding measures.
+tags. That is not a random sample of HuggingFace, and popularity is exactly
+what the concentration finding measures.
 
-**A sample selected on downloads, used to make a claim about downloads, is
-circular in a way no amount of care inside the analysis fixes.** The honest
-statement is narrower than the one the README makes: *among heavily-downloaded
-derivatives of these types*, concentration looks like this.
+**This objection is no longer hypothetical. It is quantified, and it is large.**
+`src/lineage/depth.py` shows the top-three share falling from 68.0% in the
+first hundred models to 34.2% in ranks 801–1200, with distinct organisations
+rising from 24 to 115. A study collecting the top 100 and a study collecting
+the top 1,200 report 68.0% and 45.8% from the same ecosystem.
 
-This is the most serious objection.
+The README now leads with this rather than defending against it, because the
+sensitivity turned out more interesting than the concentration figure it
+undermines.
+
+**What it costs:** every absolute concentration number in this repository is a
+statement about a sampling depth. Only the *direction* — that downloads
+concentrate more than models, at every cut — is a claim about the ecosystem.
+
+**What remains unfixed:** a random sample of the full model index would give a
+population figure rather than a depth-conditional one. The API supports it and
+this collection did not do it.
 
 ## 2. Declared lineage is not actual lineage
 

@@ -1,0 +1,125 @@
+{
+  "bands": [
+    {
+      "label": "rank 1-100",
+      "n": 100,
+      "rank_from": 1,
+      "rank_to": 100,
+      "top3_share_of_derivatives": 0.68,
+      "top3_share_of_downloads": 0.7164732860478138,
+      "distinct_root_orgs": 24,
+      "median_downloads": 788473
+    },
+    {
+      "label": "rank 101-200",
+      "n": 100,
+      "rank_from": 101,
+      "rank_to": 200,
+      "top3_share_of_derivatives": 0.65,
+      "top3_share_of_downloads": 0.6487769550164513,
+      "distinct_root_orgs": 27,
+      "median_downloads": 349468
+    },
+    {
+      "label": "rank 201-400",
+      "n": 200,
+      "rank_from": 201,
+      "rank_to": 400,
+      "top3_share_of_derivatives": 0.545,
+      "top3_share_of_downloads": 0.5440970664365081,
+      "distinct_root_orgs": 51,
+      "median_downloads": 158176
+    },
+    {
+      "label": "rank 401-800",
+      "n": 400,
+      "rank_from": 401,
+      "rank_to": 800,
+      "top3_share_of_derivatives": 0.47,
+      "top3_share_of_downloads": 0.5220052120709266,
+      "distinct_root_orgs": 89,
+      "median_downloads": 11570
+    },
+    {
+      "label": "rank 801-1200",
+      "n": 400,
+      "rank_from": 801,
+      "rank_to": 1200,
+      "top3_share_of_derivatives": 0.3425,
+      "top3_share_of_downloads": 0.35690620698166403,
+      "distinct_root_orgs": 115,
+      "median_downloads": 3106
+    }
+  ],
+  "cumulative": [
+    {
+      "label": "top 100",
+      "n": 100,
+      "rank_from": 1,
+      "rank_to": 100,
+      "top3_share_of_derivatives": 0.68,
+      "top3_share_of_downloads": 0.7164732860478138,
+      "distinct_root_orgs": 24,
+      "median_downloads": 788473
+    },
+    {
+      "label": "top 200",
+      "n": 200,
+      "rank_from": 1,
+      "rank_to": 200,
+      "top3_share_of_derivatives": 0.655,
+      "top3_share_of_downloads": 0.6978927227609639,
+      "distinct_root_orgs": 37,
+      "median_downloads": 452615
+    },
+    {
+      "label": "top 400",
+      "n": 400,
+      "rank_from": 1,
+      "rank_to": 400,
+      "top3_share_of_derivatives": 0.5825,
+      "top3_share_of_downloads": 0.6461356468973168,
+      "distinct_root_orgs": 61,
+      "median_downloads": 266987
+    },
+    {
+      "label": "top 800",
+      "n": 800,
+      "rank_from": 1,
+      "rank_to": 800,
+      "top3_share_of_derivatives": 0.525,
+      "top3_share_of_downloads": 0.6547049498483629,
+      "distinct_root_orgs": 123,
+      "median_downloads": 114554
+    },
+    {
+      "label": "top 1200",
+      "n": 1200,
+      "rank_from": 1,
+      "rank_to": 1200,
+      "top3_share_of_derivatives": 0.4583333333333333,
+      "top3_share_of_downloads": 0.633068446883321,
+      "distinct_root_orgs": 188,
+      "median_downloads": 11570
+    }
+  ],
+  "spread": {
+    "depths": [
+      100,
+      200,
+      400,
+      800,
+      1200
+    ],
+    "top3_share_range": [
+      0.4583333333333333,
+      0.68
+    ],
+    "top3_share_spread_points": 22.166666666666675,
+    "distinct_orgs_range": [
+      24,
+      188
+    ],
+    "note": "Both ends are honest readings of the same data. A claim about ecosystem concentration is incomplete without the sampling depth that produced it."
+  }
+}
