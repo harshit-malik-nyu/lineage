@@ -1,5 +1,5 @@
 {
-  "probed_at": "2026-10-06T16:39:13Z",
+  "probed_at": "2026-10-06T16:45:27Z",
   "coverage": {
     "top by downloads": {
       "n": 300,
@@ -13,8 +13,8 @@
     },
     "recently created": {
       "n": 300,
-      "declared": 90,
-      "share": 0.3
+      "declared": 91,
+      "share": 0.30333333333333334
     }
   },
   "derivative_coverage": {
