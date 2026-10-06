@@ -49,17 +49,34 @@ class Client:
         self.requests = 0
         self.errors: list[dict] = []
         self.cache: dict[str, dict] = {}
+        self.next_url: str | None = None
 
     def get(self, path: str, params: dict | None = None, retries: int = 3):
         url = f"{API}/{path}"
         if params:
             url += "?" + urllib.parse.urlencode(params, doseq=True)
+        return self.get_url(url, retries)
+
+    def get_url(self, url: str, retries: int = 3):
+        """
+        Fetch a full URL and keep the Link header.
+
+        The API ignores a `page` parameter entirely — the first version of
+        this sampler requested sixty pages and received the same hundred
+        models sixty times, ending with a pool of fifteen. Pagination is
+        cursor-based through the Link header, which is why this returns it.
+        """
+        self.next_url = None
         for attempt in range(retries):
             self.requests += 1
             try:
                 req = urllib.request.Request(
                     url, headers={"User-Agent": "lineage-sampler"})
                 with urllib.request.urlopen(req, timeout=45) as r:
+                    link = r.headers.get("Link") or ""
+                    for part in link.split(","):
+                        if 'rel="next"' in part:
+                            self.next_url = part.split(";")[0].strip(" <>")
                     time.sleep(self.pause)
                     return json.loads(r.read())
             except urllib.error.HTTPError as e:
@@ -148,22 +165,26 @@ def main() -> int:
     started = time.time()
 
     pool: dict[str, dict] = {}
-    print(f"striding {args.pages} pages of the createdAt index", flush=True)
-    for page in range(1, args.pages + 1):
-        if client.requests > args.max_requests:
-            break
-        data = client.get("models", {"sort": "createdAt", "direction": -1,
-                                     "limit": 100, "page": page,
-                                     "full": "true"})
+    print(f"striding {args.pages} cursor pages of the createdAt index", flush=True)
+    data = client.get("models", {"sort": "createdAt", "direction": -1,
+                                 "limit": 100, "full": "true"})
+    page = 0
+    while data is not None and page < args.pages:
         rows = data if isinstance(data, list) else []
         if not rows:
-            print(f"  page {page} empty — index pagination ends here", flush=True)
+            print(f"  page {page + 1} empty — index ends here", flush=True)
             break
         for m in rows[::args.stride]:
             if m.get("id"):
                 pool[m["id"]] = m
+        page += 1
         if page % 10 == 0:
             print(f"  page {page}: pool {len(pool)}", flush=True)
+        if client.requests > args.max_requests or not client.next_url:
+            if not client.next_url:
+                print(f"  no next cursor after page {page}", flush=True)
+            break
+        data = client.get_url(client.next_url)
 
     declared = [m for m in pool.values() if parents(m)]
     print(f"\n{len(pool):,} sampled, {len(declared):,} declare a parent "
