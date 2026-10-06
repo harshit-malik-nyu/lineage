@@ -1,39 +1,40 @@
-1. reachable and unauthenticated?
-   yes
+1. coverage by slice (how many declare a parent?)
 
-2. what does a model record carry?
-   fields present on the 20 most-downloaded:
-     _id                          20/20
-     id                           20/20
-     author                       20/20
-     gated                        20/20
-     lastModified                 20/20
-     likes                        20/20
-     private                      20/20
-     sha                          20/20
-     downloads                    20/20
-     tags                         20/20
-     library_name                 20/20
-     createdAt                    20/20
-     modelId                      20/20
-     siblings                     20/20
-     pipeline_tag                 18/20
+   top by downloads      108/300    36.0%
+   top by likes           85/300    28.3%
+   recently created       90/300    30.0%
 
-3. do they declare a base model?
-   5/20 of the most-downloaded declare a base model
-     sentence-transformers/all-MiniLM-L6-v2           None
-     cross-encoder/ms-marco-MiniLM-L6-v2              None
-     Qwen/Qwen3-0.6B                                  None
-     Comfy-Org/MiniMax-H3                             None
-     google/gemma-4-26B-A4B-it                        None
+2. among models that are PLAINLY derivatives
 
-4. how common is it across a wider slice?
-   74/200 of the top 200 by downloads declare a base model
+   lora      190/200    95.0%
+   peft      178/200    89.0%
+   merge     167/200    83.5%
+   gguf      177/200    88.5%
 
-5. can the tree be walked? (does a declared base resolve?)
+3. do declared parents resolve, and how deep does it go?
 
-{
-  "n": 200,
-  "with_base_model": 74,
-  "share": 0.37
-}
+   autotrust/JEV-27B-VL                 -> Qwen/Qwen3.8-27B
+   autotrust/GEV-26B-Decide             -> google/gemma-4-26B-A4B-it -> google/gemma-4-26B-A4B
+   Jackrong/Qwopus3.6-35B-A3B-Coder-M   -> Jackrong/Qwopus3.6-35B-A3B-v1 -> unsloth/Qwen3.6-35B-A3B -> Qwen/Qwen3.6-35B-A3B
+   lightx2v/Qwen-Image-Edit-2511-Ligh   -> Qwen/Qwen-Image-Edit-2511
+   lightx2v/Qwen-Image-Lightning        -> Qwen/Qwen-Image
+   nphSi/Z-Image-Lora                   -> Tongyi-MAI/Z-Image
+   autotrust/JEV-9B                     -> Qwen/Qwen3.5-9B -> Qwen/Qwen3.5-9B-Base
+   Viggle/Qwen-Image-2.1-viggle-turbo   -> Qwen/Qwen-Image-2.1
+   webAI-Official/TwIL-LM3              -> HuggingFaceTB/SmolLM3-3B -> HuggingFaceTB/SmolLM3-3B-Base
+   ScottzillaSystems/qwen-image-edit-   -> Qwen/Qwen-Image-Edit-2511
+   Jackrong/Qwopus3.6-27B-Coder-MTP-G   -> Jackrong/Qwopus3.6-27B-v2
+   LyliaEngine/Pony_Diffusion_V6_XL     -> Bakanayatsu/Pony-Diffusion-V6-
+
+4. concentration: which bases do the derivatives point at?
+
+   Qwen                           162
+   black-forest-labs              66
+   krea                           40
+   MiniMaxAI                      40
+   Tongyi-MAI                     38
+   stabilityai                    22
+   Jackrong                       14
+   Comfy-Org                      14
+
+written to evidence/probe.json
