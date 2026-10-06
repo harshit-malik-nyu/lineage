@@ -1,37 +1,41 @@
 {
-  "collected_at": "2026-10-06T16:46:54Z",
+  "collected_at": "2026-10-06T19:01:31Z",
   "coverage_by_tag": {
     "lora": {
-      "n": 250,
-      "declared": 236,
-      "share": 0.944
+      "n": 500,
+      "declared": 474,
+      "share": 0.948
     },
     "peft": {
-      "n": 250,
-      "declared": 225,
-      "share": 0.9
+      "n": 500,
+      "declared": 451,
+      "share": 0.902
     },
     "merge": {
-      "n": 250,
-      "declared": 211,
-      "share": 0.844
+      "n": 500,
+      "declared": 417,
+      "share": 0.834
     },
     "gguf": {
-      "n": 250,
-      "declared": 223,
-      "share": 0.892
+      "n": 500,
+      "declared": 453,
+      "share": 0.906
     },
     "adapter": {
-      "n": 250,
-      "declared": 206,
-      "share": 0.824
+      "n": 500,
+      "declared": 363,
+      "share": 0.726
     }
   },
-  "distinct_derivatives": 1226,
-  "chains_walked": 400,
-  "requests": 301,
-  "elapsed_s": 87.2,
+  "distinct_derivatives": 2443,
+  "chains_walked": 1200,
+  "requests": 1025,
+  "elapsed_s": 492.4,
   "errors": [
+    {
+      "path": "models/microsoft/WizardLM-2-7B",
+      "status": 401
+    },
     {
       "path": "models/huihui-ai/Huihui-gemma-4-26B-A4B-it-qat-q4_0-unquantized-abliterated",
       "status": 401
@@ -47,141 +51,201 @@
     {
       "path": "models/OliviaRossi/TripleTrouble",
       "status": 401
+    },
+    {
+      "path": "models/kaist-ai/mpa-Mistral-7b-v0.2-hf-sft-66k",
+      "status": 401
+    },
+    {
+      "path": "models/DavidAU/Qwen3.5-9B-The-Bradbury-F451-Pro-Writer-Uncensored-Heretic",
+      "status": 401
+    },
+    {
+      "path": "models/Taimwe/securecoder-30b-pro-merged",
+      "status": 401
+    },
+    {
+      "path": "models/jdqwoi/Mistral-dolphin-mix-cine-open-Ne-NSFW",
+      "status": 401
+    },
+    {
+      "path": "models/huihui-ai/Huihui-gemma-4-31B-it-qat-q4_0-unquantized-abliterated",
+      "status": 401
+    },
+    {
+      "path": "models/diffusers/stable-diffusion-xl-base-1.0",
+      "status": 401
+    },
+    {
+      "path": "models/DavidAU/Qwen3.5-9B-Polar-Rev1-Uncensored-Heretic",
+      "status": 401
+    },
+    {
+      "path": "models/Inv/Konstanta-V4-Alpha-7B",
+      "status": 401
+    },
+    {
+      "path": "models/v000000/MN-12B-Part1_ignore",
+      "status": 401
+    },
+    {
+      "path": "models/Tralalabs/Qwen3-2507-4B-Instruct-Haiku-4.5-Merged-FP16",
+      "status": 401
+    },
+    {
+      "path": "models/Trappu/Magnum-Picaro-0.7-v2-12b",
+      "status": 429
+    },
+    {
+      "path": "models/MotherEarth/MotherEarth-Hermes-8B",
+      "status": 429
+    },
+    {
+      "path": "models/backyardai/L3-Stheno-Maid-Blackroot-Grand-HORROR-16B",
+      "status": 429
+    },
+    {
+      "path": "models/VongolaChouko/Starcannon-Unleashed-12B-v1.0",
+      "status": 429
+    },
+    {
+      "path": "models/DavidAU/L3-MOE-8X8B-Dark-Planet-8D-Mirrored-Chaos-47B",
+      "status": 401
     }
   ],
-  "unresolved_parents": 4,
-  "cycles": 3,
-  "truncated": 3,
+  "unresolved_parents": 21,
+  "cycles": 6,
+  "truncated": 8,
   "top_roots_by_count": [
     [
       "Qwen/Qwen3.8-27B",
-      31
+      55
     ],
     [
       "MiniMaxAI/MiniMax-H3",
-      22
-    ],
-    [
-      "Qwen/Qwen3.5-9B-Base",
-      15
-    ],
-    [
-      "google/gemma-4-26B-A4B",
-      15
+      50
     ],
     [
       "Qwen/Qwen3.6-35B-A3B",
-      14
-    ],
-    [
-      "Qwen/Qwen3.6-27B",
-      14
-    ],
-    [
-      "Qwen/Qwen-Image-Edit-2511",
-      14
-    ],
-    [
-      "krea/Krea-2-Raw",
-      12
+      39
     ],
     [
       "google/gemma-4-31B",
-      9
+      36
     ],
     [
-      "Qwen/Qwen-Image-2.1",
-      8
+      "Qwen/Qwen3.5-9B-Base",
+      34
     ],
     [
-      "google/gemma-4-12B",
-      8
+      "google/gemma-4-26B-A4B",
+      32
     ],
     [
-      "Tongyi-MAI/Z-Image",
-      8
-    ],
-    [
-      "Qwen/Qwen3.8-Flash-Next",
-      7
-    ],
-    [
-      "Tongyi-MAI/Z-Image-Turbo",
-      7
-    ],
-    [
-      "Qwen/Qwen-Image-Edit-2509",
-      7
-    ],
-    [
-      "KBlueLeaf/kohaku-xl-beta5",
-      7
+      "Qwen/Qwen-Image-Edit-2511",
+      27
     ],
     [
       "black-forest-labs/FLUX.1-dev",
-      7
+      26
+    ],
+    [
+      "krea/Krea-2-Raw",
+      24
+    ],
+    [
+      "Qwen/Qwen3.6-27B",
+      23
+    ],
+    [
+      "Qwen/Qwen3-0.6B-Base",
+      18
     ],
     [
       "Qwen/Qwen3.5-4B-Base",
-      6
+      16
     ],
     [
-      "ornith-ai/Ornith-1.5-35B-A3B",
-      5
+      "Qwen/Qwen3.8-Flash-Next",
+      14
     ],
     [
-      "google/gemma-4-E4B",
-      5
+      "Qwen/Qwen-Image-Edit-2509",
+      13
+    ],
+    [
+      "stabilityai/stable-diffusion-xl-base-1.0",
+      13
+    ],
+    [
+      "Qwen/Qwen-Image-2.1",
+      12
+    ],
+    [
+      "google/gemma-4-12B",
+      12
+    ],
+    [
+      "Tongyi-MAI/Z-Image-Turbo",
+      12
+    ],
+    [
+      "KBlueLeaf/kohaku-xl-beta5",
+      12
+    ],
+    [
+      "meta-llama/Llama-3.1-8B",
+      11
     ]
   ],
   "top_roots_by_downloads": [
     [
       "Qwen/Qwen3.8-27B",
-      38193660
+      39740460
     ],
     [
       "Qwen/Qwen2.5-3B",
-      10946803
+      11251721
     ],
     [
       "Qwen/Qwen3.6-35B-A3B",
-      7756934
+      8740156
     ],
     [
       "Qwen/Qwen3-Coder-30B-A3B-Instruct",
-      6928970
+      7019484
+    ],
+    [
+      "Qwen/Qwen3.8-Flash-Next",
+      7010500
     ],
     [
       "ACE-Step/Ace-Step1.5",
       6696142
     ],
     [
-      "Qwen/Qwen3.8-Flash-Next",
-      6155840
+      "Qwen/Qwen3.6-27B",
+      6102059
     ],
     [
       "google/gemma-4-12B",
-      5412687
-    ],
-    [
-      "Qwen/Qwen3.6-27B",
-      5225857
+      5686539
     ],
     [
       "Qwen/Qwen3.5-9B-Base",
-      5025226
+      5431229
     ],
     [
       "MiniMaxAI/MiniMax-H3",
-      4197034
+      4668258
     ],
     [
       "google/gemma-4-26B-A4B",
-      4052387
+      4577580
     ],
     [
       "Qwen/Qwen-Image-2.1",
-      3204917
+      3434016
     ],
     [
       "ornith-ai/Ornith-1.5-35B-A3B",
@@ -189,31 +253,31 @@
     ],
     [
       "google/gemma-4-E4B",
-      3057276
+      3071922
     ],
     [
       "ornith-ai/Ornith-1.5-9B",
-      2235979
+      2406334
+    ],
+    [
+      "Qwen/Qwen3.5-4B-Base",
+      2396742
+    ],
+    [
+      "poolside/Laguna-XS-2.1",
+      2065471
+    ],
+    [
+      "Qwen/Qwen3.5-35B-A3B-Base",
+      2034900
     ],
     [
       "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP",
       1990598
     ],
     [
-      "Qwen/Qwen3.5-4B-Base",
-      1944671
-    ],
-    [
       "nvidia/nemotron-3.5-asr-streaming-0.6b",
       1867550
-    ],
-    [
-      "poolside/Laguna-XS-2.1",
-      1865978
-    ],
-    [
-      "Qwen/Qwen3.5-35B-A3B-Base",
-      1786963
     ]
   ]
 }

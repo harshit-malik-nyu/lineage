@@ -1,33 +1,49 @@
 collecting derivatives by construction type
-  lora      236/250  declare a parent (94.4%)
-  peft      225/250  declare a parent (90.0%)
-  merge     211/250  declare a parent (84.4%)
-  gguf      223/250  declare a parent (89.2%)
-  adapter   206/250  declare a parent (82.4%)
+  lora      474/500  declare a parent (94.8%)
+  peft      451/500  declare a parent (90.2%)
+  merge     417/500  declare a parent (83.4%)
+  gguf      453/500  declare a parent (90.6%)
+  adapter   363/500  declare a parent (72.6%)
 
-1,226 distinct derivatives collected
-walking 400 chains to a root
-  50/400 (49 requests)
-  100/400 (92 requests)
-  150/400 (136 requests)
-  200/400 (180 requests)
-  250/400 (222 requests)
-  300/400 (239 requests)
-  350/400 (276 requests)
-  400/400 (301 requests)
+2,443 distinct derivatives collected
+walking 1,200 chains to a root
+  50/1200 (49 requests)
+  100/1200 (92 requests)
+  150/1200 (136 requests)
+  200/1200 (180 requests)
+  250/1200 (221 requests)
+  300/1200 (252 requests)
+  350/1200 (300 requests)
+  400/1200 (340 requests)
+  450/1200 (361 requests)
+  500/1200 (383 requests)
+  550/1200 (409 requests)
+  600/1200 (440 requests)
+  650/1200 (485 requests)
+  700/1200 (517 requests)
+  750/1200 (552 requests)
+  800/1200 (611 requests)
+  850/1200 (641 requests)
+  900/1200 (702 requests)
+  950/1200 (759 requests)
+  1000/1200 (812 requests)
+  1050/1200 (860 requests)
+  1100/1200 (924 requests)
+  1150/1200 (976 requests)
+  1200/1200 (1025 requests)
 
-  requests spent      301
-  chains walked       400
-  unresolved parents  4
-  cycles              3
-  truncated at depth  3
+  requests spent      1,025
+  chains walked       1,200
+  unresolved parents  21
+  cycles              6
+  truncated at depth  8
 
   top roots by derivative count:
-    Qwen/Qwen3.8-27B                                      31
-    MiniMaxAI/MiniMax-H3                                  22
-    Qwen/Qwen3.5-9B-Base                                  15
-    google/gemma-4-26B-A4B                                15
-    Qwen/Qwen3.6-35B-A3B                                  14
-    Qwen/Qwen3.6-27B                                      14
-    Qwen/Qwen-Image-Edit-2511                             14
-    krea/Krea-2-Raw                                       12
+    Qwen/Qwen3.8-27B                                      55
+    MiniMaxAI/MiniMax-H3                                  50
+    Qwen/Qwen3.6-35B-A3B                                  39
+    google/gemma-4-31B                                    36
+    Qwen/Qwen3.5-9B-Base                                  34
+    google/gemma-4-26B-A4B                                32
+    Qwen/Qwen-Image-Edit-2511                             27
+    black-forest-labs/FLUX.1-dev                          26
