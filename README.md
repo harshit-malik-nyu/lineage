@@ -86,6 +86,22 @@ accumulated across several generations of base model. A median download count
 of zero in the recency sample is not a glitch — it is the difference between
 the two samples stated in one number.
 
+#### Is the gap just the smaller sample?
+
+This project already mistook a selection effect for a sample-size effect once,
+so the question is asked in code rather than assumed. Subsampling the 1,200
+popularity chains down to 245 — the recency sample's size — two hundred times:
+
+| | |
+|---|---:|
+| Subsample mean | 46.6% |
+| Subsample range across 200 trials | 38.8% – 53.5% |
+| Recency sample actual | **60.8%** |
+| Standard deviations from the mean | **+4.8** |
+
+**Outside every one of the two hundred subsamples.** The gap is not the sample
+size.
+
 **A snapshot of what exists understates where the ecosystem is heading.**
 
 ### What survives both selection rules

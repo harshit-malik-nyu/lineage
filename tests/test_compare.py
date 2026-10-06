@@ -108,3 +108,44 @@ class TestHonesty:
         flat = " ".join(src.split())
         assert "over-represents whatever period has the most uploads" in flat
         assert "not unbiased" in flat
+
+
+class TestTheGapIsNotSampleSize:
+    """
+    This project mistook a selection effect for a sample-size effect once
+    already. The question now gets asked in code rather than assumed.
+    """
+
+    def test_the_check_runs_and_is_applicable(self, samples):
+        from lineage.compare import is_the_gap_sample_size
+        pop, rec = samples
+        r = is_the_gap_sample_size(pop, rec, trials=60)
+        assert r["applicable"]
+        assert r["subsample_size"] == len(rec)
+
+    def test_the_recency_figure_is_outside_every_subsample(self, samples):
+        """
+        Subsampling the 1,200 down to 245, two hundred times, never reaches
+        60.8%. The gap is not the sample size.
+        """
+        from lineage.compare import is_the_gap_sample_size
+        pop, rec = samples
+        r = is_the_gap_sample_size(pop, rec, trials=100)
+        assert not r["inside_range"]
+        assert r["sd_from_mean"] > 3
+
+    def test_the_check_is_reported_alongside_the_comparison(self, samples):
+        """
+        A fifteen-point gap quoted without this check is exactly the claim I
+        got wrong earlier in this project.
+        """
+        from lineage.compare import compare
+        pop, rec = samples
+        c = compare(pop, rec)
+        assert "sample_size_check" in c
+        assert c["sample_size_check"]["verdict"].startswith("outside")
+
+    def test_it_declines_when_the_larger_sample_is_not_larger(self, samples):
+        from lineage.compare import is_the_gap_sample_size
+        _, rec = samples
+        assert not is_the_gap_sample_size(rec, rec)["applicable"]

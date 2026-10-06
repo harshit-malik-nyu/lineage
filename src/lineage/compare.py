@@ -77,6 +77,52 @@ def summarise(chains: list[dict], label: str) -> SampleSummary:
     )
 
 
+def is_the_gap_sample_size(popularity: list[dict], recency: list[dict],
+                           trials: int = 200, seed: int = 11) -> dict:
+    """
+    Could the gap be explained by the two samples having different sizes?
+
+    This project already mistook a selection effect for a sample-size effect
+    once, so the question gets asked rather than assumed. Subsample the larger
+    set down to the smaller one's size, many times, and see where the smaller
+    set's actual figure falls in that distribution.
+
+    A figure inside the subsample range means the gap is consistent with
+    noise. Outside it means the two samples are drawing from different
+    populations, which is the claim being made.
+    """
+    import random
+    import statistics
+
+    if len(popularity) <= len(recency):
+        return {"applicable": False,
+                "note": "the popularity sample is not larger"}
+
+    rng = random.Random(seed)
+    vals = []
+    for _ in range(trials):
+        sub = rng.sample(popularity, len(recency))
+        vals.append(analyse(sub).concentration(3)["share_of_derivatives"])
+
+    actual = analyse(recency).concentration(3)["share_of_derivatives"]
+    mean = statistics.fmean(vals)
+    sd = statistics.pstdev(vals)
+    lo, hi = min(vals), max(vals)
+
+    return {
+        "applicable": True,
+        "subsample_size": len(recency), "trials": trials,
+        "popularity_mean": mean, "popularity_sd": sd,
+        "popularity_range": [lo, hi],
+        "recency_actual": actual,
+        "inside_range": lo <= actual <= hi,
+        "sd_from_mean": (actual - mean) / sd if sd else float("inf"),
+        "verdict": ("consistent with sampling noise" if lo <= actual <= hi
+                    else "outside every subsample: the samples draw from "
+                         "different populations"),
+    }
+
+
 def compare(popularity: list[dict], recency: list[dict]) -> dict:
     """
     Both samples side by side, with the gap on each statistic.
@@ -112,6 +158,7 @@ def compare(popularity: list[dict], recency: list[dict]) -> dict:
     return {
         "popularity": p.as_dict(),
         "recency": r.as_dict(),
+        "sample_size_check": is_the_gap_sample_size(popularity, recency),
         "gap_top3_share": gap,
         "gap_distinct_orgs": p.distinct_root_orgs - r.distinct_root_orgs,
         # The recency sample's median downloads is zero: a model uploaded
