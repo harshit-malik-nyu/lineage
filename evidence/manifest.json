@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-06T16:42:22Z",
+  "collected_at": "2026-10-06T16:46:54Z",
   "coverage_by_tag": {
     "lora": {
       "n": 250,
@@ -30,7 +30,7 @@
   "distinct_derivatives": 1226,
   "chains_walked": 400,
   "requests": 301,
-  "elapsed_s": 97.9,
+  "elapsed_s": 87.2,
   "errors": [
     {
       "path": "models/huihui-ai/Huihui-gemma-4-26B-A4B-it-qat-q4_0-unquantized-abliterated",

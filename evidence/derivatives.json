@@ -160,7 +160,7 @@
   {
     "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
     "downloads": 2709781,
-    "likes": 634,
+    "likes": 635,
     "license": "apache-2.0",
     "tags_derivative": [
       "gguf"
@@ -510,7 +510,7 @@
   {
     "id": "autotrust/JEV-27B-VL",
     "downloads": 1525286,
-    "likes": 902,
+    "likes": 904,
     "license": "apache-2.0",
     "tags_derivative": [
       "lora"
@@ -630,7 +630,7 @@
   {
     "id": "ggml-org/Qwen3.8-27B-GGUF",
     "downloads": 1349721,
-    "likes": 108,
+    "likes": 109,
     "license": "apache-2.0",
     "tags_derivative": [
       "gguf"
