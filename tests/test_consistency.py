@@ -280,14 +280,16 @@ class TestTwoSampleFigures:
         assert "comparison rather than a trend" in flat
         assert "cohorts old enough to have matured equally" in flat
 
-    def test_the_maturation_confound_qualifies_the_download_gap(self):
+    def test_the_withdrawn_claim_stays_withdrawn(self):
         """
-        The 25.7-point download gap is the project's most quotable number and
-        the one most likely to be read as a structural claim. The qualifier
-        has to sit beside it, not in a later section.
+        The 25.7-point download gap was the project's most quotable number and
+        it does not survive removing three models from each side. The
+        withdrawal has to sit beside the figure, not in a later section a
+        quoting reader never reaches.
         """
         flat = " ".join(readme().split())
         i = flat.index("25.7 points")
-        nearby = flat[i:i + 700]
-        assert "maturation" in nearby
-        assert "not about where the ecosystem is heading" in nearby
+        nearby = flat[i:i + 900]
+        assert "does not survive inspection" in nearby
+        assert "49.5%" in nearby
+        assert "does not hold" in nearby

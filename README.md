@@ -74,17 +74,31 @@ appeared rather than how popular it became.
 | Chains through an intermediary | 53.0% | 52.9% |
 | Licence widening | 1.7% | 1.3% |
 
-**The two rules agree on model-count concentration — 4.8 points apart — and
-disagree on download concentration by 25.7 points.**
+**The two rules agree on model-count concentration — 4.8 points apart.** They
+appear to disagree on download concentration by 25.7 points.
 
-Newly uploaded derivatives spread across a comparable number of bases. The
-*attention* goes to far fewer of them.
+**That second figure does not survive inspection.** One model carries **49.5%**
+of the recency sample's downloads:
 
-The historical sample below shows this gap is **at least partly maturation**:
-freshly uploaded models have had less time for their downloads to spread, and
-the same 24-point pattern appears between two adjacent months where no
-structural change is plausible. Read the download gap as a fact about how
-attention accumulates, not about where the ecosystem is heading.
+| | Full | Drop 1 | Drop 3 | Drop 10 |
+|---|---:|---:|---:|---:|
+| Popularity (n=1,200) | 63.3% | 61.3% | 58.5% | 56.3% |
+| Recency (n=1,500) | **89.0%** | 78.2% | 69.5% | **63.6%** |
+
+The gap falls from 25.7 points to 11.0 when three models are removed from each
+side, and to under 3 when ten are. It was carried by a handful of popular
+derivatives, not by the samples' structure.
+
+**So the claim that "the flow clusters use more than it clusters models" does
+not hold.** It was a statistic resting on its own tail. The model-count
+comparison — which does not move when ten rows leave — is the one that stands,
+and it says the two selection rules broadly agree.
+
+Download-weighted concentration is the more *meaningful* measure and, on a
+fresh cohort, not a stable one. Two adjacent months make the same point: their
+cohort-level download concentration differs by 24 points, and their top three
+models carry 31.7% and 42.4% of their respective downloads. A gap like that
+turns on which month happened to contain one popular derivative.
 
 #### The first version of this said fifteen points, and was wrong
 

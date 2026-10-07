@@ -1,0 +1,34 @@
+{
+  "popularity": {
+    "n": 1200,
+    "full": 0.633068446883321,
+    "without_top": {
+      "1": 0.613020526824717,
+      "3": 0.5850712947924808,
+      "10": 0.5626802038582391
+    },
+    "top_model_share": 0.051806158848955945,
+    "top3_model_share": 0.11567566063387989,
+    "fragile": false
+  },
+  "recency": {
+    "n": 1500,
+    "full": 0.8899794102063674,
+    "without_top": {
+      "1": 0.7820221852527067,
+      "3": 0.694574567119717,
+      "10": 0.6357346194669828
+    },
+    "top_model_share": 0.4952670301737725,
+    "top3_model_share": 0.6397792130272362,
+    "fragile": true
+  },
+  "raw_gap": -0.2569109633230464,
+  "trimmed_gaps": {
+    "1": -0.16900165842798975,
+    "3": -0.10950327232723622,
+    "10": -0.0730544156087437
+  },
+  "verdict": "The gap falls from -25.7 points to -11.0 when three models are removed from each side. It was carried by a handful of popular derivatives rather than by the samples' structure.",
+  "caveat": "Trimming produces a less fragile figure and a less true one \u2014 those downloads are real. This says which kind of figure the headline is, not which number to use."
+}
