@@ -268,9 +268,26 @@ class TestTwoSampleFigures:
 
     def test_no_trend_is_claimed(self):
         """
-        All dated models in the recency sample fall in one month. A line
-        fitted to one point would be the easiest wrong claim here.
+        Two adjacent months is a comparison, not a trend. A line fitted to two
+        points — one of which has not finished accumulating downloads — is the
+        easiest wrong claim available here.
+
+        The assertion changed when the historical sample arrived: the document
+        no longer says "single month" because it now has two, and what it must
+        say instead is that two cannot separate a trend from maturation.
         """
-        t = readme()
-        assert "single month" in t or "one month" in t
-        assert "declines to report" in t
+        flat = " ".join(readme().split())
+        assert "comparison rather than a trend" in flat
+        assert "cohorts old enough to have matured equally" in flat
+
+    def test_the_maturation_confound_qualifies_the_download_gap(self):
+        """
+        The 25.7-point download gap is the project's most quotable number and
+        the one most likely to be read as a structural claim. The qualifier
+        has to sit beside it, not in a later section.
+        """
+        flat = " ".join(readme().split())
+        i = flat.index("25.7 points")
+        nearby = flat[i:i + 700]
+        assert "maturation" in nearby
+        assert "not about where the ecosystem is heading" in nearby
