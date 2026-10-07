@@ -293,3 +293,55 @@ class TestTwoSampleFigures:
         assert "does not survive inspection" in nearby
         assert "49.5%" in nearby
         assert "does not hold" in nearby
+
+
+class TestBlastFiguresAfterDominance:
+    """
+    The blast figures moved when dominated nodes were excluded — the top-five
+    union fell from 34.5% to 31.8% and the broad-node count from 170 to 134.
+    Both are in the README and both must track the code.
+    """
+
+    @pytest.fixture(scope="class")
+    def chains(self):
+        p = ROOT / "evidence" / "derivatives.json"
+        if not p.exists():
+            pytest.skip("no collected data")
+        return json.loads(p.read_text())
+
+    def test_the_broad_node_count_is_current(self, chains):
+        from lineage.blast import broad_only, compute
+        assert cites_int(readme(), len(broad_only(compute(chains))))
+
+    def test_the_dominated_count_is_current(self, chains):
+        from lineage.blast import compute
+        r = compute(chains)
+        dominated = sum(1 for b in r if b.descendants >= 3 and b.is_dominated)
+        assert cites_int(readme(), dominated)
+
+    def test_the_union_figure_tracks_the_exclusion(self, chains):
+        from lineage.blast import broad_only, compute, union_exposure
+        b = broad_only(compute(chains))
+        u = union_exposure(chains, [x.node for x in b[:5]])
+        assert cites_pct(readme(), u["share_of_downloads"])
+
+    def test_the_dominated_example_is_named_with_its_figure(self, chains):
+        """
+        A threshold is easier to trust with the case that motivated it
+        visible. 97.3% in one of three descendants is that case.
+        """
+        from lineage.blast import compute
+        r = {b.node: b for b in compute(chains)}
+        worst = max((b for b in r.values() if b.descendants >= 3),
+                    key=lambda b: b.dominance)
+        t = readme()
+        assert worst.node in t
+        assert cites_pct(t, worst.dominance, tol=0.005)
+
+    def test_the_fragility_lesson_is_connected_across_modules(self):
+        """
+        Node-level dominance and sample-level fragility are the same problem.
+        The README should say so rather than presenting two unrelated caveats.
+        """
+        flat = " ".join(readme().split())
+        assert "fragility problem again at node level" in flat

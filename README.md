@@ -243,9 +243,10 @@ its downloads. Of 989 nodes appearing as an ancestor, 170 carry three or more
 descendants — and **36 of those are one popular derivative with siblings**,
 leaving **134 genuine dependencies**.
 
-`Qwen/Qwen2.5-3B` is the clearest case: three descendants, with **97.3%** of
-their combined downloads in one of them. It clears any count threshold and is
-not a dependency in any useful sense.
+The most extreme case is `XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B`: **3 descendants**,
+with **97.5%** of their combined downloads in one of them. It
+clears any count threshold and is not a dependency in any useful sense.
+`Qwen/Qwen2.5-3B` is close behind at 97.3%.
 
 **The five broadest nodes together reach 31.8% of download-weighted exposure**
 — down from 34.5% before dominated nodes were excluded.
