@@ -1,0 +1,11 @@
+traversing up to 3000 cursor pages
+  page 200: scanned 20,000, pool 500, span 2026-10 to 2026-10
+  page 400: scanned 40,000, pool 1000, span 2026-09 to 2026-10
+
+scanned 50,000 models spanning 2026-09 to 2026-10
+months seen: {'2026-09': 27487, '2026-10': 22513}
+pool 1,250, 436 declare a parent
+  200 walked (717 requests)
+  400 walked (850 requests)
+
+  walked 436, 877 requests, 289s

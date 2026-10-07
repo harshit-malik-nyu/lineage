@@ -1,0 +1,16 @@
+{
+  "collected_at": "2026-10-07T02:10:33Z",
+  "pages": 500,
+  "scanned": 50000,
+  "months_scanned": {
+    "2026-10": 22513,
+    "2026-09": 27487
+  },
+  "pool": 1250,
+  "declaring": 436,
+  "walked": 436,
+  "requests": 877,
+  "elapsed_s": 288.6,
+  "sampling": "every 40th model of a date-sorted traversal",
+  "caveat": "Dense near the present, sparse further back. Base models have lifecycles, so a recent bucket looks concentrated around whatever launched last regardless of trend."
+}
