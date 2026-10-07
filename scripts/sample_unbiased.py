@@ -143,6 +143,10 @@ def walk(client: Client, m: dict, max_depth: int = 8) -> dict:
         truncated = True
     return {"id": m.get("id"), "downloads": m.get("downloads", 0),
             "likes": m.get("likes", 0), "license": licence(m),
+            # Upload date travels with the record so the sample can be
+            # bucketed by period. Without it the recency sample answers
+            # "is the flow concentrated" and cannot answer "is it changing".
+            "created_at": m.get("createdAt"),
             "chain": chain, "depth": len(chain),
             "root": chain[-1]["id"] if chain else m.get("id"),
             "root_resolved": chain[-1]["resolved"] if chain else True,
@@ -151,12 +155,12 @@ def walk(client: Client, m: dict, max_depth: int = 8) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--pages", type=int, default=60,
+    ap.add_argument("--pages", type=int, default=240,
                     help="pages of the createdAt-sorted index to stride across")
-    ap.add_argument("--stride", type=int, default=7,
+    ap.add_argument("--stride", type=int, default=4,
                     help="take every Nth model within a page")
-    ap.add_argument("--walk", type=int, default=900)
-    ap.add_argument("--max-requests", type=int, default=5000)
+    ap.add_argument("--walk", type=int, default=1500)
+    ap.add_argument("--max-requests", type=int, default=9000)
     ap.add_argument("--out", default=str(ROOT / "evidence"))
     args = ap.parse_args()
 
