@@ -1,17 +1,40 @@
 {
   "periods": [
     {
-      "label": "2026-10",
-      "n": 1500,
-      "top3_share": 0.5066666666666667,
-      "top3_downloads": 0.8899794102063674,
-      "distinct_orgs": 200,
+      "label": "2026-09",
+      "n": 259,
+      "top3_share": 0.5057915057915058,
+      "top3_downloads": 0.4931374020247261,
+      "distinct_orgs": 64,
       "top_root": "Qwen",
-      "top_root_share": 0.39266666666666666
+      "top_root_share": 0.38223938223938225
+    },
+    {
+      "label": "2026-10",
+      "n": 177,
+      "top3_share": 0.5254237288135594,
+      "top3_downloads": 0.7369634664809166,
+      "distinct_orgs": 52,
+      "top_root": "Qwen",
+      "top_root_share": 0.4180790960451977
     }
   ],
   "trend": {
-    "periods": 1,
-    "note": "too few periods with enough models to say anything"
+    "periods": 2,
+    "is_trend": false,
+    "first": {
+      "label": "2026-09",
+      "top3_share": 0.5057915057915058,
+      "top3_downloads": 0.4931374020247261
+    },
+    "last": {
+      "label": "2026-10",
+      "top3_share": 0.5254237288135594,
+      "top3_downloads": 0.7369634664809166
+    },
+    "model_share_change_points": 1.9632223022053585,
+    "download_share_change_points": 24.382606445619047,
+    "verdict": "Model-count concentration is flat between 2026-09 and 2026-10 (+2.0 points) while download concentration rises +24.4. The newer month's downloads are still accumulating, so this is consistent with early attention concentrating and then spreading \u2014 maturation, not a structural change. Two adjacent months cannot tell them apart.",
+    "caveat": "Two adjacent months cannot separate a trend from maturation. The newer month's models have had less time to accumulate downloads, so their download concentration reflects how fast early attention concentrates, not how the ecosystem is changing."
   }
 }

@@ -118,7 +118,30 @@ def trend(periods: list[Period]) -> dict:
     fitted model with a p-value: with a handful of monthly points, a
     regression would give a number far more precise than the data deserves.
     """
-    if len(periods) < 3:
+    if len(periods) == 2:
+        # Two periods is a comparison, not a trend, and is reported as one.
+        # The distinction matters because the download gap between adjacent
+        # months is dominated by maturation: the newer month's downloads are
+        # still accumulating and concentrate on whatever got attention first.
+        a, b = periods
+        return {
+            "periods": 2,
+            "is_trend": False,
+            "first": {"label": a.label, "top3_share": a.top3_share,
+                      "top3_downloads": a.top3_downloads},
+            "last": {"label": b.label, "top3_share": b.top3_share,
+                     "top3_downloads": b.top3_downloads},
+            "model_share_change_points": (b.top3_share - a.top3_share) * 100,
+            "download_share_change_points":
+                (b.top3_downloads - a.top3_downloads) * 100,
+            "verdict": _two_period_verdict(a, b),
+            "caveat": ("Two adjacent months cannot separate a trend from "
+                       "maturation. The newer month's models have had less "
+                       "time to accumulate downloads, so their download "
+                       "concentration reflects how fast early attention "
+                       "concentrates, not how the ecosystem is changing."),
+        }
+    if len(periods) < 2:
         return {"periods": len(periods),
                 "note": "too few periods with enough models to say anything"}
 
@@ -146,6 +169,33 @@ def trend(periods: list[Period]) -> dict:
                    "last regardless of any trend. This measures a trend and "
                    "cannot establish it is secular."),
     }
+
+
+def _two_period_verdict(a: "Period", b: "Period") -> str:
+    """
+    What two adjacent months support, which is less than it looks.
+
+    If model-count concentration is flat while download concentration jumps,
+    the honest reading is maturation rather than structural change: downloads
+    on month-old models are still concentrating, and a month later they will
+    have spread.
+    """
+    m = (b.top3_share - a.top3_share) * 100
+    d = (b.top3_downloads - a.top3_downloads) * 100
+    if abs(m) < 5 and d > 10:
+        return (f"Model-count concentration is flat between {a.label} and "
+                f"{b.label} ({m:+.1f} points) while download concentration "
+                f"rises {d:+.1f}. The newer month's downloads are still "
+                "accumulating, so this is consistent with early attention "
+                "concentrating and then spreading — maturation, not a "
+                "structural change. Two adjacent months cannot tell them "
+                "apart.")
+    if abs(m) < 5:
+        return (f"Both measures are flat between {a.label} and {b.label}. "
+                "Nothing here suggests the ecosystem's structure is moving.")
+    return (f"Model-count concentration moves {m:+.1f} points between "
+            f"{a.label} and {b.label}. With two periods this is a comparison "
+            "rather than a trend, and maturation is not ruled out.")
 
 
 def _verdict(shares: list[float], rising: int, n: int) -> str:

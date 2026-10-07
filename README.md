@@ -78,8 +78,13 @@ appeared rather than how popular it became.
 disagree on download concentration by 25.7 points.**
 
 Newly uploaded derivatives spread across a comparable number of bases. The
-*attention* goes to far fewer of them. A count of models understates where the
-stock is heading.
+*attention* goes to far fewer of them.
+
+The historical sample below shows this gap is **at least partly maturation**:
+freshly uploaded models have had less time for their downloads to spread, and
+the same 24-point pattern appears between two adjacent months where no
+structural change is plausible. Read the download gap as a fact about how
+attention accumulates, not about where the ecosystem is heading.
 
 #### The first version of this said fifteen points, and was wrong
 
@@ -109,14 +114,32 @@ The gap that survives is checked against sampling noise. Subsampling the larger
 set to the smaller one's size, 100 times, never reaches the other's figure —
 **8.3 standard deviations** out.
 
-#### What a trend would need
+#### Two months of history, and a confound in the finding above
 
-All 1,500 dated models fall in a **single month**. HuggingFace's upload rate is
-high enough that 24,000 models span under thirty days, so bucketing this sample
-by period yields one bucket and no trend. Measuring whether concentration is
-rising needs date-range queries rather than index striding, and
-`src/lineage/trend.py` declines to report rather than fitting a line to one
-point.
+Traversing 50,000 models reaches back two months — the cursor ends there, so
+that is as far as this route goes.
+
+| Month | Top 3 models | Top 3 downloads | Orgs |
+|---|---:|---:|---:|
+| 2026-09 | 50.6% | **49.3%** | 64 |
+| 2026-10 | 52.5% | **73.7%** | 52 |
+
+Model-count concentration is flat between adjacent months (+2.0 points).
+**Download concentration rises 24.4.**
+
+That is the same shape as the two-sample result — and here it has an
+explanation that does not involve the ecosystem changing. **October's models
+have had less time to accumulate downloads.** Early attention concentrates on
+whatever is noticed first, then spreads as a cohort matures. September's cohort
+has had a month to spread; October's has not.
+
+So the claim that "the flow clusters use more than it clusters models" is at
+least partly **maturation, not structure**. Two adjacent months cannot separate
+them, and `trend.py` reports a comparison rather than a trend and says so.
+
+Measuring a real trend needs cohorts old enough to have matured equally, which
+means date-range queries rather than index traversal, and a window this
+collection cannot reach.
 
 ### What survives the depth problem### What survives the depth problem
 
