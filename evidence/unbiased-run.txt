@@ -1,13 +1,44 @@
-striding 60 cursor pages of the createdAt index
-  page 10: pool 150
-  page 20: pool 300
-  page 30: pool 450
-  page 40: pool 600
-  page 50: pool 750
-  page 60: pool 900
+striding 240 cursor pages of the createdAt index
+  page 10: pool 250
+  page 20: pool 500
+  page 30: pool 750
+  page 40: pool 1000
+  page 50: pool 1250
+  page 60: pool 1500
+  page 70: pool 1750
+  page 80: pool 2000
+  page 90: pool 2250
+  page 100: pool 2500
+  page 110: pool 2750
+  page 120: pool 3000
+  page 130: pool 3250
+  page 140: pool 3500
+  page 150: pool 3750
+  page 160: pool 4000
+  page 170: pool 4250
+  page 180: pool 4500
+  page 190: pool 4750
+  page 200: pool 5000
+  page 210: pool 5250
+  page 220: pool 5500
+  page 230: pool 5750
+  page 240: pool 6000
 
-900 sampled, 245 declare a parent (27.2%)
-  100 walked (182 requests)
-  200 walked (263 requests)
+6,000 sampled, 1,953 declare a parent (32.6%)
+  100 walked (365 requests)
+  200 walked (449 requests)
+  300 walked (538 requests)
+  400 walked (607 requests)
+  500 walked (666 requests)
+  600 walked (725 requests)
+  700 walked (803 requests)
+  800 walked (864 requests)
+  900 walked (915 requests)
+  1000 walked (960 requests)
+  1100 walked (1022 requests)
+  1200 walked (1088 requests)
+  1300 walked (1157 requests)
+  1400 walked (1203 requests)
+  1500 walked (1268 requests)
 
-  walked 245, 292 requests
+  walked 1500, 1268 requests

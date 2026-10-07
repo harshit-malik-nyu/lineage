@@ -1,23 +1,91 @@
 {
-  "collected_at": "2026-10-06T21:13:56Z",
+  "collected_at": "2026-10-07T01:45:47Z",
   "sampling": "stride over createdAt-sorted index, NOT popularity",
-  "pool": 900,
-  "declaring_a_parent": 245,
-  "walked": 245,
-  "requests": 292,
-  "elapsed_s": 105.5,
+  "pool": 6000,
+  "declaring_a_parent": 1953,
+  "walked": 1500,
+  "requests": 1268,
+  "elapsed_s": 676.1,
   "errors": [
-    {
-      "url": "https://huggingface.co/api/models/ECE-Software/gemma-3-270m",
-      "status": 401
-    },
-    {
-      "url": "https://huggingface.co/api/models/KayaTechAI/fin-multitask-sft-merged",
-      "status": 401
-    },
     {
       "url": "https://huggingface.co/api/models//cache/models/61da592f24c28ffc",
       "status": 404
+    },
+    {
+      "url": "https://huggingface.co/api/models//data/hyhu/models/Meta-Llama-3.1-8B-Instruct",
+      "status": 404
+    },
+    {
+      "url": "https://huggingface.co/api/models/Tooony133/Qwen-3.6-27B-SkinnyPete",
+      "status": 401
+    },
+    {
+      "url": "https://huggingface.co/api/models/23333aa/Qwen2.5-furry-7B",
+      "status": 401
+    },
+    {
+      "url": "https://huggingface.co/api/models/cantina-security/apex-flash-1",
+      "status": 429
+    },
+    {
+      "url": "https://huggingface.co/api/models/unsloth/gemma-3-1b-it-unsloth-bnb-4bit",
+      "status": 429
+    },
+    {
+      "url": "https://huggingface.co/api/models/facebook/dinov2-with-registers-large",
+      "status": 429
+    },
+    {
+      "url": "https://huggingface.co/api/models/nvidia/parakeet_realtime_eou_120m-v1",
+      "status": 429
+    },
+    {
+      "url": "https://huggingface.co/api/models/not-tanh/wav2vec2-large-xlsr-53-vietnamese",
+      "status": 429
+    },
+    {
+      "url": "https://huggingface.co/api/models//cache/models/gold-sky--gms-env-20261004-035149",
+      "status": 404
+    },
+    {
+      "url": "https://huggingface.co/api/models/Shuu12121/NightJar-large",
+      "status": 401
+    },
+    {
+      "url": "https://huggingface.co/api/models//cache/models/gold-sky--gms-env-20261004-012608",
+      "status": 404
+    },
+    {
+      "url": "https://huggingface.co/api/models//cache/models/unsloth--Meta-Llama-3.1-8B-Instruct",
+      "status": 404
+    },
+    {
+      "url": "https://huggingface.co/api/models//workspace/models/Meta-Llama-3.1-8B-Instruct",
+      "status": 404
+    },
+    {
+      "url": "https://huggingface.co/api/models//cache/models/gold-sky--gms-env-20261002-163744",
+      "status": 404
+    },
+    {
+      "url": "https://huggingface.co/api/models/bcckfdn/cevher-test-10",
+      "status": 401
+    },
+    {
+      "url": "https://huggingface.co/api/models//root/.cache/huggingface/hub/models--krishnah27--smolvla-aegis-ft-step917/snapshots/d3",
+      "status": 404
+    },
+    {
+      "url": "https://huggingface.co/api/models/thien2006/100pt_sft",
+      "status": 401
+    },
+    {
+      "url": "https://huggingface.co/api/models//content/sft_work/stage1_merged",
+      "status": 404
+    },
+    {
+      "url": "https://huggingface.co/api/models/outputs_3/mllmu_vanilla_qwen3-vl-4b",
+      "status": 401
     }
   ],
   "caveat": "createdAt striding has its own bias: the population grows over time, so this over-represents whatever period has the most uploads. It is differently biased from popularity sampling, not unbiased."
