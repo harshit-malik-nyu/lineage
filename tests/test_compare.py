@@ -31,19 +31,40 @@ class TestTheInvertedResult:
 
     def test_the_recency_sample_is_more_concentrated(self, samples):
         """
-        THE RESULT, and it went the other way from my prediction. New uploads
-        pile onto whichever base is current; the popular stock has accumulated
-        across several generations of base model.
+        The direction held when the sample grew; the magnitude did not.
+
+        At n=245 the gap read as fifteen points. Scaling the recency
+        collection to 1,500 — a wider time window, not just more rows — put it
+        at under five. The narrow window was the more concentrated thing, not
+        the recency.
         """
         pop, rec = samples
         c = compare(pop, rec)
-        assert c["gap_top3_share"] < -0.05
-        assert "MORE concentrated" in c["verdict"]
+        assert c["gap_top3_share"] < 0, "recency should still be the higher one"
+        assert c["gap_top3_downloads"] < -0.15, "the download gap is the large one"
 
-    def test_the_flow_has_fewer_distinct_roots_than_the_stock(self, samples):
+    def test_the_download_gap_is_the_large_one(self, samples):
+        """
+        Model-count concentration differs by under five points; download
+        concentration differs by twenty-five. What the flow does is cluster
+        USE, more than it clusters models.
+        """
+        pop, rec = samples
+        c = compare(pop, rec)
+        gap = (c["recency"]["top3_share_of_downloads"]
+               - c["popularity"]["top3_share_of_downloads"])
+        assert gap > 0.15
+
+    def test_root_diversity_is_comparable_once_the_windows_match(self, samples):
+        """
+        At n=245 the recency sample showed 62 distinct roots against 188 — a
+        third. That was a two-day window. Across a week it shows 200, slightly
+        MORE than the popularity sample, so the original reading was about
+        window width rather than about the flow.
+        """
         pop, rec = samples
         p, r = summarise(pop, "p"), summarise(rec, "r")
-        assert r.distinct_root_orgs < p.distinct_root_orgs / 2
+        assert r.distinct_root_orgs > p.distinct_root_orgs * 0.8
 
     def test_download_concentration_is_higher_in_the_flow_too(self, samples):
         pop, rec = samples
@@ -52,13 +73,10 @@ class TestTheInvertedResult:
                 > c["popularity"]["top3_share_of_downloads"])
 
     def test_the_verdict_names_what_it_means(self, samples):
-        """
-        A snapshot of what exists understates where the ecosystem is heading.
-        That is the interpretation, and it has to be in the output rather than
-        left for a reader to derive.
-        """
         pop, rec = samples
-        assert "where the ecosystem is heading" in compare(pop, rec)["verdict"]
+        v = compare(pop, rec)["verdict"]
+        assert "clusters use far more than it clusters models" in v
+        assert "understates where the stock is heading" in v
 
 
 class TestWhatIsRobust:
@@ -85,17 +103,16 @@ class TestWhatIsRobust:
 
 class TestHonesty:
 
-    def test_a_zero_median_is_handled_as_information(self, samples):
+    def test_the_download_gulf_between_the_samples_is_enormous(self, samples):
         """
-        The recency sample's median download count is zero: a model uploaded
-        today has not been downloaded. The first version of this divided by it
-        and crashed; it is now reported, because it states the difference
-        between the two samples in one number.
+        Median downloads: 11,570 against 19. At the narrower window it was
+        zero, which crashed the ratio and had to be handled — a model uploaded
+        today has not been downloaded yet. Across a week it is 19, which is
+        the same fact with a little time applied.
         """
         pop, rec = samples
         c = compare(pop, rec)
-        assert c["recency_median_is_zero"] is True
-        assert c["median_download_ratio"] == float("inf")
+        assert c["median_download_ratio"] > 100
 
     def test_neither_sample_is_claimed_to_be_random(self, samples):
         pop, rec = samples
@@ -116,23 +133,30 @@ class TestTheGapIsNotSampleSize:
     already. The question now gets asked in code rather than assumed.
     """
 
-    def test_the_check_runs_and_is_applicable(self, samples):
+    def test_the_check_runs_whichever_sample_is_larger(self, samples):
+        """
+        The recency collection was scaled from 245 to 1,500 and overtook the
+        popularity set, which made the original one-directional check stop
+        applying. It now subsamples whichever is bigger.
+        """
         from lineage.compare import is_the_gap_sample_size
         pop, rec = samples
         r = is_the_gap_sample_size(pop, rec, trials=60)
         assert r["applicable"]
-        assert r["subsample_size"] == len(rec)
+        assert r["subsample_size"] == min(len(pop), len(rec))
+        assert r["subsampled"] in ("popularity", "recency")
 
-    def test_the_recency_figure_is_outside_every_subsample(self, samples):
+    def test_the_gap_survives_the_size_difference(self, samples):
         """
-        Subsampling the 1,200 down to 245, two hundred times, never reaches
-        60.8%. The gap is not the sample size.
+        Subsampling the larger set to the smaller one's size, a hundred times,
+        never reaches the other's figure. The gap shrank when the window
+        widened but it did not come from the sample size.
         """
         from lineage.compare import is_the_gap_sample_size
         pop, rec = samples
         r = is_the_gap_sample_size(pop, rec, trials=100)
         assert not r["inside_range"]
-        assert r["sd_from_mean"] > 3
+        assert abs(r["sd_from_mean"]) > 3
 
     def test_the_check_is_reported_alongside_the_comparison(self, samples):
         """

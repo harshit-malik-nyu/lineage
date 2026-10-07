@@ -57,64 +57,68 @@ is incomplete without its sampling depth, and almost none state one.
 That is a methodological finding rather than a fact about model weights, and it
 is the more useful of the two.
 
-### A second sample, selected differently — and the result inverted
+### A second sample, selected differently
 
 Depth sensitivity raises the obvious question: what does the *population* look
 like? The API has no random sampler, but it sorts by fields uncorrelated with
-downloads. Striding across the index sorted by **upload date** gives a sample
-selected on when a model appeared rather than on how popular it became.
-
-That has its own bias — the population grows over time, so it over-represents
-whatever period uploaded most. The point is that the bias runs in a different
-direction.
-
-I expected the popularity sample to be the more concentrated one. It is not.
+downloads. Striding the index sorted by **upload date** selects on when a model
+appeared rather than how popular it became.
 
 | | Popularity-sampled | Recency-sampled |
 |---|---:|---:|
-| Chains | 1,200 | 245 |
-| Top 3 share of models | 45.8% | **60.8%** |
-| Top 3 share of downloads | 63.3% | **80.6%** |
-| Distinct root organisations | 188 | **62** |
-| Median downloads | 11,570 | **0** |
-| Chains through an intermediary | 53.0% | 51.0% |
-| Licence widening | 1.7% | 1.6% |
+| Chains | 1,200 | 1,500 |
+| Top 3 share of models | 45.8% | **50.7%** |
+| Top 3 share of downloads | 63.3% | **89.0%** |
+| Distinct root organisations | 188 | 200 |
+| Median downloads | 11,570 | **19** |
+| Chains through an intermediary | 53.0% | 52.9% |
+| Licence widening | 1.7% | 1.3% |
 
-**The flow is more concentrated than the stock, by fifteen points.** New uploads
-pile onto whichever base is currently fashionable; the popular set has
-accumulated across several generations of base model. A median download count
-of zero in the recency sample is not a glitch — it is the difference between
-the two samples stated in one number.
+**The two rules agree on model-count concentration — 4.8 points apart — and
+disagree on download concentration by 25.7 points.**
 
-#### Is the gap just the smaller sample?
+Newly uploaded derivatives spread across a comparable number of bases. The
+*attention* goes to far fewer of them. A count of models understates where the
+stock is heading.
 
-This project already mistook a selection effect for a sample-size effect once,
-so the question is asked in code rather than assumed. Subsampling the 1,200
-popularity chains down to 245 — the recency sample's size — two hundred times:
+#### The first version of this said fifteen points, and was wrong
 
-| | |
-|---|---:|
-| Subsample mean | 46.6% |
-| Subsample range across 200 trials | 38.8% – 53.5% |
-| Recency sample actual | **60.8%** |
-| Standard deviations from the mean | **+4.8** |
+At 245 chains the recency sample showed 60.8% and 62 distinct roots, a
+fifteen-point gap. Scaling to 1,500 put it at 50.7% and 200 roots.
 
-**Outside every one of the two hundred subsamples.** The gap is not the sample
-size.
+That was not sample size. It was **window width** — the two runs strode 60 and
+240 pages of a date-sorted index, so the first covered two days and the second
+a week:
 
-**A snapshot of what exists understates where the ecosystem is heading.**
+| Newest N | Top 3 share | Orgs | Span |
+|---:|---:|---:|---|
+| 245 | **58.4%** | 63 | 2 days |
+| 500 | 56.8% | 99 | 3 days |
+| 1,000 | 54.0% | 150 | 5 days |
+| 1,500 | **50.7%** | 200 | 7 days |
 
-### What survives both selection rules
+**The recency sample has a window parameter of its own, and narrower means more
+concentrated — the same shape as the depth finding, in time rather than
+popularity.**
 
-Chain depth agrees — 53.0% against 51.0%. Licence widening agrees — 1.7%
-against 1.6%. Those are claims about how these models are *built*, and they
-survive a change of selection rule that moves concentration by fifteen points.
+That is the unified result: *every* narrowing of this data, on any axis,
+raises apparent concentration. A concentration figure is a statement about a
+window before it is a statement about an ecosystem.
 
-Concentration does not survive it, in either direction. Every absolute
-concentration figure here is conditional on a sampling rule, and the two rules
-available bracket it between 45.8% and 60.8%.
+The gap that survives is checked against sampling noise. Subsampling the larger
+set to the smaller one's size, 100 times, never reaches the other's figure —
+**8.3 standard deviations** out.
 
-### What survives the depth problem
+#### What a trend would need
+
+All 1,500 dated models fall in a **single month**. HuggingFace's upload rate is
+high enough that 24,000 models span under thirty days, so bucketing this sample
+by period yields one bucket and no trend. Measuring whether concentration is
+rising needs date-range queries rather than index striding, and
+`src/lineage/trend.py` declines to report rather than fitting a line to one
+point.
+
+### What survives the depth problem### What survives the depth problem
 
 Within every band, **downloads concentrate more than models do**. At the full
 sample the top three are 45.8% of derivatives and **63.3%** of downloads. That

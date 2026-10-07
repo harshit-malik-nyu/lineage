@@ -94,27 +94,38 @@ def is_the_gap_sample_size(popularity: list[dict], recency: list[dict],
     import random
     import statistics
 
-    if len(popularity) <= len(recency):
-        return {"applicable": False,
-                "note": "the popularity sample is not larger"}
+    # Either sample may be the larger one: the recency collection was scaled
+    # from 245 to 1,500 chains and overtook the popularity set. Subsampling
+    # always runs on whichever is bigger, so the check does not silently stop
+    # applying when the sizes cross over.
+    if len(popularity) == len(recency):
+        return {"applicable": False, "note": "the samples are the same size"}
+
+    big, small = ((popularity, recency) if len(popularity) > len(recency)
+                  else (recency, popularity))
+    big_label = "popularity" if big is popularity else "recency"
 
     rng = random.Random(seed)
     vals = []
     for _ in range(trials):
-        sub = rng.sample(popularity, len(recency))
+        sub = rng.sample(big, len(small))
         vals.append(analyse(sub).concentration(3)["share_of_derivatives"])
 
-    actual = analyse(recency).concentration(3)["share_of_derivatives"]
+    actual = analyse(small).concentration(3)["share_of_derivatives"]
     mean = statistics.fmean(vals)
     sd = statistics.pstdev(vals)
     lo, hi = min(vals), max(vals)
 
     return {
         "applicable": True,
-        "subsample_size": len(recency), "trials": trials,
+        "subsampled": big_label,
+        "subsample_size": len(small), "trials": trials,
+        "subsample_mean": mean, "subsample_sd": sd,
+        "subsample_range": [lo, hi],
+        "other_actual": actual,
+        # Kept so earlier evidence files and callers still resolve.
         "popularity_mean": mean, "popularity_sd": sd,
-        "popularity_range": [lo, hi],
-        "recency_actual": actual,
+        "popularity_range": [lo, hi], "recency_actual": actual,
         "inside_range": lo <= actual <= hi,
         "sd_from_mean": (actual - mean) / sd if sd else float("inf"),
         "verdict": ("consistent with sampling noise" if lo <= actual <= hi
@@ -135,10 +146,24 @@ def compare(popularity: list[dict], recency: list[dict]) -> dict:
     r = summarise(recency, "recency-sampled")
 
     gap = p.top3_share_of_derivatives - r.top3_share_of_derivatives
-    if abs(gap) < 0.05:
-        verdict = ("The two selection rules agree within five points, so the "
-                   "concentration figure does not depend on either and can be "
-                   "read as a property of the population.")
+    dl_gap = p.top3_share_of_downloads - r.top3_share_of_downloads
+
+    # Judging on model count alone would call these samples agreed. They
+    # differ by under five points there and by twenty-five on download
+    # concentration, which is the larger and more meaningful gap: the flow
+    # clusters USE far more than it clusters models.
+    if abs(gap) < 0.05 and abs(dl_gap) >= 0.10:
+        verdict = (f"The two rules agree on model-count concentration, within "
+                   f"{abs(gap)*100:.1f} points, and disagree sharply on "
+                   f"download concentration, by {abs(dl_gap)*100:.1f} points. "
+                   "The flow clusters use far more than it clusters models: "
+                   "newly uploaded derivatives spread across a comparable "
+                   "number of bases, but the attention goes to fewer of them. "
+                   "A count of models understates where the stock is heading.")
+    elif abs(gap) < 0.05:
+        verdict = ("The two selection rules agree within five points on both "
+                   "measures, so the concentration figure does not depend on "
+                   "either and can be read as a property of the population.")
     elif gap < 0:
         # The direction that was not predicted. Recently uploaded models are
         # MORE concentrated than the popular stock, because new uploads pile
@@ -160,6 +185,7 @@ def compare(popularity: list[dict], recency: list[dict]) -> dict:
         "recency": r.as_dict(),
         "sample_size_check": is_the_gap_sample_size(popularity, recency),
         "gap_top3_share": gap,
+        "gap_top3_downloads": dl_gap,
         "gap_distinct_orgs": p.distinct_root_orgs - r.distinct_root_orgs,
         # The recency sample's median downloads is zero: a model uploaded
         # today has not been downloaded yet. That is not a glitch, it is the

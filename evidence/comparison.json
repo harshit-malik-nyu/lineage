@@ -11,18 +11,42 @@
   },
   "recency": {
     "label": "recency-sampled",
-    "n": 245,
-    "top3_share_of_derivatives": 0.6081632653061224,
-    "top3_share_of_downloads": 0.8060862445414847,
-    "distinct_root_orgs": 62,
-    "through_intermediary": 0.5102040816326531,
-    "median_downloads": 0,
-    "widening_rate": 0.0163265306122449
+    "n": 1500,
+    "top3_share_of_derivatives": 0.5066666666666667,
+    "top3_share_of_downloads": 0.8899794102063674,
+    "distinct_root_orgs": 200,
+    "through_intermediary": 0.5293333333333333,
+    "median_downloads": 19,
+    "widening_rate": 0.012666666666666666
   },
-  "gap_top3_share": -0.1498299319727891,
-  "gap_distinct_orgs": 126,
-  "median_download_ratio": Infinity,
-  "recency_median_is_zero": true,
-  "verdict": "The recency sample is 15.0 points MORE concentrated than the popularity sample. New uploads pile onto whichever base is current, while the popular stock has accumulated across several generations. The flow is more concentrated than the stock, which means a snapshot of what exists understates where the ecosystem is heading.",
+  "sample_size_check": {
+    "applicable": true,
+    "subsampled": "recency",
+    "subsample_size": 1200,
+    "trials": 200,
+    "subsample_mean": 0.5064791666666667,
+    "subsample_sd": 0.006097265723712191,
+    "subsample_range": [
+      0.4891666666666667,
+      0.5216666666666666
+    ],
+    "other_actual": 0.4583333333333333,
+    "popularity_mean": 0.5064791666666667,
+    "popularity_sd": 0.006097265723712191,
+    "popularity_range": [
+      0.4891666666666667,
+      0.5216666666666666
+    ],
+    "recency_actual": 0.4583333333333333,
+    "inside_range": false,
+    "sd_from_mean": -7.896299015818654,
+    "verdict": "outside every subsample: the samples draw from different populations"
+  },
+  "gap_top3_share": -0.048333333333333395,
+  "gap_top3_downloads": -0.2569109633230464,
+  "gap_distinct_orgs": -12,
+  "median_download_ratio": 608.9473684210526,
+  "recency_median_is_zero": false,
+  "verdict": "The two rules agree on model-count concentration, within 4.8 points, and disagree sharply on download concentration, by 25.7 points. The flow clusters use far more than it clusters models: newly uploaded derivatives spread across a comparable number of bases, but the attention goes to fewer of them. A count of models understates where the stock is heading.",
   "caveat": "Neither sample is random. Recency striding over-represents whatever period uploaded most; popularity sampling over-represents the head. The comparison bounds selection effects rather than removing them."
 }

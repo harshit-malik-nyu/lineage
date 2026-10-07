@@ -1,0 +1,17 @@
+{
+  "periods": [
+    {
+      "label": "2026-10",
+      "n": 1500,
+      "top3_share": 0.5066666666666667,
+      "top3_downloads": 0.8899794102063674,
+      "distinct_orgs": 200,
+      "top_root": "Qwen",
+      "top_root_share": 0.39266666666666666
+    }
+  ],
+  "trend": {
+    "periods": 1,
+    "note": "too few periods with enough models to say anything"
+  }
+}
