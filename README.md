@@ -141,6 +141,37 @@ Measuring a real trend needs cohorts old enough to have matured equally, which
 means date-range queries rather than index traversal, and a window this
 collection cannot reach.
 
+#### Controlling for download level — and why it mostly cannot be done
+
+If maturation is the whole story, the download-concentration gap should vanish
+when the two samples are compared at **matched download levels**. A model with
+ten thousand downloads is a model with ten thousand downloads, whenever it was
+uploaded.
+
+| Band | Popularity | Recency |
+|---|---:|---:|
+| 0 – 100 | **0** | 1,114 |
+| 100 – 1,000 | **0** | 326 |
+| 1,000 – 10,000 | 585 | 57 |
+| 10,000 – 100,000 | 193 | **2** |
+| 100,000+ | 422 | **1** |
+
+**The samples barely overlap at all**, and that non-overlap is itself the
+maturation story: freshly uploaded models have not had time to accumulate
+downloads, so there is almost nothing to match them against.
+
+One band qualifies — 1,000–10,000 — and the thinner side has 57 models. Inside
+it the gap is **−39.3 points**, which is suggestive and rests on 57 models.
+
+Two reasons not to lean on it. Downloads are **downstream of base popularity**,
+so conditioning on them conditions on a collider and can create an association
+as easily as remove one. And a control available in one band out of five is
+weak wherever it is not simply absent.
+
+**So the maturation question stays open.** The control that would settle it
+needs samples that overlap in download level, which these do not — and the
+reason they do not is the hypothesis under test.
+
 ### What survives the depth problem### What survives the depth problem
 
 Within every band, **downloads concentrate more than models do**. At the full

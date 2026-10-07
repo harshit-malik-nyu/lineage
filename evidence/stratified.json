@@ -1,0 +1,86 @@
+{
+  "strata": [
+    {
+      "lo": 0,
+      "hi": 100,
+      "label": "0\u2013100",
+      "n_a": 0,
+      "n_b": 1114,
+      "share_a": null,
+      "share_b": 0.4883303411131059,
+      "dl_share_a": null,
+      "dl_share_b": 0.47342748567863424,
+      "comparable": false,
+      "gap": null,
+      "dl_gap": null
+    },
+    {
+      "lo": 100,
+      "hi": 1000,
+      "label": "100\u20131,000",
+      "n_a": 0,
+      "n_b": 326,
+      "share_a": null,
+      "share_b": 0.6319018404907976,
+      "dl_share_a": null,
+      "dl_share_b": 0.6267819189143523,
+      "comparable": false,
+      "gap": null,
+      "dl_gap": null
+    },
+    {
+      "lo": 1000,
+      "hi": 10000,
+      "label": "1,000\u201310,000",
+      "n_a": 585,
+      "n_b": 57,
+      "share_a": 0.36923076923076925,
+      "share_b": 0.7017543859649122,
+      "dl_share_a": 0.38871250075451197,
+      "dl_share_b": 0.7813533617390048,
+      "comparable": true,
+      "gap": -0.332523616734143,
+      "dl_gap": -0.39264086098449286
+    },
+    {
+      "lo": 10000,
+      "hi": 100000,
+      "label": "10,000\u2013100,000",
+      "n_a": 193,
+      "n_b": 2,
+      "share_a": 0.49222797927461137,
+      "share_b": null,
+      "dl_share_a": 0.4964152537587852,
+      "dl_share_b": null,
+      "comparable": false,
+      "gap": null,
+      "dl_gap": null
+    },
+    {
+      "lo": 100000,
+      "hi": 1000000000,
+      "label": "100,000\u2013\u221e",
+      "n_a": 422,
+      "n_b": 1,
+      "share_a": 0.5853080568720379,
+      "share_b": null,
+      "dl_share_a": 0.6632372425039885,
+      "dl_share_b": null,
+      "comparable": false,
+      "gap": null,
+      "dl_gap": null
+    }
+  ],
+  "verdict": {
+    "comparable_strata": 1,
+    "single_band_only": true,
+    "thinnest_side": 57,
+    "bands": [
+      "1,000\u201310,000"
+    ],
+    "mean_download_gap": -0.39264086098449286,
+    "unmatched_gap": 0.257,
+    "verdict": "Only one download band \u2014 1,000\u201310,000 \u2014 has enough models on both sides, and the thinner side has 57. The samples barely overlap in download level at all, which IS the maturation story: freshly uploaded models have not had time to accumulate downloads, so there is almost nothing to match them against. Inside that one band the gap is -39.3 points, which is suggestive and rests on 57 models.",
+    "caveat": "Downloads are downstream of base popularity, so this conditions on a collider. It gives a direction, not a causal answer. And with the samples overlapping in one band, the control is weak wherever it is not absent."
+  }
+}
