@@ -38,7 +38,14 @@ def chains():
 
 
 def cites_pct(text: str, value: float, tol: float = 0.011) -> bool:
-    for m in re.finditer(r"([0-9]+\.?[0-9]*)%", text):
+    """
+    Does the document quote this figure as a percentage or as points?
+
+    A gap written as "25.7 points" is the same claim as "25.7%" and is the
+    right way to write a difference between two percentages. Matching only
+    the % sign made a correct document fail.
+    """
+    for m in re.finditer(r"([0-9]+\.?[0-9]*)\s*(?:%|points?)", text):
         if abs(float(m.group(1)) / 100 - value) <= tol:
             return True
     return False
@@ -193,3 +200,77 @@ class TestDocumentIntegrity:
         t = readme()
         assert "not a legal finding" in (ROOT / "docs" / "against.md").read_text()
         assert "violation rate" not in t.lower() or "wrong" in t.lower()
+
+
+class TestTwoSampleFigures:
+    """
+    The comparison figures moved twice — once when the recency sample grew from
+    245 to 1,500, and once when the verdict stopped judging on model count
+    alone. Both times the README carried stale numbers until a test said so.
+    """
+
+    @pytest.fixture(scope="class")
+    def both(self):
+        a = ROOT / "evidence" / "derivatives.json"
+        b = ROOT / "evidence" / "unbiased.json"
+        if not (a.exists() and b.exists()):
+            pytest.skip("both samples required")
+        return json.loads(a.read_text()), json.loads(b.read_text())
+
+    def test_both_sample_sizes_are_stated(self, both):
+        pop, rec = both
+        t = readme()
+        assert cites_int(t, len(pop)) and cites_int(t, len(rec))
+
+    def test_the_model_count_shares_are_current(self, both):
+        from lineage.compare import compare
+        pop, rec = both
+        c = compare(pop, rec)
+        t = readme()
+        assert cites_pct(t, c["popularity"]["top3_share_of_derivatives"])
+        assert cites_pct(t, c["recency"]["top3_share_of_derivatives"])
+
+    def test_the_download_shares_are_current(self, both):
+        from lineage.compare import compare
+        pop, rec = both
+        c = compare(pop, rec)
+        t = readme()
+        assert cites_pct(t, c["popularity"]["top3_share_of_downloads"])
+        assert cites_pct(t, c["recency"]["top3_share_of_downloads"])
+
+    def test_the_download_gap_is_reported_as_the_large_one(self, both):
+        """
+        Judging these samples on model count alone would call them agreed.
+        The README has to carry the download gap, which is five times larger.
+        """
+        from lineage.compare import compare
+        pop, rec = both
+        c = compare(pop, rec)
+        assert abs(c["gap_top3_downloads"]) > abs(c["gap_top3_share"]) * 3
+        assert cites_pct(readme(), abs(c["gap_top3_downloads"]), tol=0.02)
+
+    def test_the_significance_check_figure_is_current(self, both):
+        from lineage.compare import is_the_gap_sample_size
+        pop, rec = both
+        r = is_the_gap_sample_size(pop, rec, trials=60)
+        assert not r["inside_range"]
+        assert cites_int(readme(), round(abs(r["sd_from_mean"]))) or \
+            f"{abs(r['sd_from_mean']):.1f}" in readme()
+
+    def test_the_window_correction_is_recorded(self):
+        """
+        The README once reported a fifteen-point gap from a two-day window.
+        The correction has to stay visible, not be quietly replaced.
+        """
+        t = readme()
+        assert "was wrong" in t
+        assert "60.8%" in t and "window width" in t
+
+    def test_no_trend_is_claimed(self):
+        """
+        All dated models in the recency sample fall in one month. A line
+        fitted to one point would be the easiest wrong claim here.
+        """
+        t = readme()
+        assert "single month" in t or "one month" in t
+        assert "declines to report" in t
