@@ -239,11 +239,20 @@ quietly inflating the result.
 If a flaw were found in a base model, what is downstream of it?
 
 `Qwen/Qwen3.8-27B` has **55 descendants** in the sample, carrying **18.8%** of
-its downloads. Of 989 nodes that appear as an ancestor, **170 carry three or
-more descendants** — the rest are a single derivative each.
+its downloads. Of 989 nodes appearing as an ancestor, 170 carry three or more
+descendants — and **36 of those are one popular derivative with siblings**,
+leaving **134 genuine dependencies**.
 
-**The five broadest nodes together reach 34.5% of download-weighted
-exposure.**
+`Qwen/Qwen2.5-3B` is the clearest case: three descendants, with **97.3%** of
+their combined downloads in one of them. It clears any count threshold and is
+not a dependency in any useful sense.
+
+**The five broadest nodes together reach 31.8% of download-weighted exposure**
+— down from 34.5% before dominated nodes were excluded.
+
+This is the fragility problem again at node level. Download weight
+concentrates, so every statistic built on it needs asking how many rows it
+rests on.
 
 ### The correction that was needed first
 

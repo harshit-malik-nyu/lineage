@@ -1,53 +1,8 @@
 {
-  "chains": 1200,
-  "distinct_root_orgs": 188,
-  "concentration_top3": {
-    "k": 3,
-    "orgs": [
-      "Qwen",
-      "google",
-      "black-forest-labs"
-    ],
-    "share_of_derivatives": 0.4583333333333333,
-    "share_of_downloads": 0.633068446883321
-  },
-  "concentration_top5": {
-    "k": 5,
-    "orgs": [
-      "Qwen",
-      "google",
-      "black-forest-labs",
-      "MiniMaxAI",
-      "mistralai"
-    ],
-    "share_of_derivatives": 0.5383333333333333,
-    "share_of_downloads": 0.672478480204173
-  },
-  "through_intermediary": 0.53,
-  "max_depth": 8,
-  "depth_distribution": {
-    "1": 564,
-    "2": 366,
-    "3": 144,
-    "4": 69,
-    "5": 32,
-    "6": 14,
-    "7": 3,
-    "8": 8
-  },
-  "licence_categories": {
-    "consistent": 732,
-    "unrankable": 157,
-    "narrows": 47,
-    "undeclared": 244,
-    "widens": 20
-  },
-  "widening_count": 20,
-  "unresolved_parents": 21,
-  "cycles": 6,
   "blast": {
     "ancestor_nodes": 989,
-    "broad_nodes": 170,
+    "broad_nodes": 134,
+    "dominated_excluded": 36,
     "top": [
       {
         "node": "Qwen/Qwen3.8-27B",
@@ -57,16 +12,8 @@
         "max_depth_below": 4,
         "share_of_sample": 0.04583333333333333,
         "share_of_downloads": 0.1880732286395014,
-        "is_broad": true
-      },
-      {
-        "node": "Qwen/Qwen2.5-3B",
-        "descendants": 3,
-        "descendant_downloads": 11251721,
-        "direct_children": 0,
-        "max_depth_below": 3,
-        "share_of_sample": 0.0025,
-        "share_of_downloads": 0.05324919480602085,
+        "dominance": 0.16524355782494718,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -77,6 +24,8 @@
         "max_depth_below": 5,
         "share_of_sample": 0.0325,
         "share_of_downloads": 0.04136311853795628,
+        "dominance": 0.14854471705081695,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -87,6 +36,8 @@
         "max_depth_below": 2,
         "share_of_sample": 0.011666666666666667,
         "share_of_downloads": 0.033177456158716444,
+        "dominance": 0.38653177376791953,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -97,6 +48,8 @@
         "max_depth_below": 3,
         "share_of_sample": 0.019166666666666665,
         "share_of_downloads": 0.028878224798573725,
+        "dominance": 0.11986052576679446,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -107,6 +60,8 @@
         "max_depth_below": 4,
         "share_of_sample": 0.01,
         "share_of_downloads": 0.026911760697144464,
+        "dominance": 0.279816774315625,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -117,6 +72,8 @@
         "max_depth_below": 5,
         "share_of_sample": 0.01,
         "share_of_downloads": 0.026911760697144464,
+        "dominance": 0.279816774315625,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -127,6 +84,8 @@
         "max_depth_below": 6,
         "share_of_sample": 0.028333333333333332,
         "share_of_downloads": 0.02570349647463795,
+        "dominance": 0.22725869227756737,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -137,6 +96,8 @@
         "max_depth_below": 5,
         "share_of_sample": 0.0275,
         "share_of_downloads": 0.025680893874165226,
+        "dominance": 0.2274587101371743,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -147,6 +108,8 @@
         "max_depth_below": 4,
         "share_of_sample": 0.041666666666666664,
         "share_of_downloads": 0.022092707386431397,
+        "dominance": 0.34975359116826876,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -157,6 +120,8 @@
         "max_depth_below": 5,
         "share_of_sample": 0.02666666666666667,
         "share_of_downloads": 0.021663570324943617,
+        "dominance": 0.1866868520047711,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -167,6 +132,8 @@
         "max_depth_below": 6,
         "share_of_sample": 0.02666666666666667,
         "share_of_downloads": 0.021663570324943617,
+        "dominance": 0.1866868520047711,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -177,6 +144,8 @@
         "max_depth_below": 1,
         "share_of_sample": 0.01,
         "share_of_downloads": 0.01625161048260906,
+        "dominance": 0.5013838025215958,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -187,6 +156,8 @@
         "max_depth_below": 2,
         "share_of_sample": 0.004166666666666667,
         "share_of_downloads": 0.014644639416587885,
+        "dominance": 0.5399688733859047,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -197,6 +168,8 @@
         "max_depth_below": 2,
         "share_of_sample": 0.0075,
         "share_of_downloads": 0.01453798694501056,
+        "dominance": 0.2753569263802922,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -207,6 +180,8 @@
         "max_depth_below": 3,
         "share_of_sample": 0.0075,
         "share_of_downloads": 0.01453798694501056,
+        "dominance": 0.2753569263802922,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -217,6 +192,8 @@
         "max_depth_below": 3,
         "share_of_sample": 0.0033333333333333335,
         "share_of_downloads": 0.011388066584156448,
+        "dominance": 0.5102043191011721,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -227,6 +204,8 @@
         "max_depth_below": 4,
         "share_of_sample": 0.013333333333333334,
         "share_of_downloads": 0.011342672081699503,
+        "dominance": 0.4527725554106366,
+        "is_dominated": false,
         "is_broad": true
       },
       {
@@ -237,30 +216,46 @@
         "max_depth_below": 3,
         "share_of_sample": 0.0125,
         "share_of_downloads": 0.01125684750892462,
+        "dominance": 0.45622458859323967,
+        "is_dominated": false,
         "is_broad": true
       },
       {
-        "node": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NM-DAU",
-        "descendants": 4,
-        "descendant_downloads": 2371777,
+        "node": "Qwen/Qwen3.5-35B-A3B-Base",
+        "descendants": 6,
+        "descendant_downloads": 2034900,
+        "direct_children": 0,
+        "max_depth_below": 3,
+        "share_of_sample": 0.005,
+        "share_of_downloads": 0.009630241143623436,
+        "dominance": 0.4485910855570298,
+        "is_dominated": false,
+        "is_broad": true
+      },
+      {
+        "node": "google/gemma-4-E2B-it",
+        "descendants": 8,
+        "descendant_downloads": 1861144,
         "direct_children": 3,
         "max_depth_below": 2,
-        "share_of_sample": 0.0033333333333333335,
-        "share_of_downloads": 0.011224524275836532,
+        "share_of_sample": 0.006666666666666667,
+        "share_of_downloads": 0.008807934307832273,
+        "dominance": 0.22317993664111965,
+        "is_dominated": false,
         "is_broad": true
       }
     ],
     "union_top5": {
       "nodes": [
         "Qwen/Qwen3.8-27B",
-        "Qwen/Qwen2.5-3B",
         "Qwen/Qwen3.6-35B-A3B",
         "Qwen/Qwen3.8-Flash-Next",
-        "Qwen/Qwen3.6-27B"
+        "Qwen/Qwen3.6-27B",
+        "google/gemma-4-12B-it"
       ],
-      "leaves_reached": 134,
-      "share_of_leaves": 0.11166666666666666,
-      "share_of_downloads": 0.3447412229407687
+      "leaves_reached": 143,
+      "share_of_leaves": 0.11916666666666667,
+      "share_of_downloads": 0.3184037888318923
     }
   }
 }

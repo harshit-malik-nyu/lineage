@@ -57,6 +57,26 @@ class BlastRadius:
     share_of_sample: float = 0.0
     share_of_downloads: float = 0.0
 
+    dominance: float = 0.0
+    """Share of this node's downstream downloads carried by its single
+    largest descendant."""
+
+    @property
+    def is_dominated(self) -> bool:
+        """
+        Is one derivative carrying most of this node's exposure?
+
+        Qwen/Qwen2.5-3B has three descendants and one of them is 97.3% of
+        their combined downloads. It clears the descendant-count threshold and
+        is not a dependency in any useful sense — it is one popular model with
+        two siblings.
+
+        This is the same failure the fragility check found in the sample-level
+        figures, appearing again at node level. Download weight concentrates,
+        and any statistic built on it needs asking how many rows it rests on.
+        """
+        return self.dominance > 0.6
+
     @property
     def is_broad(self) -> bool:
         """
@@ -71,7 +91,7 @@ class BlastRadius:
         Three descendants is an arbitrary floor and is exposed rather than
         buried, because the right value depends on what the number is for.
         """
-        return self.descendants >= 3
+        return self.descendants >= 3 and not self.is_dominated
 
     def as_dict(self) -> dict:
         return {
@@ -82,6 +102,8 @@ class BlastRadius:
             "max_depth_below": self.max_depth_below,
             "share_of_sample": self.share_of_sample,
             "share_of_downloads": self.share_of_downloads,
+            "dominance": self.dominance,
+            "is_dominated": self.is_dominated,
             "is_broad": self.is_broad,
         }
 
@@ -99,6 +121,7 @@ def compute(chains: list[dict]) -> list[BlastRadius]:
     desc_dl: Counter = Counter()
     direct: Counter = Counter()
     depth_below: dict[str, int] = defaultdict(int)
+    largest: Counter = Counter()
 
     total_leaves = len(chains)
     total_dl = sum(w.get("downloads", 0) for w in chains)
@@ -114,6 +137,8 @@ def compute(chains: list[dict]) -> list[BlastRadius]:
             seen.add(name)
             desc[name] += 1
             desc_dl[name] += dl
+            if dl > largest[name]:
+                largest[name] = dl
             if i == 0:
                 direct[name] += 1
             depth_below[name] = max(depth_below[name], i + 1)
@@ -124,6 +149,8 @@ def compute(chains: list[dict]) -> list[BlastRadius]:
             node=name, descendants=n, descendant_downloads=desc_dl[name],
             direct_children=direct.get(name, 0),
             max_depth_below=depth_below[name],
+            dominance=(largest[name] / desc_dl[name]
+                       if desc_dl[name] else 0.0),
             share_of_sample=n / total_leaves if total_leaves else 0,
             share_of_downloads=desc_dl[name] / total_dl if total_dl else 0,
         ))
@@ -136,8 +163,17 @@ def compute(chains: list[dict]) -> list[BlastRadius]:
 
 
 def broad_only(radii: list["BlastRadius"], min_descendants: int = 3) -> list:
-    """Nodes carrying a dependency rather than one popular descendant."""
-    return [b for b in radii if b.descendants >= min_descendants]
+    """
+    Nodes carrying a dependency rather than one popular descendant.
+
+    Both conditions, not just the count. An earlier version filtered on
+    descendants alone while is_broad also checked dominance, so nodes the
+    property excluded still came through this function — Qwen/Qwen2.5-3B, with
+    three descendants and 97.3% of their downloads in one of them, appeared at
+    the top of a list of "genuine dependencies".
+    """
+    return [b for b in radii
+            if b.descendants >= min_descendants and not b.is_dominated]
 
 
 def cumulative_exposure(radii: list[BlastRadius], k: int = 10) -> dict:

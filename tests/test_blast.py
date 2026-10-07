@@ -137,3 +137,55 @@ class TestMeasured:
         doc = " ".join(bl.__doc__.split())
         assert "every count below is a floor" in doc
         assert "upper bound on exposure" in doc
+
+
+class TestDominance:
+    """
+    The fragility problem again, at node level. Download weight concentrates,
+    so any statistic built on it needs asking how many rows it rests on —
+    including a node's own blast radius.
+    """
+
+    def test_one_derivative_carrying_most_of_a_node_is_flagged(self):
+        rows = [chain("big", 970, ["n"])] + [chain(f"s{i}", 10, ["n"])
+                                             for i in range(2)]
+        r = {b.node: b for b in compute(rows)}["n"]
+        assert r.descendants == 3
+        assert r.dominance > 0.9
+        assert r.is_dominated
+        assert not r.is_broad
+
+    def test_an_even_spread_is_not_flagged(self):
+        rows = [chain(f"d{i}", 100, ["n"]) for i in range(8)]
+        r = {b.node: b for b in compute(rows)}["n"]
+        assert not r.is_dominated and r.is_broad
+
+    def test_broad_only_honours_dominance(self):
+        """
+        REGRESSION. broad_only filtered on descendant count alone while
+        is_broad also checked dominance, so nodes the property excluded still
+        came through the function — a node with three descendants and 97.3%
+        of their downloads in one appeared at the top of a list of genuine
+        dependencies.
+        """
+        rows = [chain("big", 970, ["dom"])] + [chain(f"s{i}", 10, ["dom"])
+                                               for i in range(2)]
+        rows += [chain(f"e{i}", 100, ["even"]) for i in range(6)]
+        names = [b.node for b in broad_only(compute(rows))]
+        assert "even" in names
+        assert "dom" not in names
+
+    def test_the_real_data_excludes_a_meaningful_number(self, chains):
+        r = compute(chains)
+        three_plus = [b for b in r if b.descendants >= 3]
+        broad = broad_only(r)
+        assert len(three_plus) > len(broad), "dominance should exclude some"
+        assert len(broad) > len(three_plus) * 0.5, "but not most of them"
+
+    def test_the_threshold_is_documented(self):
+        import inspect
+
+        from lineage.blast import BlastRadius
+        doc = " ".join(inspect.getdoc(BlastRadius.is_dominated.fget).split())
+        assert "97.3%" in doc
+        assert "same failure the fragility check found" in doc

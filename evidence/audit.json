@@ -1,0 +1,66 @@
+[
+  {
+    "figure": "popularity sample",
+    "full": 0.633068446883321,
+    "trimmed3": 0.5850712947924808,
+    "move": 0.04799715209084021,
+    "fragile": false,
+    "top_model_share": 0.051806158848955945
+  },
+  {
+    "figure": "recency sample",
+    "full": 0.8899794102063674,
+    "trimmed3": 0.694574567119717,
+    "move": 0.1954048430866504,
+    "fragile": true,
+    "top_model_share": 0.4952670301737725
+  },
+  {
+    "figure": "history sample",
+    "full": 0.5601113346119662,
+    "trimmed3": 0.5301748215578773,
+    "move": 0.029936513054088842,
+    "fragile": false,
+    "top_model_share": 0.08578534562068267
+  },
+  {
+    "figure": "depth band rank 1-100",
+    "full": 0.7164732860478138,
+    "trimmed3": 0.6497819713792945,
+    "move": 0.0666913146685193,
+    "fragile": true,
+    "top_model_share": 0.08528451498660225
+  },
+  {
+    "figure": "depth band rank 101-200",
+    "full": 0.6487769550164513,
+    "trimmed3": 0.6614179438754981,
+    "move": 0.012640988859046853,
+    "fragile": false,
+    "top_model_share": 0.012832478520821429
+  },
+  {
+    "figure": "depth band rank 201-400",
+    "full": 0.5440970664365081,
+    "trimmed3": 0.5490219746153462,
+    "move": 0.004924908178838061,
+    "fragile": false,
+    "top_model_share": 0.007725495149329654
+  },
+  {
+    "figure": "depth band rank 401-800",
+    "full": 0.5220052120709266,
+    "trimmed3": 0.5273285016523505,
+    "move": 0.005323289581423807,
+    "fragile": false,
+    "top_model_share": 0.00917316144286262
+  },
+  {
+    "figure": "depth band rank 801-1200",
+    "full": 0.35690620698166403,
+    "trimmed3": 0.36076514716323255,
+    "move": 0.0038589401815685154,
+    "fragile": false,
+    "top_model_share": 0.0035744023427114417
+  }
+]
