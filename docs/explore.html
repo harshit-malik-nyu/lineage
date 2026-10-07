@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lineage — what is actually inside the model you deployed?</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F7F5F0;--bone2:#F0ECE4;--navy:#131F2B;--navy2:#33404E;--muted:#6B7684;--rule:#DFD9CE;--brass:#8A6D3B;--red:#A8321E;
+--serif:"Newsreader",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bone:#0F1720;--bone2:#151F29;--navy:#EFEBE3;--navy2:#C3CBD4;--muted:#8A96A4;--rule:#26313D;--brass:#C9A867;--red:#E8705A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bone);color:var(--navy);font:400 17px/1.65 var(--serif);-webkit-font-smoothing:antialiased}
+.wrap{max-width:58rem;margin:0 auto;padding:clamp(1.5rem,5vw,3.5rem)}
+h1{font-weight:400;font-size:clamp(1.8rem,4.5vw,2.7rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 1rem;max-width:20ch}
+.kicker{font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 1.4rem}
+.lede{color:var(--navy2);max-width:35rem;margin:0 0 2.5rem}
+.panel{border-top:1px solid var(--navy);padding-top:1.8rem;margin-bottom:2.6rem}
+h2{font-weight:500;font-size:1.3rem;margin:0 0 .5rem}
+.sub{color:var(--muted);font-size:.95rem;margin:0 0 1.6rem;max-width:35rem}
+label{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:1px;background:var(--rule);cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--navy);border:0}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--navy);border:0}
+.val{font-family:var(--mono);font-size:1.05rem;margin-top:.5rem}
+.bars{display:grid;gap:.85rem;margin:1.5rem 0}
+.bar{display:grid;grid-template-columns:9rem 1fr 4.5rem;gap:.9rem;align-items:center;font-size:.88rem}
+.track{height:3px;background:var(--rule);position:relative}
+.fill{position:absolute;inset:0 auto 0 0;height:3px;background:var(--brass);transition:width .18s}
+.fill.alt{background:var(--navy)}
+.q{font-family:var(--mono);font-size:.84rem;text-align:right}
+.note{font-size:.93rem;color:var(--muted);max-width:36rem;padding-top:1.2rem;border-top:1px solid var(--rule);margin-top:1.4rem}
+.note b{color:var(--navy);font-weight:500}
+.scores{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(8rem,1fr));margin:1.6rem 0}
+.score{border-top:1px solid var(--navy);padding-top:.85rem}
+.score .n{font-family:var(--mono);font-size:clamp(1.3rem,3.2vw,1.7rem);letter-spacing:-.04em;line-height:1;margin:0 0 .45rem;color:var(--brass)}
+.score .n.bad{color:var(--red)}
+.score .l{font-family:var(--sans);font-size:.64rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="kicker">Lineage &middot; open-weight supply chain</p>
+<h1>What is actually inside the model you deployed?</h1>
+<p class="lede">2,700 derivative chains walked from HuggingFace, each traced to
+a root. Every open model looks like an independent artifact; almost none are.
+The figures below are the ones that survived being attacked.</p>
+
+<div class="panel">
+  <h2>Concentration is a property of where you look</h2>
+  <p class="sub">Move the cut and watch the answer change. Both ends are honest
+  readings of the same data, which is why any claim about ecosystem
+  concentration is incomplete without its sampling depth.</p>
+  <label for="depth">Collect the top N by downloads</label>
+  <input type="range" id="depth" min="0" max="4" step="1" value="4">
+  <p class="val" id="depth-v"></p>
+  <div class="scores">
+    <div class="score"><p class="n" id="d-share">—</p><p class="l">Top 3 orgs</p></div>
+    <div class="score"><p class="n" id="d-orgs">—</p><p class="l">Distinct orgs</p></div>
+  </div>
+  <div class="bars" id="bands"></div>
+  <p class="note" id="depth-note"></p>
+</div>
+
+<div class="panel">
+  <h2>How much rests on a handful of models?</h2>
+  <p class="sub">Download-weighted concentration is the more meaningful measure
+  and the more fragile one. Remove the largest contributors and see which
+  figures hold.</p>
+  <label for="trim">Models removed from each sample</label>
+  <input type="range" id="trim" min="0" max="3" step="1" value="0">
+  <p class="val" id="trim-v"></p>
+  <div class="bars" id="frag"></div>
+  <p class="note" id="frag-note"></p>
+</div>
+
+<div class="panel">
+  <h2>Blast radius</h2>
+  <p class="sub">What is downstream of a single base, after excluding nodes
+  where one popular derivative carries most of the exposure.</p>
+  <div class="bars" id="blast"></div>
+  <p class="note">A node with three descendants and 97.5% of their downloads in
+  one is not a dependency; it is one model with siblings. <b>36 of 170 nodes
+  are excluded on that basis.</b> "Inherits" means "is downstream of" — an
+  upper bound on exposure, not a prediction that a flaw propagates.</p>
+</div>
+
+<p class="note" style="border:0;padding-top:0">Every figure computed from the
+committed samples. Chains are drawn from the most-downloaded models of five
+derivative types, so the absolute numbers describe that slice; only the
+<i>direction</i> of the depth effect is a claim about the ecosystem.</p>
+</div>
+
+<script>
+const D = {"bands":[{"label":"rank 1-100","n":100,"rank_from":1,"rank_to":100,"top3_share_of_derivatives":0.68,"top3_share_of_downloads":0.7164732860478138,"distinct_root_orgs":24,"median_downloads":788473},{"label":"rank 101-200","n":100,"rank_from":101,"rank_to":200,"top3_share_of_derivatives":0.65,"top3_share_of_downloads":0.6487769550164513,"distinct_root_orgs":27,"median_downloads":349468},{"label":"rank 201-400","n":200,"rank_from":201,"rank_to":400,"top3_share_of_derivatives":0.545,"top3_share_of_downloads":0.5440970664365081,"distinct_root_orgs":51,"median_downloads":158176},{"label":"rank 401-800","n":400,"rank_from":401,"rank_to":800,"top3_share_of_derivatives":0.47,"top3_share_of_downloads":0.5220052120709266,"distinct_root_orgs":89,"median_downloads":11570},{"label":"rank 801-1200","n":400,"rank_from":801,"rank_to":1200,"top3_share_of_derivatives":0.3425,"top3_share_of_downloads":0.35690620698166403,"distinct_root_orgs":115,"median_downloads":3106}],"cumulative":[{"label":"top 100","n":100,"rank_from":1,"rank_to":100,"top3_share_of_derivatives":0.68,"top3_share_of_downloads":0.7164732860478138,"distinct_root_orgs":24,"median_downloads":788473},{"label":"top 200","n":200,"rank_from":1,"rank_to":200,"top3_share_of_derivatives":0.655,"top3_share_of_downloads":0.6978927227609639,"distinct_root_orgs":37,"median_downloads":452615},{"label":"top 400","n":400,"rank_from":1,"rank_to":400,"top3_share_of_derivatives":0.5825,"top3_share_of_downloads":0.6461356468973168,"distinct_root_orgs":61,"median_downloads":266987},{"label":"top 800","n":800,"rank_from":1,"rank_to":800,"top3_share_of_derivatives":0.525,"top3_share_of_downloads":0.6547049498483629,"distinct_root_orgs":123,"median_downloads":114554},{"label":"top 1200","n":1200,"rank_from":1,"rank_to":1200,"top3_share_of_derivatives":0.4583333333333333,"top3_share_of_downloads":0.633068446883321,"distinct_root_orgs":188,"median_downloads":11570}],"samples":{"popularity":{"n":1200,"full":0.633068446883321,"without_top":{"1":0.613020526824717,"3":0.5850712947924808,"10":0.5626802038582391},"top_model_share":0.051806158848955945,"downloads":[10946803,6928970,6566855,6064650,4193836,3992074,2709781,2251779,2125779,2097263,2084738,1990598,1867550,1865978,1723872,1721760,1670911,1632740,1591189,1589314,1525286,1508219,1496369,1423824,1360159,1349721,1321639,1298304,1238988,1234294,1227722,1210499,1085179,1075570,1072690,1048414,1032399,1023190,1004109,969058,951105,912838,899408,887408,882876,854574,845875,831740,813990,788473,769676,765184,738686,736414,731396,724399,723517,710949,706145,699926,683506,671197,670722,664064,658332,638367,631492,615826,613987,610647,609077,608428,605383,586177,571408,568209,560088,559074,551518,548299,545521,544317,542337,528539,527729,525990,517561,512884,512088,502809,491872,491040,489794,487217,483840,478633,477112,467386,454542,452615,445172,444779,443321,437556,434289,429323,428171,427942,426731,426082,423210,420197,418057,415555,415370,408994,408989,407515,399180,393691,386827,385757,385270,382709,382040,379872,378756,378682,378187,373675,372117,371331,370988,369579,369229,363003,360581,360095,359784,358916,355291,354639,354196,353982,353856,353347,352034,351214,350726,349468,347756,346462,346343,330501,330128,329808,328865,327911,326877,325931,325541,325518,323366,321309,320223,320105,319321,318965,318643,317990,313357,310225,302875,302425,302039,301943,301770,300685,298526,297977,297062,294984,294184,292514,290785,290636,289281,289091,288080,287669,284452,283937,279248,278424,272765,271378,269413,268971,267517,266987]},"recency":{"n":1500,"full":0.8899794102063674,"without_top":{"1":0.7820221852527067,"3":0.694574567119717,"10":0.6357346194669828},"top_model_share":0.4952670301737725,"downloads":[369229,97175,10561,9282,6743,6490,6140,5303,5169,4252,4095,4081,3861,3266,3260,3101,3090,2919,2808,2717,2647,2647,2585,2456,2349,2239,2204,2044,1969,1925,1878,1873,1859,1798,1713,1548,1487,1420,1363,1337,1292,1265,1265,1235,1216,1171,1165,1144,1142,1142,1131,1095,1073,1060,1053,1052,1035,1012,1004,1000,992,988,982,960,915,902,878,869,868,863,855,842,831,818,811,800,796,782,779,773,772,770,759,746,743,740,717,715,714,697,697,689,688,688,677,664,654,640,639,628,624,621,617,617,611,596,595,589,588,588,583,582,578,577,577,576,575,573,565,561,557,539,537,533,533,527,525,515,514,507,506,503,501,498,494,494,492,488,484,483,475,471,470,467,463,461,454,452,445,444,442,440,437,431,429,419,418,416,411,408,406,402,400,397,394,394,386,385,385,384,381,378,370,370,370,368,366,365,364,363,360,356,353,351,347,347,347,347,346,343,342,342,342,341,339,335,334,331,331,330]}},"blast":[{"node":"Qwen/Qwen3.8-27B","descendants":55,"descendant_downloads":39740460,"direct_children":25,"max_depth_below":4,"share_of_sample":0.04583333333333333,"share_of_downloads":0.1880732286395014,"dominance":0.16524355782494718,"is_dominated":false,"is_broad":true},{"node":"Qwen/Qwen3.6-35B-A3B","descendants":39,"descendant_downloads":8740156,"direct_children":11,"max_depth_below":5,"share_of_sample":0.0325,"share_of_downloads":0.04136311853795628,"dominance":0.14854471705081695,"is_dominated":false,"is_broad":true},{"node":"Qwen/Qwen3.8-Flash-Next","descendants":14,"descendant_downloads":7010500,"direct_children":8,"max_depth_below":2,"share_of_sample":0.011666666666666667,"share_of_downloads":0.033177456158716444,"dominance":0.38653177376791953,"is_dominated":false,"is_broad":true},{"node":"Qwen/Qwen3.6-27B","descendants":23,"descendant_downloads":6102059,"direct_children":12,"max_depth_below":3,"share_of_sample":0.019166666666666665,"share_of_downloads":0.028878224798573725,"dominance":0.11986052576679446,"is_dominated":false,"is_broad":true},{"node":"google/gemma-4-12B-it","descendants":12,"descendant_downloads":5686539,"direct_children":6,"max_depth_below":4,"share_of_sample":0.01,"share_of_downloads":0.026911760697144464,"dominance":0.279816774315625,"is_dominated":false,"is_broad":true},{"node":"google/gemma-4-12B","descendants":12,"descendant_downloads":5686539,"direct_children":0,"max_depth_below":5,"share_of_sample":0.01,"share_of_downloads":0.026911760697144464,"dominance":0.279816774315625,"is_dominated":false,"is_broad":true},{"node":"Qwen/Qwen3.5-9B-Base","descendants":34,"descendant_downloads":5431229,"direct_children":1,"max_depth_below":6,"share_of_sample":0.028333333333333332,"share_of_downloads":0.02570349647463795,"dominance":0.22725869227756737,"is_dominated":false,"is_broad":true},{"node":"Qwen/Qwen3.5-9B","descendants":33,"descendant_downloads":5426453,"direct_children":10,"max_depth_below":5,"share_of_sample":0.0275,"share_of_downloads":0.025680893874165226,"dominance":0.2274587101371743,"is_dominated":false,"is_broad":true},{"node":"MiniMaxAI/MiniMax-H3","descendants":50,"descendant_downloads":4668258,"direct_children":33,"max_depth_below":4,"share_of_sample":0.041666666666666664,"share_of_downloads":0.022092707386431397,"dominance":0.34975359116826876,"is_dominated":false,"is_broad":true},{"node":"google/gemma-4-26B-A4B-it","descendants":32,"descendant_downloads":4577580,"direct_children":9,"max_depth_below":5,"share_of_sample":0.02666666666666667,"share_of_downloads":0.021663570324943617,"dominance":0.1866868520047711,"is_dominated":false,"is_broad":true},{"node":"google/gemma-4-26B-A4B","descendants":32,"descendant_downloads":4577580,"direct_children":0,"max_depth_below":6,"share_of_sample":0.02666666666666667,"share_of_downloads":0.021663570324943617,"dominance":0.1866868520047711,"is_dominated":false,"is_broad":true},{"node":"Qwen/Qwen-Image-2.1","descendants":12,"descendant_downloads":3434016,"direct_children":12,"max_depth_below":1,"share_of_sample":0.01,"share_of_downloads":0.01625161048260906,"dominance":0.5013838025215958,"is_dominated":false,"is_broad":true}]};
+const pct = x => (x*100).toFixed(1) + "%";
+
+function renderDepth(){
+  const i = +document.getElementById("depth").value;
+  const c = D.cumulative[i];
+  document.getElementById("depth-v").textContent = "top " + c.n.toLocaleString();
+  document.getElementById("d-share").textContent = pct(c.top3_share_of_derivatives);
+  document.getElementById("d-orgs").textContent = c.distinct_root_orgs;
+
+  const max = Math.max(...D.bands.map(b=>b.top3_share_of_derivatives));
+  document.getElementById("bands").innerHTML = D.bands.map(b=>{
+    const inCut = b.rank_to <= c.n;
+    return `<div class="bar" style="opacity:${inCut?1:.3}">
+      <span>${b.label}</span>
+      <span class="track"><span class="fill" style="width:${(b.top3_share_of_derivatives/max)*100}%"></span></span>
+      <span class="q">${pct(b.top3_share_of_derivatives)}</span></div>`;
+  }).join("");
+
+  const first = D.cumulative[0], last = D.cumulative[D.cumulative.length-1];
+  const spread = (first.top3_share_of_derivatives - last.top3_share_of_derivatives)*100;
+  document.getElementById("depth-note").innerHTML =
+    `Collecting the top ${first.n} gives <b>${pct(first.top3_share_of_derivatives)}</b> across
+     ${first.distinct_root_orgs} organisations. Collecting ${last.n.toLocaleString()} gives
+     <b>${pct(last.top3_share_of_derivatives)}</b> across ${last.distinct_root_orgs}.
+     A spread of <b>${spread.toFixed(1)} points</b> and a factor of
+     ${(last.distinct_root_orgs/first.distinct_root_orgs).toFixed(0)} on the tail,
+     from one dataset, by choosing a cut.`;
+}
+
+function renderFrag(){
+  const k = [0,1,3,10][+document.getElementById("trim").value];
+  document.getElementById("trim-v").textContent = k === 0 ? "none" : k;
+  const rows = ["popularity","recency"].map(lab=>{
+    const s = D.samples[lab];
+    const v = k === 0 ? s.full : (s.without_top[k] ?? s.full);
+    return {lab, v, n:s.n, top:s.top_model_share};
+  });
+  document.getElementById("frag").innerHTML = rows.map(r=>
+    `<div class="bar"><span>${r.lab} (${r.n.toLocaleString()})</span>
+     <span class="track"><span class="fill${r.lab==="recency"?"":" alt"}" style="width:${r.v*100}%"></span></span>
+     <span class="q">${pct(r.v)}</span></div>`).join("");
+  const gap = (rows[0].v - rows[1].v) * 100;
+  const raw = (D.samples.popularity.full - D.samples.recency.full) * 100;
+  document.getElementById("frag-note").innerHTML = k === 0
+    ? `Untrimmed, the samples differ by <b>${Math.abs(raw).toFixed(1)} points</b>. One model
+       carries <b>${pct(D.samples.recency.top_model_share)}</b> of the recency sample's downloads
+       — drag the slider.`
+    : `With ${k} removed from each side the gap is <b>${Math.abs(gap).toFixed(1)} points</b>,
+       against ${Math.abs(raw).toFixed(1)} untrimmed. ${Math.abs(gap) < Math.abs(raw)*0.5
+       ? "<b>It was carried by a handful of popular derivatives, not by the samples' structure.</b> This is why the claim it supported was withdrawn."
+       : "The gap is holding."}`;
+}
+
+const maxBlast = Math.max(...D.blast.map(b=>b.descendants));
+document.getElementById("blast").innerHTML = D.blast.slice(0,8).map(b=>
+  `<div class="bar"><span>${b.node.split("/").pop().slice(0,16)}</span>
+   <span class="track"><span class="fill" style="width:${(b.descendants/maxBlast)*100}%"></span></span>
+   <span class="q">${b.descendants}</span></div>`).join("");
+
+document.getElementById("depth").addEventListener("input", renderDepth);
+document.getElementById("trim").addEventListener("input", renderFrag);
+renderDepth(); renderFrag();
+</script>
+</body>
+</html>

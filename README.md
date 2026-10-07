@@ -279,6 +279,16 @@ true widening rate could be several times 1.67% or could be zero.
 
 ---
 
+## Explore it
+
+**[Open the explorer](https://claude.ai/artifact/BC2C8oBCcejyPRdkocoZUe)** —
+move the sampling cut and watch the concentration figure change; drag the trim
+slider and watch the download gap collapse.
+
+The second control is the one worth playing with. It reproduces the finding
+that killed a headline: remove three models from each sample and a 25.7-point
+gap becomes 11.0.
+
 ## How the data was collected
 
 Reachability first, as always. The probe asked four questions in the order that
