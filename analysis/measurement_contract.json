@@ -1,0 +1,23 @@
+{
+  "decision": "Prioritize model-family metadata review under a fixed governance budget.",
+  "primary_outcome": "Confirmed actionable metadata issues resolved per reviewer hour, with coverage by model family and download exposure.",
+  "denominator": "All models in the explicitly frozen selected graph; neither the graph nor downloads represent all users or all models.",
+  "independence_unit": "Root family; descendants can share the same inherited issue.",
+  "quality_guardrail": "No legal verdict from metadata alone; track unresolved lineage and missing license fields.",
+  "minimum_data": "Model/root IDs, snapshot date, ancestry edges, metadata fields, download measure definition, review disposition and time.",
+  "failure_handling": "Missing license or ancestry stays unknown. Do not convert absent metadata into compliant or noncompliant labels.",
+  "release_rule": "Prioritize transparent exposure scenarios while requiring qualified review for legal conclusions; report both counts and download weighting.",
+  "reversal": "Ancestry errors, concentrated duplicated issues, or changed exposure weights alter which roots deserve priority.",
+  "project": "lineage",
+  "status": "PROPOSED MEASUREMENT CONTRACT; NOT AN EXECUTED DOMAIN EXPERIMENT",
+  "defense": [
+    [
+      "Are downloads users?",
+      "No. Download counts are an activity proxy. I show both count concentration and download concentration without claiming unique-user exposure."
+    ],
+    [
+      "Why prioritize roots?",
+      "A root-level review may resolve a shared issue across descendants, but that benefit depends on verified inheritance, not graph position alone."
+    ]
+  ]
+}
