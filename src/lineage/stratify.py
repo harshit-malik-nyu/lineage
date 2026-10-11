@@ -136,6 +136,7 @@ def verdict(strata: list[Stratum]) -> dict:
 
     if single:
         s0 = usable[0]
+        assert s0.dl_gap is not None
         text = (f"Only one download band — {s0.label()} — has enough models on "
                 f"both sides, and the thinner side has {thinnest}. The samples "
                 "barely overlap in download level at all, which IS the "

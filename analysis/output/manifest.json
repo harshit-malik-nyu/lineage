@@ -1,0 +1,19 @@
+{
+  "external_services_required": false,
+  "input_sha256": {
+    "evidence/derivatives.json": "f35e000f5b79f356aa22534f69c86f881b673775de71419a49c93d27ee76cf43"
+  },
+  "outputs": {
+    "query_1.csv": "e377428f8dfb691a7732c838dfbae2a8f1912cc58d5ee6e454d68bf56269ae6a",
+    "query_2.csv": "c4dd81d16fefaec63e88aa8c3882474587aa83c28a601a8e2f76abd0c508b399"
+  },
+  "project": "lineage",
+  "quality_checks": [
+    "SQL type and domain constraints",
+    "row-count reconciliation",
+    "SQLite integrity"
+  ],
+  "query_sha256": "9b11765f5b92096d8252dfaff7345f33ccd3327865378a8a476ea6208acae23d",
+  "rows": 1200,
+  "scope": "Self-declared Hub metadata snapshot; downloads are not unique users and selected models are not a population sample."
+}

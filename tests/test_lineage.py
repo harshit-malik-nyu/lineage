@@ -47,7 +47,7 @@ class TestLicenceClassification:
     def test_claiming_apache_over_a_llama_ancestor_widens(self):
         cat, note = classify_licence_pair("apache-2.0", "llama3.2")
         assert cat == "widens"
-        assert "does not grant" in note
+        assert "requires review" in note
 
     def test_narrowing_is_not_flagged(self):
         cat, _ = classify_licence_pair("cc-by-nc-4.0", "apache-2.0")

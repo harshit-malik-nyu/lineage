@@ -78,7 +78,8 @@ class LicenceFinding:
     def as_dict(self) -> dict:
         return {"leaf": self.leaf_id, "leaf_licence": self.leaf_licence,
                 "root_licence": self.root_licence, "downloads": self.downloads,
-                "category": self.category, "note": self.note}
+                "category": self.category, "note": self.note,
+                "status": "metadata screening flag, not legal adjudication"}
 
 
 def classify_licence_pair(leaf: str, root: str) -> tuple[str, str]:
@@ -92,9 +93,9 @@ def classify_licence_pair(leaf: str, root: str) -> tuple[str, str]:
     if leaf == root:
         return "consistent", "same licence declared at both ends"
 
-    if root in NAMED_RESTRICTIVE and leaf in PERMISSIVENESS:
+    if root in NAMED_RESTRICTIVE and root not in PERMISSIVENESS and leaf in PERMISSIVENESS:
         return ("widens", f"leaf claims {leaf} while the ancestor is {root}, "
-                          "which does not grant that")
+                          "requires review of the actual terms")
 
     lp, rp = PERMISSIVENESS.get(leaf), PERMISSIVENESS.get(root)
     if lp is not None and rp is not None:
@@ -102,7 +103,7 @@ def classify_licence_pair(leaf: str, root: str) -> tuple[str, str]:
             return ("widens", f"leaf claims {leaf}, more permissive than the "
                               f"ancestor's {root}")
         return ("narrows", f"leaf claims {leaf}, no wider than the ancestor's "
-                           f"{root} — permitted")
+                           f"{root} by this heuristic; compatibility requires review")
 
     # One or both sit outside the rankable set. "other" is the common case and
     # it is a text box, not a licence, so nothing can be concluded.

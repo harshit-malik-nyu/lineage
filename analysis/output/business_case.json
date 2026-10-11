@@ -1,0 +1,33 @@
+{
+  "status": "illustrative planning assumptions; not observed impact",
+  "assumptions": {
+    "evidence_status": "illustrative planning assumptions; not observed impact",
+    "cases_per_period": 1200,
+    "baseline_minutes": 20,
+    "assisted_minutes": 8,
+    "hourly_cost": 60,
+    "fixed_cost": 5000,
+    "quality_loss_cost": 0,
+    "note": "quality_loss_cost must be populated before an operating decision; zero is a scenario, not proof of no risk"
+  },
+  "scenarios": [
+    {
+      "assisted_time_multiplier": 0.5,
+      "net_value_per_case": 16.0,
+      "net_period_value": 14200.0,
+      "break_even_cases": 312.5
+    },
+    {
+      "assisted_time_multiplier": 1.0,
+      "net_value_per_case": 12.0,
+      "net_period_value": 9400.0,
+      "break_even_cases": 416.6666666666667
+    },
+    {
+      "assisted_time_multiplier": 1.5,
+      "net_value_per_case": 8.0,
+      "net_period_value": 4600.0,
+      "break_even_cases": 625.0
+    }
+  ]
+}

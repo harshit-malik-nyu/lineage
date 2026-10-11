@@ -1,5 +1,8 @@
 # What is actually inside the model you deployed?
 
+> **Validation update (2026-10-10):** License ordering no longer misclassifies equal-ranked NC variants through the unknown-license branch. Screening does not adjudicate legal compatibility. See the [current decision brief](docs/decision-brief.md) and [reproducible analysis](analysis/README.md). Historical evidence and figures retain their original run context; this update supersedes conflicting claims below.
+
+
 Every open model on HuggingFace looks like an independent artifact. Almost none
 of them are.
 
