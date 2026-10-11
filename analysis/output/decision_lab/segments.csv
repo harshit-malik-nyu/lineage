@@ -1,0 +1,5 @@
+segment,arm,assigned,activated,activation_itt,incidents,incident_itt
+incomplete_metadata,control,640,208,0.325,4,0.00625
+incomplete_metadata,treatment,640,215,0.3359375,13,0.0203125
+resolved_graph,control,640,310,0.484375,2,0.003125
+resolved_graph,treatment,640,408,0.6375,1,0.0015625

@@ -1,0 +1,120 @@
+{
+  "project": "lineage",
+  "title": "Prioritize dependency review by exposure and unresolved provenance",
+  "decision_owner": "Model governance lead",
+  "observed_evidence": "The frozen Hub graph distinguishes descendant-count and download concentration. Downloads are not unique users, selection is not population sampling, and license metadata flags are not legal findings.",
+  "executive_recommendation": "Review highly exposed roots and unresolved paths together. A popularity-only queue misses unknown dependencies and should not be treated as a complete control.",
+  "priorities": [
+    "Put unresolved roots and cycles on an explicit exception queue.",
+    "Compare descendant and download-weighted review coverage without conflating the denominators.",
+    "Set metadata freshness and ownership requirements before recurring review."
+  ],
+  "reversal": "If roots cannot be resolved reliably, shared-root amortization is not justified; revert to direct review for affected models.",
+  "uncertainty": "Incident-loss values are illustrative operational scenarios, not estimates of license liability.",
+  "economics": {
+    "evidence_status": "ILLUSTRATIVE ASSUMPTIONS, NOT MEASURED COSTS OR RISK",
+    "period": "one planning year",
+    "volume": 1200,
+    "review_capacity_hours": 500,
+    "loss_per_incident_usd": 1200,
+    "max_incident_rate": 0.006,
+    "options": [
+      {
+        "name": "Uniform model-by-model review",
+        "fixed_usd": 0,
+        "incident_rate": 0.005,
+        "activities": [
+          {
+            "name": "Model review",
+            "unit": "reviewer_hour",
+            "units_per_case": 0.4166666666666667,
+            "usd_per_unit": 95,
+            "cash": false
+          }
+        ]
+      },
+      {
+        "name": "Root-prioritized review with unresolved queue",
+        "fixed_usd": 16000,
+        "incident_rate": 0.004,
+        "activities": [
+          {
+            "name": "Shared-root amortized review",
+            "unit": "reviewer_hour",
+            "units_per_case": 0.13333333333333333,
+            "usd_per_unit": 95,
+            "cash": false
+          },
+          {
+            "name": "Unresolved queue: 20% at 30 minutes",
+            "unit": "reviewer_hour",
+            "units_per_case": 0.1,
+            "usd_per_unit": 95,
+            "cash": false
+          },
+          {
+            "name": "Metadata refresh",
+            "unit": "model",
+            "units_per_case": 1,
+            "usd_per_unit": 0.05,
+            "cash": true
+          }
+        ]
+      },
+      {
+        "name": "Popularity-only review",
+        "fixed_usd": 4000,
+        "incident_rate": 0.02,
+        "activities": [
+          {
+            "name": "Top-model review allocation",
+            "unit": "reviewer_hour",
+            "units_per_case": 0.08333333333333333,
+            "usd_per_unit": 95,
+            "cash": false
+          }
+        ]
+      }
+    ]
+  },
+  "product": {
+    "seed": 737,
+    "randomization_unit": "governance analyst account / inventory owner",
+    "stages": [
+      "inventory_uploaded",
+      "lineage_review_completed",
+      "review_priority_exported"
+    ],
+    "incident_definition": "unresolved path represented as resolved",
+    "retention_interpretation": "analyst refreshes another eligible model inventory",
+    "observation_day": 56,
+    "minimum_activation_lift": 0.02,
+    "maximum_incident_increase": 0.005,
+    "planning_baseline": 0.45,
+    "minimum_detectable_effect": 0.05,
+    "segments": [
+      {
+        "name": "resolved_graph",
+        "start_probability": 0.9,
+        "control_activation": 0.64,
+        "treatment_delta": 0.16,
+        "apply_probability": 0.88,
+        "control_incident": 0.004,
+        "treatment_incident": 0.004,
+        "return7": 0.55,
+        "return28": 0.35
+      },
+      {
+        "name": "incomplete_metadata",
+        "start_probability": 0.8200000000000001,
+        "control_activation": 0.52,
+        "treatment_delta": -0.04,
+        "apply_probability": 0.8,
+        "control_incident": 0.01,
+        "treatment_incident": 0.064,
+        "return7": 0.43000000000000005,
+        "return28": 0.24999999999999997
+      }
+    ]
+  }
+}

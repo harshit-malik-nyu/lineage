@@ -1,0 +1,2403 @@
+{
+  "base_case": {
+    "cost_factor": 1.0,
+    "options": [
+      {
+        "capacity_gate_pass": true,
+        "cash_outlay_usd": 0.0,
+        "components": [
+          {
+            "activity": "Model review",
+            "cash_outlay_usd": 0.0,
+            "economic_cost_usd": 47500.0,
+            "quantity": 500.0,
+            "unit": "reviewer_hour"
+          }
+        ],
+        "economic_cost_usd": 54700.0,
+        "expected_incidents": 6.0,
+        "feasible": true,
+        "option": "Uniform model-by-model review",
+        "reviewer_hours": 500.0,
+        "risk_gate_pass": true,
+        "scenario_loss_usd": 7200.0,
+        "volume": 1200.0
+      },
+      {
+        "capacity_gate_pass": true,
+        "cash_outlay_usd": 16060.0,
+        "components": [
+          {
+            "activity": "Shared-root amortized review",
+            "cash_outlay_usd": 0.0,
+            "economic_cost_usd": 15200.0,
+            "quantity": 160.0,
+            "unit": "reviewer_hour"
+          },
+          {
+            "activity": "Unresolved queue: 20% at 30 minutes",
+            "cash_outlay_usd": 0.0,
+            "economic_cost_usd": 11400.0,
+            "quantity": 120.0,
+            "unit": "reviewer_hour"
+          },
+          {
+            "activity": "Metadata refresh",
+            "cash_outlay_usd": 60.0,
+            "economic_cost_usd": 60.0,
+            "quantity": 1200.0,
+            "unit": "model"
+          }
+        ],
+        "economic_cost_usd": 48420.0,
+        "expected_incidents": 4.8,
+        "feasible": true,
+        "option": "Root-prioritized review with unresolved queue",
+        "reviewer_hours": 280.0,
+        "risk_gate_pass": true,
+        "scenario_loss_usd": 5760.0,
+        "volume": 1200.0
+      },
+      {
+        "capacity_gate_pass": true,
+        "cash_outlay_usd": 4000.0,
+        "components": [
+          {
+            "activity": "Top-model review allocation",
+            "cash_outlay_usd": 0.0,
+            "economic_cost_usd": 9500.0,
+            "quantity": 100.0,
+            "unit": "reviewer_hour"
+          }
+        ],
+        "economic_cost_usd": 42300.0,
+        "expected_incidents": 24.0,
+        "feasible": false,
+        "option": "Popularity-only review",
+        "reviewer_hours": 100.0,
+        "risk_gate_pass": false,
+        "scenario_loss_usd": 28800.0,
+        "volume": 1200.0
+      }
+    ],
+    "recommended_if_assumptions_hold": "Root-prioritized review with unresolved queue",
+    "risk_factor": 1.0,
+    "volume_factor": 1.0
+  },
+  "break_even": [
+    {
+      "additional_fixed_usd": 16000,
+      "minimum_integer_volume_to_break_even": 862,
+      "option": "Root-prioritized review with unresolved queue",
+      "qualification": "Positive unit advantage required; risk and capacity gates still apply.",
+      "relative_to": "Uniform model-by-model review",
+      "unit_economic_advantage_usd": 18.566667
+    },
+    {
+      "additional_fixed_usd": 4000,
+      "minimum_integer_volume_to_break_even": 293,
+      "option": "Popularity-only review",
+      "qualification": "Positive unit advantage required; risk and capacity gates still apply.",
+      "relative_to": "Uniform model-by-model review",
+      "unit_economic_advantage_usd": 13.666667
+    }
+  ],
+  "evidence_status": "ILLUSTRATIVE PLANNING ASSUMPTIONS; NOT OBSERVED ROI",
+  "scenarios": [
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 17812.5,
+              "quantity": 250.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 21412.5,
+          "expected_incidents": 3.0,
+          "feasible": true,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 250.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 3600.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16022.5,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 5700.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4275.0,
+              "quantity": 60.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 22.5,
+              "economic_cost_usd": 22.5,
+              "quantity": 600.0,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 28877.5,
+          "expected_incidents": 2.4,
+          "feasible": true,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 140.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 2880.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 3562.5,
+              "quantity": 50.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 21962.5,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 50.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 14400.0,
+          "volume": 600.0
+        }
+      ],
+      "recommended_if_assumptions_hold": "Uniform model-by-model review",
+      "risk_factor": 1,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 17812.5,
+              "quantity": 250.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 25012.5,
+          "expected_incidents": 6.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 250.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 7200.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16022.5,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 5700.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4275.0,
+              "quantity": 60.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 22.5,
+              "economic_cost_usd": 22.5,
+              "quantity": 600.0,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 31757.5,
+          "expected_incidents": 4.8,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 140.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 5760.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 3562.5,
+              "quantity": 50.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 36362.5,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 50.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 600.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 17812.5,
+              "quantity": 250.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 32212.5,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 250.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 14400.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16022.5,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 5700.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4275.0,
+              "quantity": 60.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 22.5,
+              "economic_cost_usd": 22.5,
+              "quantity": 600.0,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 37517.5,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 140.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 11520.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 3562.5,
+              "quantity": 50.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 65162.5,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 50.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 600.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 23750.0,
+              "quantity": 250.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 27350.0,
+          "expected_incidents": 3.0,
+          "feasible": true,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 250.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 3600.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16030.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 7600.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 5700.0,
+              "quantity": 60.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 30.0,
+              "economic_cost_usd": 30.0,
+              "quantity": 600.0,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 32210.0,
+          "expected_incidents": 2.4,
+          "feasible": true,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 140.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 2880.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4750.0,
+              "quantity": 50.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 23150.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 50.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 14400.0,
+          "volume": 600.0
+        }
+      ],
+      "recommended_if_assumptions_hold": "Uniform model-by-model review",
+      "risk_factor": 1,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 23750.0,
+              "quantity": 250.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 30950.0,
+          "expected_incidents": 6.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 250.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 7200.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16030.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 7600.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 5700.0,
+              "quantity": 60.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 30.0,
+              "economic_cost_usd": 30.0,
+              "quantity": 600.0,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 35090.0,
+          "expected_incidents": 4.8,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 140.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 5760.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4750.0,
+              "quantity": 50.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 37550.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 50.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 600.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 23750.0,
+              "quantity": 250.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 38150.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 250.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 14400.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16030.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 7600.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 5700.0,
+              "quantity": 60.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 30.0,
+              "economic_cost_usd": 30.0,
+              "quantity": 600.0,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 40850.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 140.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 11520.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 4750.0,
+              "quantity": 50.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 66350.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 50.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 600.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 35625.0,
+              "quantity": 250.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 39225.0,
+          "expected_incidents": 3.0,
+          "feasible": true,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 250.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 3600.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16045.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11400.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8550.0,
+              "quantity": 60.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 45.0,
+              "economic_cost_usd": 45.0,
+              "quantity": 600.0,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 38875.0,
+          "expected_incidents": 2.4,
+          "feasible": true,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 140.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 2880.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 7125.0,
+              "quantity": 50.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 25525.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 50.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 14400.0,
+          "volume": 600.0
+        }
+      ],
+      "recommended_if_assumptions_hold": "Root-prioritized review with unresolved queue",
+      "risk_factor": 1,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 35625.0,
+              "quantity": 250.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 42825.0,
+          "expected_incidents": 6.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 250.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 7200.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16045.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11400.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8550.0,
+              "quantity": 60.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 45.0,
+              "economic_cost_usd": 45.0,
+              "quantity": 600.0,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 41755.0,
+          "expected_incidents": 4.8,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 140.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 5760.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 7125.0,
+              "quantity": 50.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 39925.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 50.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 600.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 35625.0,
+              "quantity": 250.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 50025.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 250.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 14400.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16045.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11400.0,
+              "quantity": 80.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8550.0,
+              "quantity": 60.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 45.0,
+              "economic_cost_usd": 45.0,
+              "quantity": 600.0,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 47515.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 140.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 11520.0,
+          "volume": 600.0
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 7125.0,
+              "quantity": 50.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 68725.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 50.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 600.0
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 0.5
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 35625.0,
+              "quantity": 500.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 42825.0,
+          "expected_incidents": 6.0,
+          "feasible": true,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 500.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 7200.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16045.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11400.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8550.0,
+              "quantity": 120.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 45.0,
+              "economic_cost_usd": 45.0,
+              "quantity": 1200,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 41755.0,
+          "expected_incidents": 4.8,
+          "feasible": true,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 280.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 5760.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 7125.0,
+              "quantity": 100.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 39925.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 100.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 1200
+        }
+      ],
+      "recommended_if_assumptions_hold": "Root-prioritized review with unresolved queue",
+      "risk_factor": 1,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 35625.0,
+              "quantity": 500.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 50025.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 500.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 14400.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16045.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11400.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8550.0,
+              "quantity": 120.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 45.0,
+              "economic_cost_usd": 45.0,
+              "quantity": 1200,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 47515.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 280.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 11520.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 7125.0,
+              "quantity": 100.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 68725.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 100.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 1200
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 35625.0,
+              "quantity": 500.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 64425.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 500.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16045.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11400.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 8550.0,
+              "quantity": 120.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 45.0,
+              "economic_cost_usd": 45.0,
+              "quantity": 1200,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 59035.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 280.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 23040.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 7125.0,
+              "quantity": 100.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 126325.0,
+          "expected_incidents": 96.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 100.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 115200.0,
+          "volume": 1200
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 47500.0,
+              "quantity": 500.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 54700.0,
+          "expected_incidents": 6.0,
+          "feasible": true,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 500.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 7200.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16060.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 15200.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11400.0,
+              "quantity": 120.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 60.0,
+              "economic_cost_usd": 60.0,
+              "quantity": 1200,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 48420.0,
+          "expected_incidents": 4.8,
+          "feasible": true,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 280.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 5760.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 9500.0,
+              "quantity": 100.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 42300.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 100.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 1200
+        }
+      ],
+      "recommended_if_assumptions_hold": "Root-prioritized review with unresolved queue",
+      "risk_factor": 1,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 47500.0,
+              "quantity": 500.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 61900.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 500.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 14400.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16060.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 15200.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11400.0,
+              "quantity": 120.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 60.0,
+              "economic_cost_usd": 60.0,
+              "quantity": 1200,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 54180.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 280.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 11520.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 9500.0,
+              "quantity": 100.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 71100.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 100.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 1200
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 47500.0,
+              "quantity": 500.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 76300.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 500.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16060.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 15200.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 11400.0,
+              "quantity": 120.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 60.0,
+              "economic_cost_usd": 60.0,
+              "quantity": 1200,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 65700.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 280.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 23040.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 9500.0,
+              "quantity": 100.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 128700.0,
+          "expected_incidents": 96.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 100.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 115200.0,
+          "volume": 1200
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 71250.0,
+              "quantity": 500.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 78450.0,
+          "expected_incidents": 6.0,
+          "feasible": true,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 500.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 7200.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16090.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 22800.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 17100.0,
+              "quantity": 120.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 1200,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 61750.0,
+          "expected_incidents": 4.8,
+          "feasible": true,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 280.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 5760.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 14250.0,
+              "quantity": 100.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 47050.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 100.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 1200
+        }
+      ],
+      "recommended_if_assumptions_hold": "Root-prioritized review with unresolved queue",
+      "risk_factor": 1,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 71250.0,
+              "quantity": 500.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 85650.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 500.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 14400.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16090.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 22800.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 17100.0,
+              "quantity": 120.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 1200,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 67510.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 280.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 11520.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 14250.0,
+              "quantity": 100.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 75850.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 100.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 1200
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 71250.0,
+              "quantity": 500.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 100050.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 500.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 16090.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 22800.0,
+              "quantity": 160.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 17100.0,
+              "quantity": 120.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 1200,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 79030.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 280.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 23040.0,
+          "volume": 1200
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 14250.0,
+              "quantity": 100.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 133450.0,
+          "expected_incidents": 96.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 100.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 115200.0,
+          "volume": 1200
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 1
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 71250.0,
+              "quantity": 1000.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 85650.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 1000.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 14400.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 16090.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 22800.0,
+              "quantity": 320.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 17100.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 2400,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 67510.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 560.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 11520.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 14250.0,
+              "quantity": 200.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 75850.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 200.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 2400
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 1,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 71250.0,
+              "quantity": 1000.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 100050.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 1000.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 16090.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 22800.0,
+              "quantity": 320.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 17100.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 2400,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 79030.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 560.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 23040.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 14250.0,
+              "quantity": 200.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 133450.0,
+          "expected_incidents": 96.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 200.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 115200.0,
+          "volume": 2400
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 0.75,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 71250.0,
+              "quantity": 1000.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 128850.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 1000.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 16090.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 22800.0,
+              "quantity": 320.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 17100.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 90.0,
+              "economic_cost_usd": 90.0,
+              "quantity": 2400,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 102070.0,
+          "expected_incidents": 38.4,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 560.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 46080.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 14250.0,
+              "quantity": 200.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 248650.0,
+          "expected_incidents": 192.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 200.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 230400.0,
+          "volume": 2400
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 95000.0,
+              "quantity": 1000.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 109400.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 1000.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 14400.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 16120.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 30400.0,
+              "quantity": 320.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 22800.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 120.0,
+              "economic_cost_usd": 120.0,
+              "quantity": 2400,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 80840.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 560.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 11520.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 19000.0,
+              "quantity": 200.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 80600.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 200.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 2400
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 1,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 95000.0,
+              "quantity": 1000.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 123800.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 1000.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 16120.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 30400.0,
+              "quantity": 320.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 22800.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 120.0,
+              "economic_cost_usd": 120.0,
+              "quantity": 2400,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 92360.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 560.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 23040.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 19000.0,
+              "quantity": 200.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 138200.0,
+          "expected_incidents": 96.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 200.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 115200.0,
+          "volume": 2400
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 95000.0,
+              "quantity": 1000.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 152600.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 1000.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 16120.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 30400.0,
+              "quantity": 320.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 22800.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 120.0,
+              "economic_cost_usd": 120.0,
+              "quantity": 2400,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 115400.0,
+          "expected_incidents": 38.4,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 560.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 46080.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 19000.0,
+              "quantity": 200.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 253400.0,
+          "expected_incidents": 192.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 200.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 230400.0,
+          "volume": 2400
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 142500.0,
+              "quantity": 1000.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 156900.0,
+          "expected_incidents": 12.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 1000.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 14400.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 16180.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 45600.0,
+              "quantity": 320.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 34200.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 2400,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 107500.0,
+          "expected_incidents": 9.6,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 560.0,
+          "risk_gate_pass": true,
+          "scenario_loss_usd": 11520.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 28500.0,
+              "quantity": 200.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 90100.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 200.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 2400
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 1,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 142500.0,
+              "quantity": 1000.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 171300.0,
+          "expected_incidents": 24.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 1000.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 28800.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 16180.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 45600.0,
+              "quantity": 320.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 34200.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 2400,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 119020.0,
+          "expected_incidents": 19.2,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 560.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 23040.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 28500.0,
+              "quantity": 200.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 147700.0,
+          "expected_incidents": 96.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 200.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 115200.0,
+          "volume": 2400
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 2,
+      "volume_factor": 2
+    },
+    {
+      "cost_factor": 1.5,
+      "options": [
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 0.0,
+          "components": [
+            {
+              "activity": "Model review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 142500.0,
+              "quantity": 1000.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 200100.0,
+          "expected_incidents": 48.0,
+          "feasible": false,
+          "option": "Uniform model-by-model review",
+          "reviewer_hours": 1000.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 57600.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": false,
+          "cash_outlay_usd": 16180.0,
+          "components": [
+            {
+              "activity": "Shared-root amortized review",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 45600.0,
+              "quantity": 320.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Unresolved queue: 20% at 30 minutes",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 34200.0,
+              "quantity": 240.0,
+              "unit": "reviewer_hour"
+            },
+            {
+              "activity": "Metadata refresh",
+              "cash_outlay_usd": 180.0,
+              "economic_cost_usd": 180.0,
+              "quantity": 2400,
+              "unit": "model"
+            }
+          ],
+          "economic_cost_usd": 142060.0,
+          "expected_incidents": 38.4,
+          "feasible": false,
+          "option": "Root-prioritized review with unresolved queue",
+          "reviewer_hours": 560.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 46080.0,
+          "volume": 2400
+        },
+        {
+          "capacity_gate_pass": true,
+          "cash_outlay_usd": 4000.0,
+          "components": [
+            {
+              "activity": "Top-model review allocation",
+              "cash_outlay_usd": 0.0,
+              "economic_cost_usd": 28500.0,
+              "quantity": 200.0,
+              "unit": "reviewer_hour"
+            }
+          ],
+          "economic_cost_usd": 262900.0,
+          "expected_incidents": 192.0,
+          "feasible": false,
+          "option": "Popularity-only review",
+          "reviewer_hours": 200.0,
+          "risk_gate_pass": false,
+          "scenario_loss_usd": 230400.0,
+          "volume": 2400
+        }
+      ],
+      "recommended_if_assumptions_hold": null,
+      "risk_factor": 4,
+      "volume_factor": 2
+    }
+  ]
+}
